@@ -36,6 +36,23 @@
  * @see template_preprocess_field()
  */
 #}
-<p>
-  <span>Type: {{ type_link }}</span>
-</p>
+{%
+  set title_classes = [
+  label_display == 'visually_hidden' ? 'visually-hidden',
+]
+%}
+
+{% if label_hidden %}
+  <p{{ attributes }}>
+    {% for item in items %}
+      <span{{ item.attributes }}>{{ item.content }}</span>
+    {% endfor %}
+  </p>
+{% else %}
+  <p{{ attributes }}>
+    <span{{ title_attributes.addClass(title_classes) }}>{{ label }}: </span>
+    {% for item in items %}
+      <span{{ item.attributes }}>{{ item.content }}</span>
+    {% endfor %}
+  </p>
+{% endif %}
