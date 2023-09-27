@@ -23,9 +23,6 @@ class TaxonomyToFacetFormatter extends FormatterBase {
   /**
    * {@inheritdoc}
    */
-  /**
-   * {@inheritdoc}
-   */
   public static function defaultSettings() {
     return [
         'search_page_url' => '',
@@ -42,17 +39,19 @@ class TaxonomyToFacetFormatter extends FormatterBase {
     // TODO: There is no form validator call for plugin settings forms,
     // possibly look at using an ajax callback to validate CSS classes.
 
+    /** @var \Drupal\facets\FacetManager\DefaultFacetManager $facet_manager */
+    $facet_manager = \Drupal::service('facets.manager');
 
-    $facet_manager = \Drupal::service('facets.manager')->getEnabledFacets();
+    $facets = $facet_manager->getEnabledFacets();
     $active_facets = [];
-    foreach ($facet_manager as $searcher => $info) {
-      $active_facets[$searcher] .= $info->id();
+    foreach ($facets as $facet => $info) {
+      $active_facets[$facet] .= $info->id();
     }
     $elements['search_page_url'] = [
-      '#title' => $this->t('Search page URL'),
+      '#title' => $this->t('Search page URL ending'),
       '#type' => 'textfield',
       '#default_value' => $this->getSetting('search_page_url'),
-      '#description' => $this->t('Add the url of the search page. e.g. If the the search page is http://www.test.co.uk/search-page then simply enter search-page.'),
+      '#description' => $this->t('Add the url ending of the search page. e.g. If the the search page is http://www.test.co.uk/search-page then simply enter search-page.'),
       '#required' => TRUE,
     ];
     $elements['search_index'] = [
