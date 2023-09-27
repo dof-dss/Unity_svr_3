@@ -12,7 +12,7 @@ field_name: field_published_date
 entity_type: node
 bundle: decision
 label: Date
-description: ''
+description: 'Please select the published date for this decision, or accept the default value of today. '
 required: true
 translatable: true
 default_value:

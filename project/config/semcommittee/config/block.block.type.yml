@@ -12,7 +12,7 @@ dependencies:
 id: type
 theme: semcommittee_theme
 region: search_facets
-weight: 0
+weight: -7
 provider: null
 plugin: 'facet_block:type'
 settings:
@@ -26,4 +26,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: "/publications\r\n/publications/date/*\r\n/publications/type/*"
+    pages: "/publications\r\n/publications/date/*\r\n/publications/type/*\r\n/publications/topic/*"

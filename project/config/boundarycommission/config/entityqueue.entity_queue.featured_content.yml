@@ -23,7 +23,7 @@ entity_settings:
       auto_add: 0
       insert_front: 0
 queue_settings:
-  min_size: 2
+  min_size: 0
   max_size: 2
   act_as_queue: false
   reverse: false

@@ -2,7 +2,10 @@ uuid: a25e8c08-7367-4953-abc4-30a66486d582
 langcode: en
 status: true
 dependencies:
+  config:
+    - filter.format.basic_html
   module:
+    - filter
     - media
     - node
     - pathauto
@@ -34,6 +37,7 @@ permissions:
   - 'notify of path changes'
   - 'revert revisions'
   - 'use media wysiwyg'
+  - 'use text format basic_html'
   - 'use text format filtered_html'
   - 'use text format filtered_html_with_no_images'
   - 'view all revisions'

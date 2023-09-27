@@ -21,21 +21,33 @@
   }
 }
 
-#main-menu .hamburger {
-  @media screen and (max-width: $tab) {
-    display: flex;
-  }
-}
+#main-menu {
+  .menu-item.open .menu-toggle-btn {
+    background: #000;
+    color: #fff;
+    font-weight: normal;
 
-#main-menu .hamburger:not([hidden]) ~ .nav-main {
-  @media screen and (max-width: $tab) {
-    display: none;
+    &:hover {
+      background: $brand-secondary;
+    }
   }
-}
 
-#main-menu .hamburger[aria-expanded="true"] ~ .nav-main {
-  @media screen and (max-width: $tab) {
-    display: flex;
+  .hamburger {
+    @media screen and (max-width: $tab) {
+      display: flex;
+    }
+  }
+
+  .hamburger:not([hidden]) ~ .nav-main {
+    @media screen and (max-width: $tab) {
+      display: none;
+    }
+  }
+
+  .hamburger[aria-expanded="true"] ~ .nav-main {
+    @media screen and (max-width: $tab) {
+      display: flex;
+    }
   }
 }
 

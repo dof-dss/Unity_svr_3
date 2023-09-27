@@ -107,3 +107,7 @@
 #search-facets a.facets-soft-limit-link, #content a.facets-soft-limit-link {
   color: $link;
 }
+
+#content #block-mainpagecontent .list--no-bullet:not(.facet-summary__list) a[href] {
+  padding: 0;
+}

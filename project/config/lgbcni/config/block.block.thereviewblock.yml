@@ -1,0 +1,30 @@
+uuid: 005ceb85-a522-4d57-af37-bc43e8d16de7
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:3d7ff167-29c1-4509-9194-366925853883'
+  module:
+    - block_content
+    - system
+  theme:
+    - lgbcni_theme
+id: thereviewblock
+theme: lgbcni_theme
+region: bottom_widget_1
+weight: 0
+provider: null
+plugin: 'block_content:3d7ff167-29c1-4509-9194-366925853883'
+settings:
+  id: 'block_content:3d7ff167-29c1-4509-9194-366925853883'
+  label: 'The Review'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

@@ -3,7 +3,7 @@ _core:
 langcode: en
 uuid: 75c3f9d4-2a49-4df0-b22d-bdaeee4177fc
 name: 'NICS e-library'
-mail: eddwebdev@finance-ni.gov.uk
+mail: nicslibrary@finance-ni.gov.uk
 slogan: ''
 page:
   403: ''

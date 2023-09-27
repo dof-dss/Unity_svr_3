@@ -21,6 +21,7 @@ dependencies:
     - contextual
     - entityqueue
     - file
+    - file_delete_ui
     - layout_builder
     - media
     - menu_admin_per_menu
@@ -85,6 +86,7 @@ permissions:
   - 'delete any document files'
   - 'delete any document media'
   - 'delete any featured_content content'
+  - 'delete any file'
   - 'delete any file media'
   - 'delete any image files'
   - 'delete any image media'

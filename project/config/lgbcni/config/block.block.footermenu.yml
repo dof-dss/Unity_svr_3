@@ -1,6 +1,6 @@
 uuid: c05b6388-5baf-4692-ab08-7f38fae730bf
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.menu-footer-menu
@@ -11,7 +11,7 @@ dependencies:
 id: footermenu
 theme: lgbcni_theme
 region: footer_first
-weight: 0
+weight: -7
 provider: null
 plugin: 'system_menu_block:menu-footer-menu'
 settings:

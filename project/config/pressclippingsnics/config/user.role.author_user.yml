@@ -8,7 +8,6 @@ dependencies:
     - media.type.file
     - media.type.image
     - media.type.remote_video
-    - node.type.basic_page
     - node.type.press_clippings
     - workflows.workflow.nics_editorial_workflow
   module:
@@ -31,7 +30,6 @@ permissions:
   - 'access toolbar'
   - 'administer main menu items'
   - 'create audio media'
-  - 'create basic_page content'
   - 'create document media'
   - 'create file media'
   - 'create image media'
@@ -39,22 +37,18 @@ permissions:
   - 'create remote_video media'
   - 'create url aliases'
   - 'delete own audio media'
-  - 'delete own basic_page content'
   - 'delete own document media'
   - 'delete own file media'
   - 'delete own image media'
   - 'delete own press_clippings content'
   - 'delete own remote_video media'
-  - 'edit any basic_page content'
   - 'edit any press_clippings content'
   - 'edit own audio media'
-  - 'edit own basic_page content'
   - 'edit own document media'
   - 'edit own file media'
   - 'edit own image media'
   - 'edit own press_clippings content'
   - 'edit own remote_video media'
-  - 'revert basic_page revisions'
   - 'revert press_clippings revisions'
   - 'use moderation sidebar'
   - 'use nics_editorial_workflow transition create_new_draft'
@@ -63,7 +57,6 @@ permissions:
   - 'use nics_editorial_workflow transition submit_for_review'
   - 'view all revisions'
   - 'view any unpublished content'
-  - 'view basic_page revisions'
   - 'view content references'
   - 'view latest version'
   - 'view own unpublished media'

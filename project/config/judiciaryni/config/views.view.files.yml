@@ -448,6 +448,12 @@ display:
           format_plural_string: !!binary MSBwbGFjZQNAY291bnQgcGxhY2Vz
           prefix: ''
           suffix: ''
+        operations:
+          id: operations
+          table: file_managed
+          field: operations
+          entity_type: file
+          plugin_id: entity_operations
       pager:
         type: mini
         options:

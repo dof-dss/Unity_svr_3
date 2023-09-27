@@ -3,9 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - node.type.basic_page
     - node.type.press_clippings
-    - node.type.webform
   module:
     - content_moderation
 _core:
@@ -95,7 +93,5 @@ type_settings:
       weight: -2
   entity_types:
     node:
-      - basic_page
       - press_clippings
-      - webform
   default_moderation_state: draft

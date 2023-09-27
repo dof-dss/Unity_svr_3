@@ -1,0 +1,53 @@
+uuid: 7ceddce3-0b50-49c4-ad02-3be705673543
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.faq
+    - node.type.news
+  module:
+    - node
+    - path
+    - pathauto
+    - system
+_core:
+  default_config_hash: zLyQwFO06-pj9Gj5UZMWuk_aAuAOSC8YqFEHItUk-Tc
+id: authenticated
+label: 'authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access administration menu'
+  - 'access administration pages'
+  - 'access content'
+  - 'access media browser'
+  - 'access workbench'
+  - 'create faq content'
+  - 'create news content'
+  - 'create page content'
+  - 'create staff_member content'
+  - 'create url aliases'
+  - 'delete own faq content'
+  - 'delete own news content'
+  - 'delete own page content'
+  - 'delete own staff_member content'
+  - 'diff view changes'
+  - 'edit any faq content'
+  - 'edit any news content'
+  - 'edit any page content'
+  - 'edit any staff_member content'
+  - 'edit own faq content'
+  - 'edit own news content'
+  - 'edit own page content'
+  - 'edit own staff_member content'
+  - 'notify of path changes'
+  - 'revert revisions'
+  - 'use media wysiwyg'
+  - 'use text format filtered_html'
+  - 'use text format filtered_html_with_no_images'
+  - 'view files'
+  - 'view moderation history'
+  - 'view moderation messages'
+  - 'view own unpublished content'
+  - 'view revisions'
+  - 'view the administration theme'

@@ -1,0 +1,24 @@
+uuid: c9479e36-87a3-44d4-a5d8-0e297f76a359
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - nibureau_theme
+id: pagetitle
+theme: nibureau_theme
+region: content
+weight: -2
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "<front>\r\n/search"

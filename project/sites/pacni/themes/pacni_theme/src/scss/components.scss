@@ -9,8 +9,16 @@
   background: resolve('header_bg.jpg') no-repeat top right;
   margin: .5rem auto .1rem;
 
-  @media screen and (max-width: $tab) {
+  @media screen and (max-width: 890px) {
     background: none;
+  }
+}
+
+.top_left {
+  min-height: 14.5rem;
+
+  #logo img {
+    height: 120px;
   }
 }
 
@@ -32,8 +40,34 @@
   }
 }
 
-.region-slideshow {
-  height: 250px;
+.sidebar-second-layout {
+  .rel-menu--latest-news {
+    margin-bottom: 2rem;
+
+    ul {
+      margin-bottom: 1rem;
+
+      li {
+        padding: 0 0 .6rem 1rem;
+        list-style: none;
+        margin: 0 0 .2rem;
+        position: relative;
+
+        &::before {
+          content: "-";
+          left: 0;
+          position: absolute;
+          top: 0;
+        }
+
+        .date-published {
+          display: block;
+          font-size: 1.4rem;
+          line-height: 1.8rem;
+        }
+      }
+    }
+  }
 }
 
 .views-field-field-photo .field-content .media-image img {
@@ -46,9 +80,12 @@
   background: $brand-tertiary;
   width: 35.5rem;
   margin-top: .1rem;
-  padding-left: .8rem;
 
-  @media screen and (max-width: $tab) {
+  @media screen and (min-width: 990px) {
+    padding: 2rem 3rem;
+  }
+
+  @media screen and (max-width: 990px) {
     position: relative;
     width: 100%;
     margin-top: 0;
@@ -56,24 +93,24 @@
 
   .content {
 
-    @media screen and (max-width: $tab) {
+    @media screen and (max-width: 990px) {
       padding: 1rem;
     }
 
     div {
 
       h2 {
-        color: #fff;
-        font-size: 1.8rem;
+        color: $white;
+        @include adjust-font-size-to(20px);
         margin: 0;
       }
 
       p {
-        color: #fff;
+        color: $white;
       }
 
       a.btn {
-        padding: 0 .6rem;
+        padding: .4rem 1.6rem;
       }
     }
   }
@@ -189,10 +226,10 @@
 }
 
 .region-bottom-widget-5 {
-  padding: 1rem 2rem;
+  padding: 0 2rem 1rem 2rem;
 
   h2 {
-    margin: 1.5rem 0 1.8rem;
+    margin: 0 0 2.6rem 0;
   }
 
   .item-list ul li .date-published {

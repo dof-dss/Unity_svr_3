@@ -1,0 +1,15 @@
+uuid: dd4aa450-5cd1-464f-9151-e165dfc29d2c
+langcode: en
+status: true
+dependencies: {  }
+id: hosted
+label: hosted
+description: ''
+weight: 0
+folder: ../project/config/nibureau/hosted
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true

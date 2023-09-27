@@ -1,0 +1,11 @@
+uuid: 9521fbf4-2142-42c5-bc8b-df5ebdda0df4
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.manager
+id: node.manager
+target_entity_type_id: node
+target_bundle: manager
+default_langcode: site_default
+language_alterable: false

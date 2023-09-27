@@ -323,7 +323,7 @@ display:
             field_link_url: '0'
             field_teaser: '0'
             field_photo: '0'
-          optionset: default
+          optionset: sem
           class: ''
           id: ''
           image: ''
@@ -334,7 +334,7 @@ display:
           layout: ''
           cache: 0
           current_view_mode: slideshow
-          skin: ''
+          skin: default
           style: ''
           grid: null
           grid_medium: null

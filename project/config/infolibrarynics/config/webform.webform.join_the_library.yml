@@ -56,10 +56,6 @@ elements: |-
       '#title': 'Mobile telephone'
       '#placeholder': 'Please enter your mobile telephone number'
       '#pattern': '^[0-9\(\) \+\-]{6,20}$'
-    fax_number:
-      '#type': textfield
-      '#title': 'Fax number'
-      '#placeholder': 'Please enter your fax number'
     email_address:
       '#type': email
       '#title': 'Email address'

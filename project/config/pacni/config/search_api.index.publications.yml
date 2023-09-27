@@ -16,6 +16,7 @@ third_party_settings:
     finalize: false
     commit_before_finalize: false
     commit_after_finalize: false
+    debug_finalize: false
     highlighter:
       maxAnalyzedChars: 51200
       fragmenter: gap
@@ -52,11 +53,10 @@ third_party_settings:
     multilingual:
       limit_to_content_language: false
       include_language_independent: true
-      use_language_undefined_as_fallback_language: false
       specific_languages:
         en: '0'
+      use_language_undefined_as_fallback_language: false
       use_universal_collation: false
-    debug_finalize: false
 id: publications
 name: Publications
 description: ''

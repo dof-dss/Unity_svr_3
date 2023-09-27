@@ -19,11 +19,6 @@ targetEntityType: node
 bundle: featured_list
 mode: diff
 content:
-  content_moderation_control:
-    settings: {  }
-    third_party_settings: {  }
-    weight: -20
-    region: content
   field_link:
     type: link
     label: hidden
@@ -37,6 +32,7 @@ content:
     weight: 0
     region: content
 hidden:
+  content_moderation_control: true
   langcode: true
   links: true
   search_api_excerpt: true

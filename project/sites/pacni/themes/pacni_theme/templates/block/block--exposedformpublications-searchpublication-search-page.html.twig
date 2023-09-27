@@ -1,0 +1,28 @@
+{#
+/**
+* @file
+* Block template for exposed filter forms attached to search pages.
+ * The following is controlled through the uregni_theme.theme variables.
+ * - search_page_name: Returns the name of the search page based on its plugin id.
+#}
+{% set classes = [
+  'block',
+  'block-' ~ configuration.provider|clean_class,
+  'block-' ~ plugin_id|clean_class,
+] %}
+
+
+<div{{ attributes.addClass(classes) }}>
+  <p>{{ 'Search Publications and choose filters to show only the results you want. To search for an appeal, please use our '|t }}
+    <a href="https://search.pacni.gov.uk/Appeals">Search appeals page</a></p>
+  {% block content %}
+    {% if content_attributes is not empty %}
+      <div{{ content_attributes }}>
+        {{ content }}
+      </div>
+    {% else %}
+      {{ content }}
+    {% endif %}
+  {% endblock %}
+</div>
+<h2 class="visually-hidden">Filter search results</h2>

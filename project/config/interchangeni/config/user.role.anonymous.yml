@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
+    - eu_cookie_compliance
     - media
     - system
 _core:
@@ -14,6 +15,7 @@ is_admin: false
 permissions:
   - 'access content'
   - 'diff view changes'
+  - 'display eu cookie compliance popup'
   - 'download any document files'
   - 'view files'
   - 'view media'

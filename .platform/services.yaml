@@ -20,6 +20,7 @@ db:
             - parolecomnidb
             - lgbcnidb
             - semcommitteedb
+            - nibureaudb
         endpoints:
             pacni:
                 default_schema: pacnidb
@@ -61,6 +62,10 @@ db:
                 default_schema: semcommitteedb
                 privileges:
                     semcommitteedb: admin
+            nibureau:
+                default_schema: nibureaudb
+                privileges:
+                    nibureaudb: admin
 solr:
     type: 'solr:7.7'
     disk: 1024
@@ -84,6 +89,8 @@ solr:
                 conf_dir: !archive solr_config/
             semcommittee_index:
                 conf_dir: !archive solr_config/
+            nibureau_index:
+                conf_dir: !archive solr_config/
         endpoints:
             pacni:
                 core: pacni_index
@@ -103,5 +110,7 @@ solr:
                 core: lgbcni_index
             semcommittee:
                 core: semcommittee_index
+            nibureau:
+                core: nibureau_index
 redis:
     type: 'redis:6.0'

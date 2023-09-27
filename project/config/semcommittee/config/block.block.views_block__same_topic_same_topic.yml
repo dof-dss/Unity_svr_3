@@ -1,0 +1,32 @@
+uuid: 989809ad-57a8-4643-94f2-faec5b1e8bac
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.same_topic
+  module:
+    - node
+    - views
+  theme:
+    - semcommittee_theme
+id: views_block__same_topic_same_topic
+theme: semcommittee_theme
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:same_topic-same_topic'
+settings:
+  id: 'views_block:same_topic-same_topic'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      basic_page: basic_page

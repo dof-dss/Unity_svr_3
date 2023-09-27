@@ -1,0 +1,29 @@
+uuid: bb768666-69ca-4ba8-bfa5-acb8cff768a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.publication_topics
+  module:
+    - facets
+    - system
+  theme:
+    - semcommittee_theme
+id: publicationtopics
+theme: semcommittee_theme
+region: search_facets
+weight: -6
+provider: null
+plugin: 'facet_block:publication_topics'
+settings:
+  id: 'facet_block:publication_topics'
+  label: Topics
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: publicationtopics
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/publications\r\n/publications/date/*\r\n/publications/type/*\r\n/publications/topic/*"

@@ -9,7 +9,7 @@ dependencies:
 id: industrialcourt
 label: industrialcourt
 weight: 0
-container_id: GTM-XXXXX
+container_id: GTM-NLS8Q6N
 data_layer: dataLayer
 include_classes: false
 whitelist_classes: |-

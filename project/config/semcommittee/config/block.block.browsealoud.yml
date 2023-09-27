@@ -1,0 +1,25 @@
+uuid: 1bc137a7-8476-4c6b-8f4a-8851ac14a9c3
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:005ccd62-24dd-4164-affa-67cd9e70aa57'
+  module:
+    - block_content
+  theme:
+    - semcommittee_theme
+id: browsealoud
+theme: semcommittee_theme
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:005ccd62-24dd-4164-affa-67cd9e70aa57'
+settings:
+  id: 'block_content:005ccd62-24dd-4164-affa-67cd9e70aa57'
+  label: BrowseAloud
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

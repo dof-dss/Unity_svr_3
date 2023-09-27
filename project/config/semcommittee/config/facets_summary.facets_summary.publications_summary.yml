@@ -29,3 +29,9 @@ facets:
     separator: ', '
     show_count: false
     weight: 0
+  publication_topics:
+    checked: true
+    label: 'Publication Topics'
+    separator: ', '
+    show_count: false
+    weight: 0

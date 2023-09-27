@@ -1,0 +1,30 @@
+uuid: dad3d83c-bf4a-4a90-ba2b-abccdb37b283
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:153072bb-13c9-4d0b-bbab-444b8b81fe0f'
+  module:
+    - block_content
+    - system
+  theme:
+    - lgbcni_theme
+id: aboutusblock
+theme: lgbcni_theme
+region: bottom_widget_3
+weight: 0
+provider: null
+plugin: 'block_content:153072bb-13c9-4d0b-bbab-444b8b81fe0f'
+settings:
+  id: 'block_content:153072bb-13c9-4d0b-bbab-444b8b81fe0f'
+  label: 'About us'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

@@ -11,6 +11,9 @@ report-only:
         - 'https://www.google-analytics.com'
         - 'https://region1.google-analytics.com'
         - 'https://*.twitter.com'
+        - 'https://wiki-summarizer-eu.texthelp.com'
+        - 'https://browsealoud-webservices-8.texthelp.com'
+        - 'https://browsealoud-webservices-eu.texthelp.com'
     font-src:
       base: self
       sources:
@@ -38,6 +41,8 @@ report-only:
         - 'https://maps.googleapis.com'
         - 'data:'
         - 'https://*.twitter.com'
+        - 'https://browsealoud-webservices-8.texthelp.com'
+        - 'https://browsealoud-webservices-eu.texthelp.com'
     manifest-src:
       base: self
     script-src:

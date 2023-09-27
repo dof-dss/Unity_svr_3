@@ -1,5 +1,5 @@
 <?php
-
+use Drupal\Core\Database\Database;
 /**
  * @file
  * Contains pressclippingsnics_clippingtidy.module.
@@ -30,8 +30,21 @@ function pressclippingsnics_clippingtidy_cron() {
           'Archiving press clipping @nid',
           ['@nid' => $pressclipping->get('nid')->getString()]
         );
+
+        $fid = $pressclipping->get('field_attachment')->getValue()[0]['target_id'];
+
         $pressclipping->moderation_state->value = 'archived';
         $pressclipping->save();
+
+        $connection = Database::getConnection();
+        $connection->update('file_managed')
+          ->fields(['status' => 0])
+          ->condition('fid', $fid)
+          ->execute();
+
+        $connection->delete('file_usage')
+          ->condition('fid', $fid)
+          ->execute();
       }
     }
   }

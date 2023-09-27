@@ -4,3 +4,266 @@
  */
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
+
+#header {
+  .top_left {
+    .region-header {
+      @media screen and (max-width: 766px) {
+        flex: 1;
+      }
+
+      @media screen and (max-width: $mob) {
+        flex: 0;
+      }
+
+      @media screen and (max-width: $mob) {
+        margin-right: 7rem;
+      }
+    }
+
+    #logo {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      bottom: 0;
+
+      @media screen and (max-width: $phab) {
+        padding: 0;
+      }
+    }
+    @media screen and (max-width: $tab) {
+      display: flex;
+    }
+  }
+
+  .header_slogan {
+    @media screen and (max-width: $phab) {
+      font-size: 1.2rem;
+      margin-left: 2rem;
+    }
+
+    @media screen and (max-width: 766px) {
+      display: flex;
+      line-height: 2;
+      flex: 7;
+    }
+
+    @media screen and (max-width: $mob) {
+      margin-left: 0;
+    }
+
+    p {
+      margin: 0;
+      padding: 0 1rem;
+      border-right: 2px solid $brand-primary;
+
+      @media screen and (max-width: $phab) {
+        padding: .7rem;
+      }
+    }
+
+    p:last-child {
+      border-right: none;
+    }
+  }
+
+  @media screen and (min-width: $tab) {
+    display: flex;
+
+    .top_left {
+      display: flex;
+      flex: 2;
+
+      .region-header {
+        flex: .3;
+      }
+
+      .header_slogan {
+        display: flex;
+        flex: 2;
+
+        @media screen and (max-width: $phab) {
+          font-size: 1.2rem;
+          margin-left: 2rem;
+        }
+
+        @media screen and (max-width: 766px) {
+          display: flex;
+          line-height: 2;
+        }
+
+        @media screen and (max-width: $mob) {
+          margin-left: 0;
+        }
+
+        p {
+          margin: 0;
+          padding: 0 1rem;
+          border-right: 2px solid $brand-primary;
+
+          @media screen and (max-width: $phab) {
+            padding: .7rem;
+          }
+        }
+
+        p:last-child {
+          border: none;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 766px) {
+    display: grid;
+  }
+}
+
+#headerHero {
+  flex: 1;
+
+  @media screen and (max-width: 766px) {
+    background-color: #333;
+  }
+}
+
+.menu_wrapper {
+  @media screen and (min-width: 767px) {
+    border: 1px solid #333;
+  }
+}
+
+#main-menu {
+  background: $white;
+
+  li {
+    @media screen and (min-width: $tab) {
+      border-right: 1px solid #fff;
+    }
+  }
+
+  .menu-link,
+  .menu .active,
+  .menu-item.open .menu-toggle-btn {
+    color: #333;
+    @include adjust-font-size-to(16px);
+  }
+
+  .menu .menu-item .active {
+    border-bottom-color: $brand-primary;
+    background: #333;
+    color: #fff;
+  }
+
+  .menu-link {
+    border-bottom: 5px solid transparent;
+    &:hover,
+    &:focus {
+      background: #333;
+      color: $white;
+      border-bottom-color: $brand-primary;
+    }
+  }
+
+  .menu-main_sub .menu-item span.active {
+    @include adjust-font-size-to(14px);
+    border-bottom-color: $brand-secondary;
+    padding: 1rem;
+  }
+
+  .menu-main_sub {
+    .menu-item {
+      background: #333;
+
+      .active {
+        background: $brand-secondary;
+        color: $white;
+      }
+
+      a {
+        &:hover,
+        &:focus {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.region-slideshow {
+  background: resolve('lgbc-bkgd.png') no-repeat 50%;
+  height: 30rem;
+
+  blockquote {
+    @include adjust-font-size-to(30px);
+    font-weight: bold;
+    max-width: 60%;
+    @media screen and (max-width: $tab) {
+      @include adjust-font-size-to(26px);
+    }
+    @media screen and (max-width: $mob) {
+      @include adjust-font-size-to(22px);
+    }
+
+    h2 {
+      color: $white;
+      margin: 5rem;
+    }
+
+    &::before,
+    &::after {
+      background: none;
+      padding: 0;
+    }
+  }
+}
+
+#bottom_wrapper {
+  @media screen and (max-width: $tab) {
+    padding: 0 1rem;
+  }
+}
+
+.bottom_widget .footer-area .column {
+  @media screen and (max-width: $tab) {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.region-bottom-widget-2 .content {
+  p {
+    margin-bottom: 0;
+  }
+
+  .more-link {
+    margin-top: 4.4rem;
+  }
+}
+
+.footer-area {
+  .column {
+    width: 100%;
+  }
+
+  .column:last-child {
+    float: left;
+  }
+}
+
+.region-footer-first {
+  .menu_wrapper {
+    border: none;
+  }
+
+  #main-menu {
+    background: $footer-background;
+  }
+}
+
+#footer .column li {
+  border-bottom-style: none;
+  display: inline-block;
+  padding: 0 .8rem 0 0;
+  border: none;
+  color: #fff;
+}

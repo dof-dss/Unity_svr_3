@@ -1,0 +1,25 @@
+uuid: 0858cf4c-61b3-46fe-b222-2e700c884e0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-footer-links
+  module:
+    - system
+  theme:
+    - lgbcni_theme
+id: footerlinks
+theme: lgbcni_theme
+region: footer_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:menu-footer-links'
+settings:
+  id: 'system_menu_block:menu-footer-links'
+  label: 'Footer links'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

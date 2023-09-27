@@ -19,7 +19,9 @@ dependencies:
   module:
     - content_moderation
     - contextual
+    - entityqueue
     - file
+    - file_delete_ui
     - layout_builder
     - media
     - menu_admin_per_menu
@@ -42,6 +44,7 @@ permissions:
   - 'access administration menu'
   - 'access administration pages'
   - 'access ckeditor link'
+  - 'access content overview'
   - 'access contextual links'
   - 'access files overview'
   - 'access toolbar'
@@ -84,6 +87,7 @@ permissions:
   - 'delete any document media'
   - 'delete any feature content'
   - 'delete any featured_list content'
+  - 'delete any file'
   - 'delete any file media'
   - 'delete any image files'
   - 'delete any image media'
@@ -159,6 +163,8 @@ permissions:
   - 'edit own remote_video media'
   - 'edit own video files'
   - 'flag content_audit'
+  - 'manipulate all entityqueues'
+  - 'manipulate entityqueues'
   - 'moderate content from draft to needs_review'
   - 'moderate content from needs_review to draft'
   - 'moderate content from needs_review to published'

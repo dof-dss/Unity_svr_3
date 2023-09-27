@@ -9,7 +9,6 @@ dependencies:
     - media.type.image
     - media.type.remote_video
     - node.type.basic_page
-    - node.type.book
     - node.type.faq
     - node.type.publication
     - node.type.terms
@@ -18,8 +17,8 @@ dependencies:
     - book
     - content_moderation
     - contextual
-    - entity_browser
     - file
+    - file_delete_ui
     - media
     - menu_admin_per_menu
     - moderation_sidebar
@@ -54,14 +53,12 @@ permissions:
   - 'add scheduled transitions node publication'
   - 'add scheduled transitions node terms'
   - 'administer book outlines'
-  - 'administer entity browsers'
   - 'administer main menu items'
   - 'administer main-menu menu items'
   - 'administer redirects'
   - 'audit content'
   - 'create audio media'
   - 'create basic_page content'
-  - 'create book content'
   - 'create document media'
   - 'create faq content'
   - 'create file media'
@@ -79,6 +76,7 @@ permissions:
   - 'delete any document files'
   - 'delete any document media'
   - 'delete any faq content'
+  - 'delete any file'
   - 'delete any file media'
   - 'delete any image files'
   - 'delete any image media'

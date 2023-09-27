@@ -133,7 +133,20 @@ display:
       cache:
         type: search_api_tag
         options: {  }
-      empty: {  }
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: true
+          content:
+            value: 'Sorry, no results found.'
+            format: basic_html
+          tokenize: false
       sorts:
         field_published_date:
           id: field_published_date
@@ -159,7 +172,7 @@ display:
           admin_label: ''
           plugin_id: search_api_fulltext
           operator: or
-          value: Keywords
+          value: ''
           group: 1
           exposed: true
           expose:
@@ -250,15 +263,16 @@ display:
       path: publications
       menu:
         type: normal
-        title: Publications
+        title: 'Publications search'
         description: ''
-        weight: -43
+        weight: -50
+        enabled: true
         expanded: false
         menu_name: main
-        parent: ''
+        parent: 'menu_link_content:68835f79-0662-43f0-9d48-e4e679d693b7'
         context: '0'
     cache_metadata:
-      max-age: -1
+      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -266,5 +280,7 @@ display:
         - url.query_args
         - 'user.node_grants:view'
       tags:
+        - 'config:facets.facet.publication_type'
+        - 'config:facets.facet.published_date_publications'
         - 'config:field.storage.node.body'
         - 'config:search_api.index.publications'

@@ -4,3 +4,8 @@ services:
     arguments: [ '@request_stack', '@title_resolver' ]
     tags:
       - { name: breadcrumb_builder, priority: 1011 }
+  infolibrarynics_breadcrumbs.breadcrumb.publications_page:
+    class: Drupal\infolibrarynics_breadcrumbs\PublicationsBreadcrumb
+    arguments: [ '@entity_type.manager', '@title_resolver', '@request_stack' ]
+    tags:
+      - { name: breadcrumb_builder, priority: 1011 }

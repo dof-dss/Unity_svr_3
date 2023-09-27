@@ -1,0 +1,29 @@
+uuid: 3eb3fc65-cfd1-4591-b57e-38211a594ea6
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.publication_date
+  module:
+    - facets
+    - system
+  theme:
+    - lgbcni_theme
+id: publicationdate
+theme: lgbcni_theme
+region: search_facets
+weight: -6
+provider: null
+plugin: 'facet_block:publication_date'
+settings:
+  id: 'facet_block:publication_date'
+  label: Date
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: publicationdate
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/news\r\n/news/date/*"

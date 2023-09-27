@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: IqFDJOUXgoqYSm39bzsb0BVMDSkw3b4-KD4YSUgMw7U
+name: 'Northern Ireland Bureau'
+mail: test@test.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+uuid: f4aca5e2-7993-4db4-812b-244015902258
+frontpage_title: 'Welcome to Drupal site'

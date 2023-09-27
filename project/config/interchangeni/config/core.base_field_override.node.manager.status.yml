@@ -1,0 +1,22 @@
+uuid: a73330d6-4ce6-4a41-b9d8-f5b1cee035c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.manager
+id: node.manager.status
+field_name: status
+entity_type: node
+bundle: manager
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
