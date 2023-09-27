@@ -39,9 +39,11 @@ content:
     weight: 3
     region: content
   field_publication_type:
-    type: type_formatter
+    type: 'Map taxonomy term to facet'
     label: above
-    settings: {  }
+    settings:
+      search_page_url: publications
+      facets: publication_type
     third_party_settings: {  }
     weight: 1
     region: content

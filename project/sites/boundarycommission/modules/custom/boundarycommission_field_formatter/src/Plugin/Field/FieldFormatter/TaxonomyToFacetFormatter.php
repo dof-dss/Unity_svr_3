@@ -26,7 +26,7 @@ class TaxonomyToFacetFormatter extends FormatterBase {
   public static function defaultSettings() {
     return [
         'search_page_url' => '',
-        'search_index' => ''
+        'facets' => ''
       ] + parent::defaultSettings();
   }
 
@@ -54,12 +54,12 @@ class TaxonomyToFacetFormatter extends FormatterBase {
       '#description' => $this->t('Add the url ending of the search page. e.g. If the the search page is http://www.test.co.uk/search-page then simply enter search-page.'),
       '#required' => TRUE,
     ];
-    $elements['search_index'] = [
+    $elements['facets'] = [
       '#type' => 'select',
       '#title' => t('Related facet'),
       '#description' => t('The facet you want to link this term to.'),
       '#options' => $active_facets,
-      "#default_value" => $this->getSetting('search_index'),
+      "#default_value" => $this->getSetting('facets'),
       '#required' => TRUE,
     ];
     return $elements;
@@ -70,8 +70,8 @@ class TaxonomyToFacetFormatter extends FormatterBase {
    */
   public function settingsSummary() {
     $summary = [];
-    $summary[] = $this->t('Facet: @search_page_url', ['@search_page_url' => $this->getSetting('search_page_url')]);
-    $summary[] = $this->t('Search page URL: @search_index', ['@search_index' => $this->getSetting('search_index')]);
+    $summary[] = $this->t('Search page URL ending: @search_page_url', ['@search_page_url' => $this->getSetting('search_page_url')]);
+    $summary[] = $this->t('Facet: @facets', ['@facets' => $this->getSetting('facets')]);
     return $summary;
   }
 
@@ -82,7 +82,7 @@ class TaxonomyToFacetFormatter extends FormatterBase {
     $element = [];
     $settings = $this->getSettings();
 
-    $facet = Facet::load($settings['search_index']);
+    $facet = Facet::load($settings['facets']);
     $facet_pretty_path_url = $facet->get('url_alias');
 
     $element['search_page_url'] = $settings['search_page_url'];
