@@ -42,10 +42,13 @@ class TaxonomyToFacetFormatter extends FormatterBase {
     /** @var \Drupal\facets\FacetManager\DefaultFacetManager $facet_manager */
     $facet_manager = \Drupal::service('facets.manager');
 
+    // Get all the enabled facets.
     $facets = $facet_manager->getEnabledFacets();
-    $active_facets = [];
-    foreach ($facets as $facet => $info) {
-      $active_facets[$facet] .= $info->id();
+
+    // Store the facet names for use in the form.
+    $active_facet_names = [];
+    foreach ($facets as $facet_name => $info) {
+      $active_facet_names[$facet_name] .= $info->get('name');
     }
     $elements['search_page_url'] = [
       '#title' => $this->t('Search page URL ending'),
@@ -58,7 +61,7 @@ class TaxonomyToFacetFormatter extends FormatterBase {
       '#type' => 'select',
       '#title' => t('Related facet'),
       '#description' => t('The facet you want to link this term to.'),
-      '#options' => $active_facets,
+      '#options' => $active_facet_names,
       "#default_value" => $this->getSetting('facets'),
       '#required' => TRUE,
     ];
@@ -82,10 +85,9 @@ class TaxonomyToFacetFormatter extends FormatterBase {
     $element = [];
     $settings = $this->getSettings();
 
+    // Load the facet and get the URL alias.
     $facet = Facet::load($settings['facets']);
     $facet_pretty_path_url = $facet->get('url_alias');
-
-    $element['search_page_url'] = $settings['search_page_url'];
 
     foreach ($items as $delta => $item) {
       // Get the taxonomy tid for this field.
@@ -95,8 +97,8 @@ class TaxonomyToFacetFormatter extends FormatterBase {
         $term = \Drupal::entityTypeManager()
           ->getStorage('taxonomy_term')
           ->load($tid);
-        // Build the link to return to the consultations page with this term selected.
-        $element[$delta] = ['#markup' => '<a href="/' . $element['search_page_url'] . '/' . $facet_pretty_path_url . '/' . $tid . '">' . $term->label() . '</a>'];
+        // Build the link to return to the search page with this term selected.
+        $element[$delta] = ['#markup' => '<a href="/' . $settings['search_page_url'] . '/' . $facet_pretty_path_url . '/' . $tid . '">' . $term->label() . '</a>'];
       }
     }
 
