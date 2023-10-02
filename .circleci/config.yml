@@ -349,7 +349,7 @@ workflows:
           filters:
             branches:
               only:
-                - development
+                - 9.x-dev
     jobs:
       - edge_build
 
