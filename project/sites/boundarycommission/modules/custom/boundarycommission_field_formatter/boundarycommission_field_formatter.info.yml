@@ -1,5 +1,0 @@
-name: 'Boundary Commission field formatter'
-type: module
-description: 'Publication consultation field formatter'
-core_version_requirement: 8.x || ^9 || ^10
-package: 'custom'
