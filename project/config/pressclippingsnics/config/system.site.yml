@@ -3,7 +3,7 @@ _core:
 langcode: en
 uuid: 78765322-fa2b-444f-90d6-0510cccb5ffc
 name: 'Press Clippings Service'
-mail: Test@test.com
+mail: cutsteam@finance-ni.gov.uk
 slogan: ''
 page:
   403: /user/login

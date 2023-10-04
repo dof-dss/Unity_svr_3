@@ -4,3 +4,23 @@
  */
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
+
+.top_left {
+  padding-left: 19rem;
+  min-height: 18rem;
+  @media screen and (max-width: $tab) {
+    padding-left: 0;
+  }
+
+  #logo img {
+    height: 17rem;
+    @media screen and (max-width: $tab) {
+      position: relative;
+    }
+  }
+}
+
+#main-menu .menu .menu-item .active,
+#main-menu .menu .menu-item .active + .menu-main_sub .title a {
+  border-bottom-color: $brand-secondary;
+}
