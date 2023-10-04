@@ -1,4 +1,4 @@
-uuid: c3b7edd6-fe2f-4b3c-ac64-ca9a5f752b21
+uuid: 5d84770b-28db-4643-a921-dc3f74b8369b
 langcode: en
 status: true
 dependencies:
@@ -11,12 +11,10 @@ dependencies:
     - field.field.node.publication.field_published_date
     - node.type.publication
   module:
-    - boundarycommission_field_formatter
     - datetime
     - text
+    - unity_common
     - user
-_core:
-  default_config_hash: dGe_U65t-a-PtVI1RO755kulh2XfPgvblOXVKquzmyU
 id: node.publication.default
 targetEntityType: node
 bundle: publication
@@ -24,7 +22,7 @@ mode: default
 content:
   body:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 2

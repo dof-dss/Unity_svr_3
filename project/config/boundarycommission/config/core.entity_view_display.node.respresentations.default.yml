@@ -1,4 +1,4 @@
-uuid: 1ed22e1a-2022-46d8-96c7-f394a6fee730
+uuid: 5b77d01f-d333-4af8-bb40-da5795fd8e2f
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ dependencies:
     - field.field.node.respresentations.field_response_type
     - node.type.respresentations
   module:
-    - boundarycommission_field_formatter
+    - unity_common
     - user
 id: node.respresentations.default
 targetEntityType: node

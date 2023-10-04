@@ -1,4 +1,4 @@
-uuid: 4086b1ca-b7c6-467e-86e1-6d29c0833c6a
+uuid: 385acab1-fcb2-4e94-9b12-32b8fd0ebc80
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ dependencies:
     - field.field.node.consultation_response.field_response_type
     - node.type.consultation_response
   module:
-    - boundarycommission_field_formatter
+    - unity_common
     - user
 id: node.consultation_response.default
 targetEntityType: node
@@ -27,7 +27,7 @@ content:
     region: content
   field_consultation_stage:
     type: 'Map taxonomy term to facet'
-    label: inline
+    label: above
     settings:
       search_page_url: representations-received
       facets: stage
@@ -36,7 +36,7 @@ content:
     region: content
   field_response_type:
     type: 'Map taxonomy term to facet'
-    label: inline
+    label: above
     settings:
       search_page_url: representations-received
       facets: response_type
