@@ -325,4 +325,4 @@ workflows:
       - edge_build
       - sync_data:
           requires:
-            - edge_build 
+            - edge_build
