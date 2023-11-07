@@ -13,6 +13,7 @@ dependencies:
   module:
     - datetime
     - text
+    - unity_common
     - user
 _core:
   default_config_hash: dGe_U65t-a-PtVI1RO755kulh2XfPgvblOXVKquzmyU
@@ -38,10 +39,11 @@ content:
     weight: 3
     region: content
   field_publication_type:
-    type: entity_reference_label
+    type: 'Map taxonomy term to facet'
     label: above
     settings:
-      link: true
+      search_page_url: publications
+      facets: publication_type
     third_party_settings: {  }
     weight: 1
     region: content

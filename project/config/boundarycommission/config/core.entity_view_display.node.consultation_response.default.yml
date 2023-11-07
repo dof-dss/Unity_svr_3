@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.consultation_response.field_response_type
     - node.type.consultation_response
   module:
+    - unity_common
     - user
 id: node.consultation_response.default
 targetEntityType: node
@@ -25,18 +26,20 @@ content:
     weight: 2
     region: content
   field_consultation_stage:
-    type: entity_reference_label
+    type: 'Map taxonomy term to facet'
     label: inline
     settings:
-      link: true
+      search_page_url: representations-received
+      facets: stage
     third_party_settings: {  }
     weight: 0
     region: content
   field_response_type:
-    type: entity_reference_label
+    type: 'Map taxonomy term to facet'
     label: inline
     settings:
-      link: true
+      search_page_url: representations-received
+      facets: response_type
     third_party_settings: {  }
     weight: 1
     region: content
