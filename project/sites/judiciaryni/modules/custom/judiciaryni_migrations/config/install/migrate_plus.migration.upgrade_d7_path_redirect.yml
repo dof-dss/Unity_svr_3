@@ -24,7 +24,7 @@ process:
       source: uid
   redirect_source/path:
     -
-      plugin: get
+      plugin: check_alias
       source: source
   redirect_source/query:
     -
