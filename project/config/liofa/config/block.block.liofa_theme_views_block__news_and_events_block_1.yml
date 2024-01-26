@@ -1,0 +1,29 @@
+uuid: e1a74dbd-6c10-4e4d-a42c-f843801fa1d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.news_and_events
+  module:
+    - system
+    - views
+  theme:
+    - liofa_theme
+id: liofa_theme_views_block__news_and_events_block_1
+theme: liofa_theme
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:news_and_events-block_1'
+settings:
+  id: 'views_block:news_and_events-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
