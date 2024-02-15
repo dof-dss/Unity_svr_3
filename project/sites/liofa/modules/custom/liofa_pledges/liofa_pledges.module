@@ -6,15 +6,19 @@ use Drupal\webform\WebformSubmissionInterface;
  * Implements hook_ENTITY_TYPE_insert() for webform_submission entities.
  */
 function liofa_pledges_webform_submission_insert(WebformSubmissionInterface $webform_submission) {
-  $config = \Drupal::configFactory()
-    ->getEditable('online_pledge_count.countsettings');
+  object_log('Webdform_submission', $webform_submission);
+  if ($webform_submission->getWebform()->id() == 'sign_up') {
+    \Drupal::logger('liofa_pledges')->notice("id is " . $webform_id);
+    $config = \Drupal::configFactory()
+      ->getEditable('online_pledge_count.countsettings');
 
-  $onsite_pledges = intval($config->get('pledge_count_submissions'));
-  $onsite_pledges++;
+    $onsite_pledges = intval($config->get('pledge_count_submissions'));
+    $onsite_pledges++;
 
-  $config
-    ->set('pledge_count_submissions', $onsite_pledges)
-    ->save();
+    $config
+      ->set('pledge_count_submissions', $onsite_pledges)
+      ->save();
+  }
 }
 
 
