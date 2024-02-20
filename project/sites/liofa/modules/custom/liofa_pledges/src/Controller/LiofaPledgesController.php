@@ -31,15 +31,20 @@ class LiofaPledgesController extends ControllerBase {
     if (!empty($result) && is_array($result)) {
       $bulk_pledge_count = $result[0]['field_bulk_number_sum'];
     }
-    object_log('totals', $result);
-
+    // Get pledge count offset.
+    $pledge_count_offset = intval($config->get('pledge_count_offset'));
+    if (empty($pledge_count_offset)) {
+      $pledge_count_offset = 0;
+    }
+    // Calculate total.
+    $total = $onsite_pledges + $bulk_pledge_count + $pledge_count_offset;
     $table_html = '<table id="pledges-table" class="sticky-enabled tableheader-processed sticky-table">
             <thead><tr><th>Component</th><th class="right">Value</th> </tr></thead>
             <tbody>
              <tr class="odd"><td>Pledges submitted online</td><td class="right">' . $onsite_pledges . '</td> </tr>
              <tr class="even"><td>Bulk pledges</td><td class="right">' . $bulk_pledge_count . '</td> </tr>
-             <tr class="odd"><td>Pledge count offset</td><td class="right">1,000</td> </tr>
-             <tr class="even"><td class="total">Total</td><td class="right total">26,258</td> </tr>
+             <tr class="odd"><td>Pledge count offset</td><td class="right">' . $pledge_count_offset . '</td> </tr>
+             <tr class="even"><td class="total">Total</td><td class="right total">' . $total . '</td> </tr>
             </tbody>
       </table>';
     return [
