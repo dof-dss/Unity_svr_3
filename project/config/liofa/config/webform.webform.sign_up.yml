@@ -1,30 +1,27 @@
-uuid: d0dea441-50ef-4e54-b3e0-8168f3f48904
+uuid: ed10eb20-ca4f-4d37-b853-94eb52cea6ac
 langcode: en
 status: open
 dependencies: {  }
 weight: 0
 open: null
 close: null
-uid: 305
+uid: 295
 template: false
 archive: false
-id: sign_up_to_liofa
-title: 'Sign up to Líofa'
-description: ''
+id: sign_up
+title: 'Sign up'
+description: 'Sign up webform'
 categories: {  }
 elements: |-
-  signup_name:
+  name:
     '#type': textfield
     '#title': Name
-    '#required': true
-  signup_email:
+  email_address:
     '#type': email
     '#title': 'Email address'
-    '#required': true
-  signup_postcode:
+  postcode:
     '#type': textfield
     '#title': Postcode
-    '#pattern': '^[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}$'
 css: ''
 javascript: ''
 settings:
@@ -154,7 +151,7 @@ settings:
   entity_limit_user_interval: null
   purge: none
   purge_days: null
-  results_disabled: true
+  results_disabled: false
   results_disabled_ignore: false
   results_customize: false
   token_view: false
@@ -208,42 +205,5 @@ access:
     roles: {  }
     users: {  }
     permissions: {  }
-handlers:
-  email:
-    id: email
-    handler_id: email
-    label: Email
-    notes: ''
-    status: true
-    conditions: {  }
-    weight: 0
-    settings:
-      states:
-        - completed
-      to_mail: _default
-      to_options: {  }
-      bcc_mail: ''
-      bcc_options: {  }
-      cc_mail: ''
-      cc_options: {  }
-      from_mail: _default
-      from_options: {  }
-      from_name: _default
-      reply_to: ''
-      return_path: ''
-      sender_mail: ''
-      sender_name: ''
-      subject: _default
-      body: _default
-      excluded_elements: {  }
-      ignore_access: false
-      exclude_empty: true
-      exclude_empty_checkbox: false
-      exclude_attachments: false
-      html: true
-      attachments: false
-      twig: false
-      theme_name: ''
-      parameters: {  }
-      debug: false
+handlers: {  }
 variants: {  }
