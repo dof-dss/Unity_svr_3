@@ -1,6 +1,6 @@
 liofa_pledges.pledge_count:
   title: 'Pledge count'
-  route_name: liofa_pledges.online_pledge_count
+  route_name: liofa_pledges.liofa_pledges
   description: 'Configure pledge count'
   parent: unity.admin_config
   weight: 99

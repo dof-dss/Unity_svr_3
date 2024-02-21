@@ -1,4 +1,4 @@
-liofa_pledges.online_pledge_count:
+liofa_pledges.liofa_pledges:
   path: '/admin/config/liofa_pledges/pledge_count'
   defaults:
     _form: '\Drupal\liofa_pledges\Form\PledgeCountForm'

@@ -15,7 +15,7 @@ class pledgeCountForm extends ConfigFormBase {
    */
   protected function getEditableConfigNames() {
     return [
-      'online_pledge_count.countsettings',
+      'liofa_pledges.countsettings',
     ];
   }
 
@@ -23,14 +23,14 @@ class pledgeCountForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function getFormId() {
-    return 'online_pledge_count';
+    return 'liofa_pledges';
   }
 
   /**
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('online_pledge_count.countsettings');
+    $config = $this->config('liofa_pledges.countsettings');
 
     $message_online = "For data protection reasons, pledges submitted via the website are deleted after 3 days. The website maintains";
     $message_online .= "<br/>a count of all submitted pledges, deleted and not deleted. On very rare occasions, the count might get out of sync. ";
@@ -82,7 +82,7 @@ class pledgeCountForm extends ConfigFormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     parent::submitForm($form, $form_state);
 
-    $this->config('online_pledge_count.countsettings')
+    $this->config('liofa_pledges.countsettings')
       ->set('pledge_count_submissions', $form_state->getValue('pledge_count_submissions'))
       ->set('pledge_count_offset', $form_state->getValue('pledge_count_offset'))
       ->save();

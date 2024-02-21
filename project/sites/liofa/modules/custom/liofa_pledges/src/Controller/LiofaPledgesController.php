@@ -40,7 +40,7 @@ class LiofaPledgesController extends ControllerBase {
   public function __construct(ConfigFactoryInterface $config_factory, EntityTypeManagerInterface $entity_type_manager) {
     $this->configFactory = $config_factory;
     $this->entityTypeManager = $entity_type_manager;
-    $this->config = $this->configFactory->get('online_pledge_count.countsettings');
+    $this->config = $this->configFactory->get('liofa_pledges.countsettings');
   }
 
   /**
