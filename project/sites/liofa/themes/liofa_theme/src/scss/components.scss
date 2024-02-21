@@ -5,6 +5,11 @@
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
 
+#main-menu .menu .menu-item .active,
+#main-menu .menu .menu-item .active + .menu-main_sub .title a {
+  border-bottom-color: $brand-secondary;
+}
+
 address {
   margin-bottom: 2.4rem;
 }
@@ -214,6 +219,7 @@ article.block-link {
 
 #footer {
   padding: 0;
+  border-top: 9px solid $brand-secondary;
 }
 
 #footer-area {

@@ -532,7 +532,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '{{ field_full_title }} <span>(appointed {{ field_date_appointed }})</span>'
+            text: "{% if field_full_title == 'Vacant' %} \r\n  {{ field_full_title }}\r\n{% else %}\r\n  {{ field_full_title }} <span>(appointed {{ field_date_appointed|spaceless }})</span>\r\n{% endif %}\r\n"
             make_link: false
             path: ''
             absolute: false

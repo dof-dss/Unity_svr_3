@@ -9,7 +9,7 @@ dependencies:
 id: liofa_theme_mainpagecontent
 theme: liofa_theme
 region: content
-weight: -3
+weight: -7
 provider: null
 plugin: system_main_block
 settings:

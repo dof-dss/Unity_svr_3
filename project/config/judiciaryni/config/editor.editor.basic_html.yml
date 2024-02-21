@@ -48,8 +48,11 @@ settings:
     ckeditor5_style:
       styles:
         -
-          label: 'Information notice\r\na.btn'
+          label: 'Information notice'
           element: '<p class="info-notice">'
+        -
+          label: Button
+          element: '<a class="btn">'
     linkit_extension:
       linkit_enabled: true
       linkit_profile: default

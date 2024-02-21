@@ -2,12 +2,14 @@ uuid: 28f6d426-13e2-4a56-93c2-3be139e17fc9
 langcode: en
 status: true
 dependencies:
+  module:
+    - system
   theme:
     - liofa_theme
 id: liofa_theme_pagetitle
 theme: liofa_theme
 region: content
-weight: -4
+weight: -9
 provider: null
 plugin: page_title_block
 settings:
@@ -15,4 +17,8 @@ settings:
   label: 'Page title'
   label_display: '0'
   provider: core
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "<front>\r\n/search\r\n/news\r\n"

@@ -9,7 +9,7 @@ dependencies:
 id: liofa_theme_languageswitcher
 theme: liofa_theme
 region: search
-weight: -1
+weight: -7
 provider: null
 plugin: 'language_block:language_interface'
 settings:

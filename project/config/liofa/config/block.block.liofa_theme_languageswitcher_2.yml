@@ -10,7 +10,7 @@ dependencies:
 id: liofa_theme_languageswitcher_2
 theme: liofa_theme
 region: content
-weight: -2
+weight: -6
 provider: null
 plugin: 'language_block:language_interface'
 settings:

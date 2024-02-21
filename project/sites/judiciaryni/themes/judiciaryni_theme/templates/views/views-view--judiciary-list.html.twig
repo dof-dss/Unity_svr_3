@@ -111,8 +111,7 @@
   {% endif %}
 
   {% if drupal_view_result('judicial_members', 'judiciary_term_id', 25)|length > 0 %}
-    <h3>Legal Member of Appeals Tribunal ({{ drupal_view_result('judicial_members', 'judiciary_term_id', 25)|length }}
-      )</h3>
+    <h3>Legal Member of Appeals Tribunal ({{ drupal_view_result('judicial_members', 'judiciary_term_id', 25)|length }})</h3>
     {{ drupal_view('judicial_members', 'judiciary_term_id', 25) }}
   {% endif %}
 

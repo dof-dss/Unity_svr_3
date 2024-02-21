@@ -1,0 +1,30 @@
+uuid: af2c6cc3-5c9d-47d7-a610-ef4219ced785
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:df89aa81-ffbb-419e-bf1e-282cd99b7c63'
+  module:
+    - block_content
+    - system
+  theme:
+    - liofa_theme
+id: liofa_theme_signuptoliofawebforminformation
+theme: liofa_theme
+region: content
+weight: -8
+provider: null
+plugin: 'block_content:df89aa81-ffbb-419e-bf1e-282cd99b7c63'
+settings:
+  id: 'block_content:df89aa81-ffbb-419e-bf1e-282cd99b7c63'
+  label: 'Sign up to liofa webform information'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /signup
