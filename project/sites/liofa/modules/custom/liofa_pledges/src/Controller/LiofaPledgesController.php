@@ -83,7 +83,6 @@ class LiofaPledgesController extends ControllerBase {
     $this->onsite_pledges = intval($this->config->get('pledge_count_submissions'));
     // Now need to get bulk pledges count.
     $this->bulk_pledge_count = 0;
-    // \Drupal::entityQueryAggregate('node')
     $result = $this->entityTypeManager->getStorage('node')->getAggregateQuery('AND')
       ->accessCheck(FALSE)
       ->aggregate('field_bulk_number', 'sum')
