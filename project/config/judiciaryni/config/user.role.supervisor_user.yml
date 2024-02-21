@@ -18,6 +18,7 @@ dependencies:
     - book
     - content_moderation
     - contextual
+    - entityqueue
     - file
     - media
     - menu_admin_per_menu
@@ -111,6 +112,7 @@ permissions:
   - 'edit own judicial_member content'
   - 'edit own publication content'
   - 'edit own remote_video media'
+  - 'manipulate entityqueues'
   - 'reschedule scheduled transitions node basic_page'
   - 'reschedule scheduled transitions node feature'
   - 'reschedule scheduled transitions node judicial_decision'
@@ -121,6 +123,7 @@ permissions:
   - 'revert judicial_decision revisions'
   - 'revert judicial_member revisions'
   - 'revert publication revisions'
+  - 'update slideshow entityqueue'
   - 'use moderation sidebar'
   - 'use nics_editorial_workflow transition archive'
   - 'use nics_editorial_workflow transition create_new_draft'

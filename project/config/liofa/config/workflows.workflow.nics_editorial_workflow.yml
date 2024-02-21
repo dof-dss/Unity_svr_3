@@ -8,8 +8,6 @@ dependencies:
     - node.type.feature
     - node.type.news
     - node.type.organisation
-    - node.type.phrase_of_the_week
-    - node.type.podcast
     - node.type.webform
   module:
     - content_moderation
@@ -105,7 +103,5 @@ type_settings:
       - feature
       - news
       - organisation
-      - phrase_of_the_week
-      - podcast
       - webform
   default_moderation_state: draft

@@ -12,8 +12,6 @@ dependencies:
     - node.type.bulk_pledges
     - node.type.news
     - node.type.organisation
-    - node.type.phrase_of_the_week
-    - node.type.podcast
     - workflows.workflow.nics_editorial_workflow
   module:
     - content_moderation
@@ -42,8 +40,6 @@ permissions:
   - 'create image media'
   - 'create news content'
   - 'create organisation content'
-  - 'create phrase_of_the_week content'
-  - 'create podcast content'
   - 'create remote_video media'
   - 'delete own audio media'
   - 'delete own basic_page content'
@@ -53,15 +49,11 @@ permissions:
   - 'delete own image media'
   - 'delete own news content'
   - 'delete own organisation content'
-  - 'delete own phrase_of_the_week content'
-  - 'delete own podcast content'
   - 'delete own remote_video media'
   - 'edit any basic_page content'
   - 'edit any bulk_pledges content'
   - 'edit any news content'
   - 'edit any organisation content'
-  - 'edit any phrase_of_the_week content'
-  - 'edit any podcast content'
   - 'edit own audio media'
   - 'edit own basic_page content'
   - 'edit own bulk_pledges content'
@@ -70,15 +62,11 @@ permissions:
   - 'edit own image media'
   - 'edit own news content'
   - 'edit own organisation content'
-  - 'edit own phrase_of_the_week content'
-  - 'edit own podcast content'
   - 'edit own remote_video media'
   - 'revert basic_page revisions'
   - 'revert bulk_pledges revisions'
   - 'revert news revisions'
   - 'revert organisation revisions'
-  - 'revert phrase_of_the_week revisions'
-  - 'revert podcast revisions'
   - 'use moderation sidebar'
   - 'use nics_editorial_workflow transition create_new_draft'
   - 'use nics_editorial_workflow transition draft_of_published'
@@ -91,6 +79,4 @@ permissions:
   - 'view news revisions'
   - 'view organisation revisions'
   - 'view own unpublished media'
-  - 'view phrase_of_the_week revisions'
-  - 'view podcast revisions'
   - 'view the administration theme'

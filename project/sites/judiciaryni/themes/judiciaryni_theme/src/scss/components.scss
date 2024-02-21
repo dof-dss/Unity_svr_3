@@ -67,9 +67,10 @@
 
   .column {
     float: none;
+    flex-basis: 100%;
 
     @include breakpoint($tab) {
-      flex-basis: 30rem;
+      flex-basis: 50rem;
     }
   }
 
@@ -188,4 +189,13 @@ p.published-date {
 
 .salaried-date {
   @include adjust-font-size-to(26px);
+}
+
+.sign-up {
+  background-color: $grey-lightest;
+  padding: 1rem;
+
+  i {
+    padding-right: 1rem;
+  }
 }

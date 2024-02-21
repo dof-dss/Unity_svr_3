@@ -1,6 +1,6 @@
 uuid: ba58d1d9-e6df-45b2-bbf8-1c24ffc46f88
 langcode: en
-status: open
+status: closed
 dependencies:
   enforced:
     module:
@@ -17,7 +17,7 @@ id: contact
 title: Contact
 description: 'Basic email contact webform.'
 categories: {  }
-elements: |
+elements: |-
   name:
     '#title': 'Your Name'
     '#type': textfield

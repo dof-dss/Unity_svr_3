@@ -10,7 +10,7 @@ field_name: field_surname
 entity_type: node
 bundle: judicial_member
 label: 'Surname of Judge'
-description: "Enter the Surname of the Judge. \r\nIf the Judge has the same surname as another member of the Judiciary, you should also include the first letter of their christian name, e.g. E King / P King.\r\nIf the Judge is a county court Judge and they are a QC, you should include the QC after their Surname, e.g. Kerr QC"
+description: "Enter the Surname of the Judge. \r\nIf the Judge has the same surname as another member of the Judiciary, you should also include the first letter of their christian name, e.g. E King / P King.\r\nIf the Judge is a county court Judge and they are a KC, you should include the KC after their Surname, e.g. Kerr KC"
 required: true
 translatable: false
 default_value: {  }

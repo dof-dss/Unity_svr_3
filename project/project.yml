@@ -1,7 +1,7 @@
 project_type: unity
 project_name: 'Unity Svr 3'
 project_id: vnetibjd44moa
-project_disk_size: 25000
+project_disk_size: 30000
 db_disk_size: 14000
 sites:
     pacni:

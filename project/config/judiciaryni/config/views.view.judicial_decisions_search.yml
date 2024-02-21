@@ -229,7 +229,20 @@ display:
           preserve_facet_query_args: false
           query_tags: {  }
       relationships: {  }
-      header: {  }
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: "<p class=\"sign-up\">\r\n<a href=\"http://eepurl.com/deVz_L\">\r\n<i class=\"fa fa-envelope\"></i>Sign up for email alerts for new judgments</a>\r\n</p>"
+            format: full_html
+          tokenize: false
       footer: {  }
       display_extenders: {  }
     cache_metadata:
@@ -242,6 +255,7 @@ display:
         - 'user.node_grants:view'
       tags:
         - 'config:search_api.index.decisions_index'
+        - 'search_api_list:decisions_index'
   judicial_decisions_search_page:
     id: judicial_decisions_search_page
     display_title: 'Judicial decisions and directions search page'
@@ -253,13 +267,16 @@ display:
         options: {  }
       defaults:
         cache: false
+        header: true
       display_description: ''
       exposed_block: true
       display_extenders:
-        metatag_display_extender: {  }
+        metatag_display_extender:
+          metatags: {  }
+          tokenize: false
       path: judicial-decisions
     cache_metadata:
-      max-age: -1
+      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -267,7 +284,11 @@ display:
         - url.query_args
         - 'user.node_grants:view'
       tags:
+        - 'config:facets.facet.date'
+        - 'config:facets.facet.decision_pub_type'
+        - 'config:facets.facet.judicial_officer'
         - 'config:search_api.index.decisions_index'
+        - 'search_api_list:decisions_index'
   sentence_guide_search_page:
     id: sentence_guide_search_page
     display_title: 'Sentencing guidelines'
@@ -295,14 +316,16 @@ display:
         row: false
         relationships: false
         arguments: false
+        header: false
       relationships: {  }
       display_description: 'A search based on Judiciary decisions type taxonomy'
+      header: {  }
       exposed_block: true
       display_extenders:
         metatag_display_extender: {  }
       path: judiciary-decision-types
     cache_metadata:
-      max-age: -1
+      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -310,4 +333,7 @@ display:
         - url.query_args
         - 'user.node_grants:view'
       tags:
+        - 'config:facets.facet.decision_keywords_type'
+        - 'config:facets.facet.sentence_date'
         - 'config:search_api.index.decisions_index'
+        - 'search_api_list:decisions_index'
