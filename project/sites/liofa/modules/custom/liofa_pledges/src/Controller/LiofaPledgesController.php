@@ -16,6 +16,20 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 class LiofaPledgesController extends ControllerBase {
 
   /**
+   * The config for pledge counts.
+   *
+   * @var \Drupal\Core\Config\Config
+   */
+  protected $config;
+
+  /**
+   * Count storage.
+   */
+  protected $onsite_pledges;
+  protected $bulk_pledge_count;
+  protected $pledge_count_offset;
+
+  /**
    * Constructs the LiofaPledgesController object.
    *
    * @param \Drupal\Core\Config\ConfigFactoryInterface $config_factory
@@ -26,6 +40,7 @@ class LiofaPledgesController extends ControllerBase {
   public function __construct(ConfigFactoryInterface $config_factory, EntityTypeManagerInterface $entity_type_manager) {
     $this->configFactory = $config_factory;
     $this->entityTypeManager = $entity_type_manager;
+    $this->config = $this->configFactory->get('online_pledge_count.countsettings');
   }
 
   /**
@@ -45,11 +60,29 @@ class LiofaPledgesController extends ControllerBase {
    *   A simple renderable array.
    */
   public function pledgesSummary() {
-    $config = $this->configFactory->get('online_pledge_count.countsettings');
+    $this->generateTotals();
+    // Calculate overall total.
+    $total = $this->onsite_pledges + $this->bulk_pledge_count + $this->pledge_count_offset;
+    // Output table.
+    $table_html = '<table id="pledges-table">
+            <thead><tr><th>Component</th><th class="right">Value</th> </tr></thead>
+            <tbody>
+             <tr class="odd"><td>Pledges submitted online</td><td class="right">' . $this->onsite_pledges . '</td> </tr>
+             <tr class="even"><td>Bulk pledges</td><td class="right">' . $this->bulk_pledge_count . '</td> </tr>
+             <tr class="odd"><td>Pledge count offset</td><td class="right">' . $this->pledge_count_offset . '</td> </tr>
+             <tr class="even"><td class="total">Total</td><td class="right total">' . $total . '</td> </tr>
+            </tbody>
+      </table>';
+    return [
+      '#markup' => 'The table below shows a breakdown of the pledge count value shown on the home page.' . $table_html,
+    ];
+  }
+
+  protected function generateTotals() {
     // Retrieve pledge count submitted online.
-    $onsite_pledges = intval($config->get('pledge_count_submissions'));
+    $this->onsite_pledges = intval($this->config->get('pledge_count_submissions'));
     // Now need to get bulk pledges count.
-    $bulk_pledge_count = 0;
+    $this->bulk_pledge_count = 0;
     // \Drupal::entityQueryAggregate('node')
     $result = $this->entityTypeManager->getStorage('node')->getAggregateQuery('AND')
       ->accessCheck(FALSE)
@@ -58,27 +91,13 @@ class LiofaPledgesController extends ControllerBase {
       ->condition('status', NodeInterface::PUBLISHED)
       ->execute();
     if (!empty($result) && is_array($result)) {
-      $bulk_pledge_count = $result[0]['field_bulk_number_sum'];
+      $this->bulk_pledge_count = $result[0]['field_bulk_number_sum'];
     }
     // Get pledge count offset.
-    $pledge_count_offset = intval($config->get('pledge_count_offset'));
-    if (empty($pledge_count_offset)) {
-      $pledge_count_offset = 0;
+    $this->pledge_count_offset = intval($this->config->get('pledge_count_offset'));
+    if (empty($this->pledge_count_offset)) {
+      $this->pledge_count_offset = 0;
     }
-    // Calculate total.
-    $total = $onsite_pledges + $bulk_pledge_count + $pledge_count_offset;
-    $table_html = '<table id="pledges-table" class="sticky-enabled tableheader-processed sticky-table">
-            <thead><tr><th>Component</th><th class="right">Value</th> </tr></thead>
-            <tbody>
-             <tr class="odd"><td>Pledges submitted online</td><td class="right">' . $onsite_pledges . '</td> </tr>
-             <tr class="even"><td>Bulk pledges</td><td class="right">' . $bulk_pledge_count . '</td> </tr>
-             <tr class="odd"><td>Pledge count offset</td><td class="right">' . $pledge_count_offset . '</td> </tr>
-             <tr class="even"><td class="total">Total</td><td class="right total">' . $total . '</td> </tr>
-            </tbody>
-      </table>';
-    return [
-      '#markup' => 'The table below shows a breakdown of the pledge count value shown on the home page.' . $table_html,
-    ];
   }
 
 }
