@@ -1,0 +1,43 @@
+display:
+  default:
+    display_options:
+      filters:
+        name:
+          expose:
+            label: Ainm
+        langcode:
+          expose:
+            label: Teanga
+  default_page:
+    display_options:
+      fields:
+        name:
+          label: Ainm
+        edit_media:
+          text: 'Cuir in eagar'
+      filters:
+        name:
+          expose:
+            label: Ainm
+  page:
+    display_options:
+      fields:
+        edit_media:
+          text: 'Cuir in eagar'
+        delete_media:
+          text: Scrios
+  widget:
+    display_options:
+      filters:
+        name:
+          expose:
+            label: Ainm
+  widget_table:
+    display_options:
+      fields:
+        name:
+          label: Ainm
+      filters:
+        name:
+          expose:
+            label: Ainm
