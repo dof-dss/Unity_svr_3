@@ -4,6 +4,7 @@ namespace Drupal\liofa_pledges\Controller;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
+use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Form\ConfigFormBaseTrait;
 use Drupal\node\NodeInterface;
 use Drupal\views\Views;
@@ -15,13 +16,16 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 class LiofaPledgesController extends ControllerBase {
 
   /**
-   * Constructs the SchemaListenerController object.
+   * Constructs the LiofaPledgesController object.
    *
    * @param \Drupal\Core\Config\ConfigFactoryInterface $config_factory
    *   The config factory.
+   * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
+   *   The entity type manager
    */
-  public function __construct(ConfigFactoryInterface $config_factory) {
+  public function __construct(ConfigFactoryInterface $config_factory, EntityTypeManagerInterface $entity_type_manager) {
     $this->configFactory = $config_factory;
+    $this->entityTypeManager = $entity_type_manager;
   }
 
   /**
@@ -29,7 +33,8 @@ class LiofaPledgesController extends ControllerBase {
    */
   public static function create(ContainerInterface $container) {
     return new static(
-      $container->get('config.factory')
+      $container->get('config.factory'),
+      $container->get('entity_type.manager')
     );
   }
 
@@ -45,7 +50,8 @@ class LiofaPledgesController extends ControllerBase {
     $onsite_pledges = intval($config->get('pledge_count_submissions'));
     // Now need to get bulk pledges count.
     $bulk_pledge_count = 0;
-    $result = \Drupal::entityQueryAggregate('node')
+    // \Drupal::entityQueryAggregate('node')
+    $result = $this->entityTypeManager->getStorage('node')->getAggregateQuery('AND')
       ->accessCheck(FALSE)
       ->aggregate('field_bulk_number', 'sum')
       ->condition('type', 'bulk_pledges')
