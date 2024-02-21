@@ -3,6 +3,7 @@ namespace Drupal\liofa_pledges\Controller;
 
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
 use Drupal\Core\Form\ConfigFormBaseTrait;
 use Drupal\node\NodeInterface;
 use Drupal\views\Views;
@@ -14,20 +15,22 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 class LiofaPledgesController extends ControllerBase {
 
   /**
-   * The config factory.
+   * Constructs the SchemaListenerController object.
    *
-   * @var \Drupal\Core\Config\ConfigFactoryInterface
-   */
-  protected $configFactory;
-
-  /**
-   * Constructs a LiofaPledgesController.
-   *
-   * @param \Drupal\Core\Config\ConfigFactoryInterface $configFactory
+   * @param \Drupal\Core\Config\ConfigFactoryInterface $config_factory
    *   The config factory.
    */
-  public function __construct(ConfigFactoryInterface $configFactory) {
-    $this->configFactory = $configFactory;
+  public function __construct(ConfigFactoryInterface $config_factory) {
+    $this->configFactory = $config_factory;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container) {
+    return new static(
+      $container->get('config.factory')
+    );
   }
 
   /**
@@ -37,7 +40,7 @@ class LiofaPledgesController extends ControllerBase {
    *   A simple renderable array.
    */
   public function pledgesSummary() {
-    $config = \Drupal::configFactory()->get('online_pledge_count.countsettings');
+    $config = $this->configFactory->get('online_pledge_count.countsettings');
     // Retrieve pledge count submitted online.
     $onsite_pledges = intval($config->get('pledge_count_submissions'));
     // Now need to get bulk pledges count.
