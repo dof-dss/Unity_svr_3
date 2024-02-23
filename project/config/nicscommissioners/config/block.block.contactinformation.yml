@@ -1,0 +1,25 @@
+uuid: 8cda9d66-f409-44ca-824b-e646012bcedb
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:a4a6baed-978f-4279-8e50-13cdcd77302a'
+  module:
+    - block_content
+  theme:
+    - nicscommissioners_theme
+id: contactinformation
+theme: nicscommissioners_theme
+region: footer_first
+weight: -9
+provider: null
+plugin: 'block_content:a4a6baed-978f-4279-8e50-13cdcd77302a'
+settings:
+  id: 'block_content:a4a6baed-978f-4279-8e50-13cdcd77302a'
+  label: 'Contact Information'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

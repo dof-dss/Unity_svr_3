@@ -1,0 +1,20 @@
+uuid: 80e8add3-e4e7-4a52-b9f1-2458c0ec53fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.bulk_pledges
+  module:
+    - metatag
+id: node.bulk_pledges.metatag
+field_name: metatag
+entity_type: node
+bundle: bulk_pledges
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The computed meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag_computed

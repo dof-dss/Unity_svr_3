@@ -1,0 +1,19 @@
+uuid: 3a231fa9-0655-4dd4-aec1-9d914aa011ef
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_address_1
+    - node.type.organisation
+id: node.organisation.field_address_1
+field_name: field_address_1
+entity_type: node
+bundle: organisation
+label: 'Address line 1'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

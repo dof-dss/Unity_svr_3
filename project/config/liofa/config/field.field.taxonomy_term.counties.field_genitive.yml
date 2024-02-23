@@ -1,0 +1,19 @@
+uuid: 66b78045-5f14-46f6-8ae3-5c6c6e3799c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_genitive
+    - taxonomy.vocabulary.counties
+id: taxonomy_term.counties.field_genitive
+field_name: field_genitive
+entity_type: taxonomy_term
+bundle: counties
+label: Genitive
+description: 'For Irish counties, the genitive version - for example, the genitive version of Dun na nGall is Dhun na nGall'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

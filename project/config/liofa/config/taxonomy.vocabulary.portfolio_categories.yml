@@ -1,0 +1,8 @@
+uuid: dcc6c34e-daf1-41fc-92b1-f800697907c8
+langcode: en-gb
+status: true
+dependencies: {  }
+name: 'Portfolio categories'
+vid: portfolio_categories
+description: ''
+weight: 0

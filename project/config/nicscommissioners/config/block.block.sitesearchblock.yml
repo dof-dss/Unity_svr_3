@@ -1,0 +1,25 @@
+uuid: 49907c45-4cef-4447-9b03-f4dfe01a47fc
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - unity_search_pages
+  theme:
+    - nicscommissioners_theme
+id: sitesearchblock
+theme: nicscommissioners_theme
+region: search
+weight: 0
+provider: null
+plugin: site_search_block
+settings:
+  id: site_search_block
+  label: 'Site search block'
+  label_display: '0'
+  provider: unity_search_pages
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '/search*'

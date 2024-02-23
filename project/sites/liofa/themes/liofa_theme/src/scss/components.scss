@@ -1,0 +1,259 @@
+/*
+ * @file
+ * Defines the components for the theme.
+ */
+@import 'init/index';
+@import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
+
+#main-menu .menu .menu-item .active,
+#main-menu .menu .menu-item .active + .menu-main_sub .title a {
+  border-bottom-color: $brand-secondary;
+}
+
+address {
+  margin-bottom: 2.4rem;
+}
+
+.node-type-organisation,
+article .block-link {
+  .media-image[data-picture-mapping="inline"] img {
+    float: left;
+    margin-left: 0;
+  }
+}
+
+.label-bold {
+  font-weight: bold;
+  display: block;
+
+  &:after {
+    content: ':';
+  }
+}
+
+.node-type-podcast {
+  .label-bold {
+    font-weight: bold;
+    display: inline;
+  }
+}
+
+article.block-link-with-wrapper {
+  margin-bottom: 2rem;
+
+  .block-link-wrapper {
+    display: flex;
+  }
+
+  h2 {
+    margin-top: 0;
+    padding-top: 1rem;
+    color: $link;
+  }
+
+  .block-link__image {
+    width: 34rem;
+    padding-right: 2rem;
+  }
+
+  .block-link__body {
+    position: relative;
+    padding-right: 1rem;
+
+    &:after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      bottom: 0;
+      right: .1rem;
+      width: 3rem;
+      height: 3rem;
+      background-image: resolve('arrow_forward_link_blue.svg');
+      background-position: center center;
+      background-size: 2.4rem auto;
+      background-repeat: no-repeat;
+    }
+
+    h2 {
+      color: $link;
+    }
+
+    .block-link__date {
+      font-weight: bold;
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    background: $grey-light;
+    display: flex;
+
+    &:hover .block-link__body:after,
+    &:focus .block-link__body:after {
+      background-color: $charcoal;
+      background-image: resolve('arrow_forward_white.svg');
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+article.block-link {
+  position: relative;
+
+  h2 {
+    margin: 0;
+    padding-bottom: 1.8rem;
+  }
+
+  header {
+    display: flex;
+
+    .media-image[data-picture-mapping="inline"] img {
+      width: 100%;
+    }
+
+    .feature-left {
+      width: 5rem;
+    }
+
+    .feature-right {
+      padding-left: 1rem;
+    }
+  }
+
+  p.feature-morelink,
+  p.feature-morelink-irish {
+    color: $link;
+
+    &:after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      bottom: 2.6rem;
+      right: 1rem;
+      width: 3rem;
+      height: 3rem;
+      background-image: resolve('arrow_forward_link_blue.svg');
+      background-position: center center;
+      background-size: 2.4rem auto;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+#content #top-area .column article.block-link a {
+  min-height: 25.1rem;
+}
+
+#content #top-area .column article.block-link a,
+#content #bottom_wrapper .column article.block-link-with-wrapper a,
+#content #block-liofa-theme-mainpagecontent article.block-link-with-wrapper a{
+  border: none;
+  margin: 0;
+  padding: 0 1rem 1rem;
+  background: $grey-light;
+  display: block;
+
+  &:hover,
+  &:focus {
+    background: #e4f0fa;
+  }
+
+  &:focus {
+    outline: 2px solid #000;
+    outline-offset: -2px;
+  }
+
+  &:hover p.feature-morelink:after,
+  &:focus p.feature-morelink:after,
+  &:hover p.feature-morelink-irish:after,
+  &:focus p.feature-morelink-irish:after{
+    background-color: $charcoal;
+    background-image: resolve('arrow_forward_white.svg');
+    background-repeat: no-repeat;
+  }
+}
+
+#top-area {
+  text-align: left;
+  margin-top: 2rem;
+
+  h2 {
+    color: $link;
+    margin-top: 1.4rem;
+  }
+
+  .column:nth-child(2),
+  .column:nth-child(3) {
+    .block-link p.feature-morelink {
+      margin-top: 4.4rem;
+    }
+  }
+
+  @media screen and (max-width: $desk) {
+    .column:last-child {
+      margin-right: 1rem;
+    }
+  }
+}
+
+#bottom-area.container-wrap {
+  @media screen and (max-width: $tab) {
+    margin: 1rem;
+  }
+}
+
+.bottom_widget .footer-area .column {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  @include breakpoint($tab) {
+    width: 60%;
+  }
+
+  &:last-child {
+    width: 100%;
+  }
+}
+
+#footer {
+  padding: 0;
+  border-top: 9px solid $brand-secondary;
+}
+
+#footer-area {
+  .column:last-child {
+    float: left;
+    width: 30rem;
+    margin: 0;
+  }
+}
+
+#block-liofa-theme-footercontactinformation {
+  .content a {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
+  .media-image {
+    margin: 0;
+  }
+}
+
+#footer-menu {
+  @media screen and (max-width: $tab) {
+    margin-left: 1rem;
+  }
+}
+
+.accordion-row h3,
+.path-gaeltacht .item-list h3 {
+  @include adjust-font-size-to(18px);
+  margin: 0 0 1rem;
+}
+
+.path-gaeltacht .item-list ul {
+  margin: 1.2rem 0 1.8rem 2.4rem;
+}

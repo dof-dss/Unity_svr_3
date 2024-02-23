@@ -1,0 +1,15 @@
+display:
+  default:
+    display_options:
+      empty:
+        area:
+          content:
+            value: '<p>====== en ====== Sorry, no current press releases were found. ====== ga ====== Níl aon preasráiteas ar fáil.</p>'
+            format: basic_html
+      footer:
+        area:
+          content:
+            value: '<p><a href="/news">More news items</a></p>'
+            format: basic_html
+  news_page:
+    display_title: Preasráitis

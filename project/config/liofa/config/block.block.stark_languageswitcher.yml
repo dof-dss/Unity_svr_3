@@ -1,0 +1,20 @@
+uuid: 360c4100-54ef-4d4b-94d9-f1e10ce24a3b
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+  theme:
+    - stark
+id: stark_languageswitcher
+theme: stark
+region: header
+weight: 0
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Language switcher'
+  label_display: visible
+  provider: language
+visibility: {  }

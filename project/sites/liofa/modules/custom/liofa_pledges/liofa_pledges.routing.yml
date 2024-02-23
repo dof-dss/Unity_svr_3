@@ -1,0 +1,18 @@
+liofa_pledges.liofa_pledges:
+  path: '/admin/config/liofa_pledges/pledge_count'
+  defaults:
+    _form: '\Drupal\liofa_pledges\Form\PledgeCountForm'
+    _title: 'Liofa pledge count'
+  requirements:
+    _role: 'administrator'
+  options:
+    _admin_route: TRUE
+liofa_pledges.summary_page:
+  path: '/admin/config/liofa_pledges/pledge_count_summary'
+  defaults:
+    _controller: '\Drupal\liofa_pledges\Controller\LiofaPledgesController::pledgesSummary'
+    _title: 'Liofa pledge count summary'
+  requirements:
+    _role: 'administrator'
+  options:
+    _admin_route: TRUE

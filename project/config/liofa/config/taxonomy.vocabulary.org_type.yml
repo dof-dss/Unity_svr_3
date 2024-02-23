@@ -1,0 +1,8 @@
+uuid: a6d05b85-a67d-4585-b331-334acb138fb6
+langcode: en-gb
+status: true
+dependencies: {  }
+name: 'Organisation type'
+vid: org_type
+description: 'Types of organisations involved with the Irish language'
+weight: 0

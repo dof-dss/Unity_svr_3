@@ -1,0 +1,20 @@
+uuid: b64531ec-86c3-45d4-a090-c2a6502d6de9
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - liofa_theme
+id: liofa_theme_mainpagecontent
+theme: liofa_theme
+region: content
+weight: -3
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,21 @@
+uuid: 583b5433-9b8f-4c43-ace9-4f2543895099
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node_bulk_pledges
+label: 'Content - Bulk pledges'
+type: 'canonical_entities:node'
+pattern: 'admin/content/bulk-pledges/[node:title]'
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      bulk_pledges: bulk_pledges
+selection_logic: and
+weight: -14
+relationships: {  }

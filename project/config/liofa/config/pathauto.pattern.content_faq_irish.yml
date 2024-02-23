@@ -1,0 +1,33 @@
+uuid: 46565b02-d5d6-4920-a9bf-e6313f8f35f2
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: content_faq_irish
+label: 'Content - FAQ Irish'
+type: 'canonical_entities:node'
+pattern: 'maidir-le-liofa/cc/[node:title]'
+selection_criteria:
+  d41936b8-4eae-4b60-b42e-bbb899ba2635:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: d41936b8-4eae-4b60-b42e-bbb899ba2635
+    context_mapping:
+      node: node
+    bundles:
+      faq: faq
+  baf7de48-525d-47c7-bed9-b48468941efb:
+    id: language
+    negate: false
+    uuid: baf7de48-525d-47c7-bed9-b48468941efb
+    context_mapping:
+      language: 'node:langcode:language'
+    langcodes:
+      ga: ga
+selection_logic: and
+weight: -11
+relationships:
+  'node:langcode:language':
+    label: Language

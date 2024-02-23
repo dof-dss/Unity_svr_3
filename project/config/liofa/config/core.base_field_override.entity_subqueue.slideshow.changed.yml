@@ -1,0 +1,18 @@
+uuid: 192b98b3-474f-41d3-a0bd-7f83ee2b6649
+langcode: ga
+status: true
+dependencies:
+  config:
+    - entityqueue.entity_queue.slideshow
+id: entity_subqueue.slideshow.changed
+field_name: changed
+entity_type: entity_subqueue
+bundle: slideshow
+label: Changed
+description: 'The time that the subqueue was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

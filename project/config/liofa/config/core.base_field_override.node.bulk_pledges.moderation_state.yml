@@ -1,0 +1,18 @@
+uuid: bfc7517c-ad5e-4477-8e50-4db4d06290bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.bulk_pledges
+id: node.bulk_pledges.moderation_state
+field_name: moderation_state
+entity_type: node
+bundle: bulk_pledges
+label: 'Moderation state'
+description: 'The moderation state of this piece of content.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

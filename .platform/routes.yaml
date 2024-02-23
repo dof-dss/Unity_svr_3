@@ -63,6 +63,22 @@
 'https://nibureau.com/':
     type: redirect
     to: 'https://www.nibureau.com/'
+'https://www.nicscommissioners.org/':
+    type: upstream
+    upstream: 'unity_svr_3:http'
+    cache:
+        enabled: 'false'
+'https://nicscommissioners.org/':
+    type: redirect
+    to: 'https://www.nicscommissioners.org/'
+'https://www.liofa.eu/':
+    type: upstream
+    upstream: 'unity_svr_3:http'
+    cache:
+        enabled: 'false'
+'https://liofa.eu/':
+    type: redirect
+    to: 'https://www.liofa.eu/'
 'https://www.{all}/':
     type: upstream
     upstream: 'unity_svr_3:http'

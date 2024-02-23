@@ -1,0 +1,30 @@
+uuid: cb18a045-d90e-4b73-a8bd-e839f05f958f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:f5e3d608-74da-4797-8361-653348105517'
+  module:
+    - block_content
+    - system
+  theme:
+    - nicscommissioners_theme
+id: homepageinformation
+theme: nicscommissioners_theme
+region: front_welcome
+weight: -7
+provider: null
+plugin: 'block_content:f5e3d608-74da-4797-8361-653348105517'
+settings:
+  id: 'block_content:f5e3d608-74da-4797-8361-653348105517'
+  label: 'Homepage information'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

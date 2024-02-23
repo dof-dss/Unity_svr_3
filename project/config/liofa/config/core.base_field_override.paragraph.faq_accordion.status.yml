@@ -1,0 +1,22 @@
+uuid: b14103a3-8377-4c2f-b7e9-5ddeaaa508b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.faq_accordion
+id: paragraph.faq_accordion.status
+field_name: status
+entity_type: paragraph
+bundle: faq_accordion
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

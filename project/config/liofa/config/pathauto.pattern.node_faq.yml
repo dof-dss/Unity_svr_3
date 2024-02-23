@@ -1,0 +1,21 @@
+uuid: 590d5362-aae9-446e-b5a8-305fa8dfd0a8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node_faq
+label: 'Content - FAQ'
+type: 'canonical_entities:node'
+pattern: 'about-liofa/faq/[node:title]'
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      faq: faq
+selection_logic: and
+weight: -10
+relationships: {  }

@@ -1,0 +1,21 @@
+uuid: 73affbcc-4ebf-458c-b006-c8daa58f6cf5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node_newsletter
+label: 'Content - Newsletter'
+type: 'canonical_entities:node'
+pattern: 'learning-irish/newsletters/[node:title]'
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      newsletter: newsletter
+selection_logic: and
+weight: -5
+relationships: {  }

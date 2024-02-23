@@ -1,0 +1,18 @@
+uuid: 89401c69-1b1e-4a87-9e7c-95bdc40576c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.bulk_pledges
+id: node.bulk_pledges.changed
+field_name: changed
+entity_type: node
+bundle: bulk_pledges
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

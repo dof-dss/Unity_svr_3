@@ -1,0 +1,21 @@
+uuid: d81a2426-563b-4987-b7f0-36ebfeb5f924
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node_first_name
+label: 'Content - First name'
+type: 'canonical_entities:node'
+pattern: 'shared-heritage/forenames/[node:title]'
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      first_name: first_name
+selection_logic: and
+weight: -8
+relationships: {  }

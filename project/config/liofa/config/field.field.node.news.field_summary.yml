@@ -1,0 +1,19 @@
+uuid: 7fc0c805-d47b-43be-bb91-e05e290b5740
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_summary
+    - node.type.news
+id: node.news.field_summary
+field_name: field_summary
+entity_type: node
+bundle: news
+label: Summary
+description: 'Summary of the item - shown on the homepage.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

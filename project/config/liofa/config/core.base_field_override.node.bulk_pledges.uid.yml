@@ -1,0 +1,20 @@
+uuid: 495d22ac-fb17-453a-8a3f-a0f40b084caa
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.bulk_pledges
+id: node.bulk_pledges.uid
+field_name: uid
+entity_type: node
+bundle: bulk_pledges
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

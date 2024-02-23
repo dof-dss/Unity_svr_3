@@ -53,9 +53,9 @@ third_party_settings:
     multilingual:
       limit_to_content_language: false
       include_language_independent: true
+      use_language_undefined_as_fallback_language: false
       specific_languages:
         en: '0'
-      use_language_undefined_as_fallback_language: false
       use_universal_collation: false
 id: default_content
 name: 'Default Content'
@@ -159,6 +159,8 @@ datasource_settings:
     bundles:
       default: true
       selected:
+        - feature
+        - featured_list
         - webform
     languages:
       default: true
@@ -167,6 +169,7 @@ processor_settings:
   add_url: {  }
   aggregated_field: {  }
   auto_aggregated_fulltext_field: {  }
+  custom_value: {  }
   entity_status: {  }
   entity_type: {  }
   highlight:

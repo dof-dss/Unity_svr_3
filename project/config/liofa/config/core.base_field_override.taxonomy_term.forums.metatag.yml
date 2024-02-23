@@ -1,0 +1,20 @@
+uuid: 79a76257-f053-4db1-80b9-df6bbb7e388b
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.forums
+  module:
+    - metatag
+id: taxonomy_term.forums.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: forums
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The computed meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag_computed

@@ -1,0 +1,25 @@
+uuid: c5df72ad-e74b-42c2-8545-f76a14997165
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:feature_block:3843fcba-d46d-442b-b2cf-ed5e3ba104f5'
+  module:
+    - block_content
+  theme:
+    - liofa_theme
+id: liofa_theme_whatisliofa
+theme: liofa_theme
+region: bottom_widget_3
+weight: 0
+provider: null
+plugin: 'block_content:3843fcba-d46d-442b-b2cf-ed5e3ba104f5'
+settings:
+  id: 'block_content:3843fcba-d46d-442b-b2cf-ed5e3ba104f5'
+  label: 'What is Líofa?'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,92 @@
+uuid: d745de35-c440-42d7-b0e7-60dcedb34725
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+    - media.type.audio
+    - media.type.document
+    - media.type.file
+    - media.type.image
+    - media.type.remote_video
+    - node.type.basic_page
+    - node.type.board_member
+    - node.type.featured_content
+    - node.type.publication
+    - node.type.webform
+    - workflows.workflow.nics_editorial_workflow
+  module:
+    - content_moderation
+    - filter
+    - media
+    - menu_admin_per_menu
+    - moderation_sidebar
+    - node
+    - path
+    - system
+    - toolbar
+_core:
+  default_config_hash: CKfpacVfMmh209v93lvkrSNFkdxh-8fmgpTUUaFDF-M
+id: author_user
+label: 'author user'
+weight: 3
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content'
+  - 'access content overview'
+  - 'access media overview'
+  - 'access toolbar'
+  - 'administer main menu items'
+  - 'create audio media'
+  - 'create basic_page content'
+  - 'create board_member content'
+  - 'create document media'
+  - 'create featured_content content'
+  - 'create file media'
+  - 'create image media'
+  - 'create publication content'
+  - 'create remote_video media'
+  - 'create url aliases'
+  - 'delete own audio media'
+  - 'delete own basic_page content'
+  - 'delete own board_member content'
+  - 'delete own document media'
+  - 'delete own featured_content content'
+  - 'delete own file media'
+  - 'delete own image media'
+  - 'delete own publication content'
+  - 'delete own remote_video media'
+  - 'edit any basic_page content'
+  - 'edit any board_member content'
+  - 'edit any featured_content content'
+  - 'edit any publication content'
+  - 'edit own audio media'
+  - 'edit own basic_page content'
+  - 'edit own board_member content'
+  - 'edit own document media'
+  - 'edit own featured_content content'
+  - 'edit own file media'
+  - 'edit own image media'
+  - 'edit own publication content'
+  - 'edit own remote_video media'
+  - 'revert basic_page revisions'
+  - 'revert board_member revisions'
+  - 'revert featured_content revisions'
+  - 'revert publication revisions'
+  - 'use moderation sidebar'
+  - 'use nics_editorial_workflow transition create_new_draft'
+  - 'use nics_editorial_workflow transition draft_of_published'
+  - 'use nics_editorial_workflow transition reject'
+  - 'use nics_editorial_workflow transition submit_for_review'
+  - 'use text format basic_html'
+  - 'view any unpublished content'
+  - 'view basic_page revisions'
+  - 'view board_member revisions'
+  - 'view featured_content revisions'
+  - 'view latest version'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view publication revisions'
+  - 'view the administration theme'
+  - 'view webform revisions'

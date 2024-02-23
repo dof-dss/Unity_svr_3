@@ -1,0 +1,60 @@
+uuid: 8b071433-40ec-4f5b-b929-02e6fea2d30e
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+  module:
+    - block
+    - content_translation
+    - contextual
+    - filter
+    - image
+    - language
+    - locale
+    - node
+    - path
+    - pathauto
+    - system
+    - taxonomy
+_core:
+  default_config_hash: J8rXM_vdD29ZTEwtLOs84Vsn-PTRH-ZDh_Pi610CAEI
+id: administrator
+label: Administrator
+weight: 4
+is_admin: true
+permissions:
+  - 'access administration pages'
+  - 'access content'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access site in maintenance mode'
+  - 'access site reports'
+  - 'access user profiles'
+  - 'administer blocks'
+  - 'administer content types'
+  - 'administer filters'
+  - 'administer image styles'
+  - 'administer languages'
+  - 'administer menu'
+  - 'administer modules'
+  - 'administer nodes'
+  - 'administer pathauto'
+  - 'administer permissions'
+  - 'administer site configuration'
+  - 'administer software updates'
+  - 'administer taxonomy'
+  - 'administer themes'
+  - 'administer url aliases'
+  - 'administer users'
+  - 'bypass node access'
+  - 'cancel account'
+  - 'change own username'
+  - 'create url aliases'
+  - 'notify of path changes'
+  - 'select account cancellation method'
+  - 'translate any entity'
+  - 'translate interface'
+  - 'use text format full_html'
+  - 'view own unpublished content'
+  - 'view the administration theme'

@@ -1,6 +1,8 @@
 # (required) The engine to run Wraith with. Examples: 'phantomjs', 'casperjs', 'slimerjs'
 browser: "phantomjs"
 
+snap_file: javascript/snap.js
+
 # (required) The domains to take screenshots of.
 domains:
   current:  "https://www.boundarycommission.org.uk/"
@@ -12,11 +14,13 @@ paths:
   previous-reviews:    /previous-reviews
   commission:     /commission
   contact-us:  /contact-us
+  consultation:   /2023-review/consultations/sc-shane-munro-written-representation
+  news: /news/boundary-commission-northern-ireland-publishes-final-recommendations-report-2023-review
+  publication:  /publications/annual-report-2022-23
 
 # (required) Screen widths (and optional height) to resize the browser to before taking the screenshot.
 screen_widths:
-  - 500x2000
-  - 1400x2000
+  - 1200x3000
 
 # (optional) JavaScript file to execute before taking screenshot of every path. Default: nil
 before_capture: 'javascript/wait--phantom.js'

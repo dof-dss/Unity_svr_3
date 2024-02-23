@@ -1,0 +1,165 @@
+uuid: 67902ccf-002c-4386-bd7c-b40b902418bc
+langcode: en-gb
+status: true
+dependencies: {  }
+id: upgrade_d7_node_complete_organisation
+class: Drupal\node\Plugin\migrate\D7NodeTranslation
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Node complete (Organisation)'
+source:
+  plugin: d7_node_complete
+  node_type: organisation
+process:
+  nid:
+    -
+      plugin: get
+      source: tnid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  content_translation_source:
+    -
+      plugin: get
+      source: source_langcode
+  comment_node_organisation/0/status:
+    -
+      plugin: get
+      source: comment
+  field_external_url:
+    -
+      plugin: text_to_link
+      source: field_external_url
+  field_description:
+    -
+      plugin: get
+      source: field_description
+  field_description/0/format:
+    - plugin: static_map
+      bypass: true
+      source: field_description/0/format
+      map:
+        full_html: full_html
+        filtered_html_with_images: basic_html
+        wysiwyg: basic_html
+        filtered_html_with_tokens: basic_html
+        filtered_html: basic_html
+        filtered_html_with_no_images: basic_html
+        plain_text: plain_text
+  field_address_1:
+    -
+      plugin: get
+      source: field_address_1
+  field_address_2:
+    -
+      plugin: get
+      source: field_address_2
+  field_county:
+    -
+      plugin: sub_process
+      source: field_county
+      process:
+        target_id: tid
+  field_email:
+    -
+      plugin: sub_process
+      source: field_email
+      process:
+        value: email
+  field_org_type:
+    -
+      plugin: sub_process
+      source: field_org_type
+      process:
+        target_id: tid
+  field_postcode:
+    -
+      plugin: get
+      source: field_postcode
+  field_mobile:
+    -
+      plugin: get
+      source: field_mobile
+  field_phone:
+    -
+      plugin: get
+      source: field_phone
+  field_town_city:
+    -
+      plugin: get
+      source: field_town_city
+  field_photo:
+    -
+      plugin: sub_process
+      source: field_image
+      process:
+        target_id: fid
+        alt: alt
+        title: title
+        width: width
+        height: height
+  field_metatag:
+    -
+      plugin: d7_metatag_entities
+      source: pseudo_metatag_entities
+destination:
+  plugin: 'entity_complete:node'
+  translations: true
+  default_bundle: organisation
+migration_dependencies:
+  required:
+    - upgrade_d7_user
+    - upgrade_d7_node_type
+    - upgrade_language
+  optional:
+    - upgrade_d7_field_instance

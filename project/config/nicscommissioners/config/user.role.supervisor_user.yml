@@ -1,0 +1,145 @@
+uuid: fd8c1a5e-8688-40ab-ba74-774ca333ae9f
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+    - media.type.audio
+    - media.type.document
+    - media.type.file
+    - media.type.image
+    - media.type.remote_video
+    - node.type.basic_page
+    - node.type.board_member
+    - node.type.featured_content
+    - node.type.publication
+    - node.type.webform
+    - workflows.workflow.nics_editorial_workflow
+  module:
+    - content_moderation
+    - contextual
+    - entityqueue
+    - file
+    - filter
+    - layout_builder
+    - media
+    - menu_admin_per_menu
+    - moderation_sidebar
+    - node
+    - origins_metatag
+    - origins_workflow
+    - path
+    - redirect
+    - scheduled_transitions
+    - system
+    - toolbar
+    - whatlinkshere
+_core:
+  default_config_hash: 6dGYtGiX0D6hjlvLXGLSklpZZUhzbdlDZbbVZdBDcuM
+id: supervisor_user
+label: 'supervisor user'
+weight: 5
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access files overview'
+  - 'access media overview'
+  - 'access toolbar'
+  - 'add scheduled transitions node basic_page'
+  - 'add scheduled transitions node board_member'
+  - 'add scheduled transitions node publication'
+  - 'administer main menu items'
+  - 'administer redirects'
+  - 'audit content'
+  - 'create and edit custom blocks'
+  - 'create audio media'
+  - 'create basic_page content'
+  - 'create board_member content'
+  - 'create document media'
+  - 'create featured_content content'
+  - 'create file media'
+  - 'create image media'
+  - 'create publication content'
+  - 'create remote_video media'
+  - 'create url aliases'
+  - 'delete all revisions'
+  - 'delete any audio media'
+  - 'delete any basic_page content'
+  - 'delete any board_member content'
+  - 'delete any document media'
+  - 'delete any featured_content content'
+  - 'delete any file'
+  - 'delete any file media'
+  - 'delete any image media'
+  - 'delete any publication content'
+  - 'delete any remote_video media'
+  - 'delete basic_page revisions'
+  - 'delete board_member revisions'
+  - 'delete featured_content revisions'
+  - 'delete own audio media'
+  - 'delete own basic_page content'
+  - 'delete own board_member content'
+  - 'delete own document media'
+  - 'delete own featured_content content'
+  - 'delete own file media'
+  - 'delete own image media'
+  - 'delete own publication content'
+  - 'delete own remote_video media'
+  - 'delete publication revisions'
+  - 'edit any audio media'
+  - 'edit any basic_page content'
+  - 'edit any board_member content'
+  - 'edit any document media'
+  - 'edit any featured_content content'
+  - 'edit any file media'
+  - 'edit any image media'
+  - 'edit any publication content'
+  - 'edit any remote_video media'
+  - 'edit basic meta tags'
+  - 'edit own audio media'
+  - 'edit own basic_page content'
+  - 'edit own board_member content'
+  - 'edit own document media'
+  - 'edit own featured_content content'
+  - 'edit own file media'
+  - 'edit own image media'
+  - 'edit own publication content'
+  - 'edit own remote_video media'
+  - 'reschedule scheduled transitions node basic_page'
+  - 'reschedule scheduled transitions node board_member'
+  - 'reschedule scheduled transitions node publication'
+  - 'revert all revisions'
+  - 'revert basic_page revisions'
+  - 'revert board_member revisions'
+  - 'revert featured_content revisions'
+  - 'revert publication revisions'
+  - 'update board_members_queue entityqueue'
+  - 'update featured_content entityqueue'
+  - 'use moderation sidebar'
+  - 'use nics_editorial_workflow transition archive'
+  - 'use nics_editorial_workflow transition create_new_draft'
+  - 'use nics_editorial_workflow transition draft_of_published'
+  - 'use nics_editorial_workflow transition publish'
+  - 'use nics_editorial_workflow transition reject'
+  - 'use nics_editorial_workflow transition restore'
+  - 'use nics_editorial_workflow transition restore_to_draft'
+  - 'use nics_editorial_workflow transition submit_for_review'
+  - 'use text format basic_html'
+  - 'view all revisions'
+  - 'view all scheduled transitions'
+  - 'view any unpublished content'
+  - 'view basic_page revisions'
+  - 'view board_member revisions'
+  - 'view content references'
+  - 'view featured_content revisions'
+  - 'view latest version'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view publication revisions'
+  - 'view scheduled transitions node basic_page'
+  - 'view scheduled transitions node board_member'
+  - 'view scheduled transitions node publication'
+  - 'view the administration theme'
+  - 'view webform revisions'

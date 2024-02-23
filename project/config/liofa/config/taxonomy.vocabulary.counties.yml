@@ -1,0 +1,8 @@
+uuid: 744a72f3-f629-4ceb-be4d-db5b1049e6f9
+langcode: en-gb
+status: true
+dependencies: {  }
+name: Counties
+vid: counties
+description: 'A list of the counties of Ireland'
+weight: 0

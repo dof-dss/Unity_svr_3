@@ -1,0 +1,7 @@
+services:
+  nicscommissioners_breadcrumbs.breadcrumb.board:
+    class: Drupal\nicscommissioners_breadcrumbs\BoardBreadcrumb
+    arguments: ['@entity_type.manager', '@title_resolver', '@request_stack']
+    tags:
+      - { name: breadcrumb_builder, priority: 105 }
+

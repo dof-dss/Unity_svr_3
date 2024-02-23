@@ -1,0 +1,8 @@
+uuid: c9334a2d-930a-4ace-b6d0-07e9372c6409
+langcode: en
+status: true
+dependencies: {  }
+id: liofa_event
+label: 'liofa event'
+locked: false
+pattern: 'l, F d, Y - H:i'

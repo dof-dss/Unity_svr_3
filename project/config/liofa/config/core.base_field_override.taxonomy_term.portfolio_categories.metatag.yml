@@ -1,0 +1,20 @@
+uuid: a27a49a1-b21e-4246-b5c6-a168d87c7a8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.portfolio_categories
+  module:
+    - metatag
+id: taxonomy_term.portfolio_categories.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: portfolio_categories
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The computed meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag_computed

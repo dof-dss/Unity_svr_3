@@ -1,0 +1,25 @@
+uuid: 8a2d8aad-f6eb-4dab-b84e-6443ed52721e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:214af4d5-1402-4c93-856e-81657c612f83'
+  module:
+    - block_content
+  theme:
+    - nicscommissioners_theme
+id: sociallinks
+theme: nicscommissioners_theme
+region: footer_first
+weight: -8
+provider: null
+plugin: 'block_content:214af4d5-1402-4c93-856e-81657c612f83'
+settings:
+  id: 'block_content:214af4d5-1402-4c93-856e-81657c612f83'
+  label: 'Social links'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

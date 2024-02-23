@@ -1,0 +1,24 @@
+uuid: 8839f5df-b131-40f6-86cb-1cac2190e05b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - liofa_theme
+id: liofa_theme_breadcrumbs
+theme: liofa_theme
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

@@ -1,0 +1,21 @@
+uuid: c3b4dc28-cc00-4f84-b831-325908771d92
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bulk_date
+    - node.type.bulk_pledges
+  module:
+    - datetime
+id: node.bulk_pledges.field_bulk_date
+field_name: field_bulk_date
+entity_type: node
+bundle: bulk_pledges
+label: Date
+description: 'The date on which the pledges were collected..'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

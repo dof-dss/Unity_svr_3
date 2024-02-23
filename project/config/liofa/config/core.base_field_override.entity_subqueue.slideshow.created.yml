@@ -1,0 +1,18 @@
+uuid: a972987b-fda7-4930-9d21-b4e6a61423bb
+langcode: ga
+status: true
+dependencies:
+  config:
+    - entityqueue.entity_queue.slideshow
+id: entity_subqueue.slideshow.created
+field_name: created
+entity_type: entity_subqueue
+bundle: slideshow
+label: 'Authored on'
+description: 'The time that the subqueue was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

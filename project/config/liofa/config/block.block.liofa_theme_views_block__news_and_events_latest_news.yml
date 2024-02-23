@@ -1,0 +1,24 @@
+uuid: ba594889-b4cc-4874-a08e-bec3bdbecd6a
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.news_and_events
+  module:
+    - views
+  theme:
+    - liofa_theme
+id: liofa_theme_views_block__news_and_events_latest_news
+theme: liofa_theme
+region: bottom_widget_1
+weight: 0
+provider: null
+plugin: 'views_block:news_and_events-latest_news'
+settings:
+  id: 'views_block:news_and_events-latest_news'
+  label: 'Latest news'
+  label_display: visible
+  provider: views
+  views_label: 'Latest news'
+  items_per_page: none
+visibility: {  }

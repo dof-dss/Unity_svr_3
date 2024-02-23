@@ -1,0 +1,78 @@
+<?php
+
+/**
+ * Implements hook_theme_suggestions_field_alter().
+ */
+function liofa_theme_theme_suggestions_field_alter(array &$suggestions, array $variables) {
+  // Add view mode to node field theme suggestions.
+  $element = $variables['element'];
+
+  $address_field_names = [
+    'field_address_1',
+    'field_address_2',
+    'field_county',
+    'field_town_city',
+    'field_postcode'
+  ];
+
+  $label_block_bold = [
+    'field_bulk_date',
+    'field_bulk_number',
+    'field_bulk_source',
+    'field_contact_name',
+    'field_date_end'
+  ];
+
+  $label_inline = [
+    'field_email',
+    'field_phone',
+    'field_mobile',
+    'field_external_url'
+  ];
+
+  if (in_array($element['#field_name'], $address_field_names)) {
+    $suggestions[] = 'field__field_address_organisation';
+  }
+
+  if (in_array($element['#field_name'], $label_block_bold)) {
+    $suggestions[] = 'field__field_label_block_bold';
+  }
+
+  if (in_array($element['#field_name'], $label_inline)) {
+    $suggestions[] = 'field__field_label_inline';
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function liofa_theme_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  $id = $variables['elements']['#id'];
+
+  $homepage_feature_blocks = [
+    'liofa_theme_signuptoliofa',
+    'liofa_theme_irishclasses',
+    'liofa_theme_liofaresources'
+  ];
+
+  if (in_array($id, $homepage_feature_blocks)) {
+    $suggestions[] = 'block__homepage_feature';
+  }
+
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function liofa_theme_theme_suggestions_views_view_unformatted_alter(array &$suggestions, array $variables) {
+  $display_id = $variables['view']->element['#display_id'];
+
+  $organisation_views = [
+    'classes_by_county',
+    'irish_language_groups'
+  ];
+
+  if (in_array($display_id, $organisation_views)) {
+    $suggestions[] = 'views_view_unformatted__organisations_accordion';
+  }
+}

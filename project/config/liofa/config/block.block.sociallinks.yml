@@ -1,0 +1,25 @@
+uuid: 1f6bda9e-6246-4a1c-abdf-9c81b6d5d678
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:30500820-0efe-4cfd-aac0-2acf78c06140'
+  module:
+    - block_content
+  theme:
+    - liofa_theme
+id: sociallinks
+theme: liofa_theme
+region: footer_first
+weight: 0
+provider: null
+plugin: 'block_content:30500820-0efe-4cfd-aac0-2acf78c06140'
+settings:
+  id: 'block_content:30500820-0efe-4cfd-aac0-2acf78c06140'
+  label: 'Social links'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

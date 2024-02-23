@@ -1,0 +1,16 @@
+uuid: ec8386fc-9d6a-4897-89a1-c0a38864e96a
+langcode: en-gb
+status: true
+dependencies: {  }
+id: production
+label: production
+description: 'Used for the production site only.'
+weight: 0
+folder: ../project/config/liofa/production
+module:
+  fastly: 0
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true

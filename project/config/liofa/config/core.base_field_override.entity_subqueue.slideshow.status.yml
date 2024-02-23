@@ -1,0 +1,22 @@
+uuid: ba0bfe7e-4ad5-4124-984d-97d9f8c5aed3
+langcode: ga
+status: true
+dependencies:
+  config:
+    - entityqueue.entity_queue.slideshow
+id: entity_subqueue.slideshow.status
+field_name: status
+entity_type: entity_subqueue
+bundle: slideshow
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

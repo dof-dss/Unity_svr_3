@@ -1,0 +1,21 @@
+uuid: 7fed37ef-b3bd-4feb-ad55-d4cf5caa731a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_tags
+    - node.type.bulk_pledges
+  module:
+    - metatag
+id: node.bulk_pledges.field_meta_tags
+field_name: field_meta_tags
+entity_type: node
+bundle: bulk_pledges
+label: 'Meta tags'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

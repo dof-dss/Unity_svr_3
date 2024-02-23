@@ -1,0 +1,18 @@
+uuid: 3e1463f7-7117-4df6-ba5a-85947680e654
+langcode: ga
+status: true
+dependencies:
+  config:
+    - entityqueue.entity_queue.slideshow
+id: entity_subqueue.slideshow.title
+field_name: title
+entity_type: entity_subqueue
+bundle: slideshow
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

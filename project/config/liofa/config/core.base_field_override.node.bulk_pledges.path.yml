@@ -1,0 +1,20 @@
+uuid: d5c6841e-750d-4be9-bd62-4887e0364241
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.bulk_pledges
+  module:
+    - path
+id: node.bulk_pledges.path
+field_name: path
+entity_type: node
+bundle: bulk_pledges
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

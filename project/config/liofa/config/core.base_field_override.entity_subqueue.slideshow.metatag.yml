@@ -1,0 +1,20 @@
+uuid: a1700ad8-6b64-4a2b-87db-2d7907ba9e17
+langcode: ga
+status: true
+dependencies:
+  config:
+    - entityqueue.entity_queue.slideshow
+  module:
+    - metatag
+id: entity_subqueue.slideshow.metatag
+field_name: metatag
+entity_type: entity_subqueue
+bundle: slideshow
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The computed meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag_computed

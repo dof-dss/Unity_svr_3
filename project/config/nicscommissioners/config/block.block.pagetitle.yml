@@ -1,0 +1,24 @@
+uuid: 9370ee69-b5dd-4602-b28c-76dfeac263c1
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - nicscommissioners_theme
+id: pagetitle
+theme: nicscommissioners_theme
+region: content
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "<front>\r\n/search\r\n/publications\r\n/publications/date/*\r\n"

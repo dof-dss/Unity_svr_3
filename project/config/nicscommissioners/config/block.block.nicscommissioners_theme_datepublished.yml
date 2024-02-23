@@ -1,0 +1,29 @@
+uuid: 97feace6-de2a-48ed-8f7c-66592bb5666c
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.date_published
+  module:
+    - facets
+    - system
+  theme:
+    - nicscommissioners_theme
+id: nicscommissioners_theme_datepublished
+theme: nicscommissioners_theme
+region: search_facets
+weight: -4
+provider: null
+plugin: 'facet_block:date_published'
+settings:
+  id: 'facet_block:date_published'
+  label: 'Date Published'
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: nicscommissioners_theme_datepublished
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/publications\r\n/publications/date/*"

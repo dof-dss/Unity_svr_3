@@ -1,0 +1,24 @@
+uuid: 30bf0449-7523-4241-9f7b-f533291af805
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - nicscommissioners_theme
+id: breadcrumbs
+theme: nicscommissioners_theme
+region: breadcrumb
+weight: -6
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

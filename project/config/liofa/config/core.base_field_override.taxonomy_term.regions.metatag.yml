@@ -1,0 +1,20 @@
+uuid: fb24308a-31c8-4976-9376-c58b02ed07f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.regions
+  module:
+    - metatag
+id: taxonomy_term.regions.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: regions
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The computed meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag_computed

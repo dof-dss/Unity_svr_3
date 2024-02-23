@@ -1,0 +1,235 @@
+/*
+ * @file
+ * Defines the components for the theme.
+ */
+@import 'init/index';
+@import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
+
+
+  .top_left #logo img {
+    height: 9rem;
+    @media screen and (max-width: $tab) {
+      position: relative;
+    }
+  }
+
+#inner_header_wrapper {
+  background-image: resolve('banner-top.png');
+  background-size: cover;
+  height: 13rem;
+  @media screen and (max-width: $tab) {
+    background: none;
+    height: 18rem;
+  }
+}
+
+.region-primary-menu .menu_wrapper {
+  border-top: 1px solid $black;
+  border-bottom: 1px solid $black;
+}
+
+#main-menu {
+  background: $white;
+
+  .menu-link,
+  .menu .active,
+  .menu-item.open .menu-toggle-btn {
+    color: $black;
+    @include adjust-font-size-to(16px);
+  }
+
+  .menu
+  .menu-item
+  .active {
+    border-bottom-color: $brand-secondary;
+    background: $brand-primary;
+    color: white;
+  }
+
+  .menu-link {
+    &:hover,
+    &:focus {
+      background: $brand-primary;
+      color: $white;
+    }
+  }
+  .menu-main_sub
+  .menu-item
+  span.active {
+    @include adjust-font-size-to(14px);
+    padding: 1rem;
+  }
+
+  .menu-main_sub {
+    background: $brand-primary;
+
+    .menu-item {
+      background: $brand-primary;
+
+      .active {
+        background: $brand-primary;
+        color: $white;
+      }
+
+      a {
+        &:hover,
+        &:focus {
+          color: $white;
+          background: $brand-secondary;
+        }
+      }
+    }
+  }
+}
+
+.region-front-welcome {
+  background: $brand-primary;
+  display: flex;
+  justify-content: center;
+  padding: 3%;
+
+  #block-homepageinformation {
+    border-bottom: solid $brand-primary 2px;
+    background: $brand-primary;
+    color: $white;
+    text-align: left;
+
+    li {
+      margin-left: 2rem;
+    }
+
+    p {
+      color: $white;
+    }
+  }
+}
+
+#top-area {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: left;
+  padding-top: 5rem;
+
+  #block-views-block-featured-content-featured-content-list-first {
+    .content .card-deck .cards-pack .card .card__link {
+      background: $brand-primary;
+    }
+  }
+
+  #block-views-block-featured-content-featured-content-list-middle {
+    .content .card-deck .cards-pack .card .card__link {
+      background: $brand-secondary;
+    }
+  }
+
+  #block-views-block-featured-content-featured-content-list-last {
+    .content .card-deck .cards-pack .card .card__link {
+      background: #0b3993;
+    }
+  }
+
+
+  #block-views-block-featured-content-featured-content-list-first,
+  #block-views-block-featured-content-featured-content-list-middle,
+  #block-views-block-featured-content-featured-content-list-last {
+    .content .card-deck .cards-pack .card .card__link {
+      border: none;
+      display: block;
+      position: relative;
+      border: 2px solid $black;
+
+      @include breakpoint($tab) {
+        min-height: 38rem;
+      }
+
+      &:after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        bottom: 15px;
+        right: 10px;
+        width: 3rem;
+        height: 3rem;
+      }
+
+      &:hover,
+      &:focus {
+        background: $offwhite;
+
+        h2 {
+          color: $brand-primary;
+          text-decoration: underline;
+        }
+      }
+
+      .media-image {
+        margin: 0;
+      }
+    }
+  }
+
+
+  h2 {
+    @include adjust-font-size-to(22px);
+    color: $white;
+    padding: 1rem;
+  }
+
+  .column {
+    width: 33rem;
+
+    @media screen and (max-width: $tab) {
+      margin: 0 1rem;
+
+      &:last-child {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  ul.cards-pack {
+    list-style: none;
+    margin: 0;
+  }
+}
+
+#footer-area .block {
+  h2 {
+    color: $black;
+    @include adjust-font-size-to(25px)
+  }
+}
+
+#footer {
+  .column li {
+    border-bottom: 0;
+  }
+
+  .container-wrap {
+    display: block;
+  }
+
+  @include breakpoint($tab) {
+    padding: 2%;
+  }
+
+  .footer-menu li {
+    @include adjust-font-size-to(16px);
+    padding-left: 0;
+    list-style-type: none;
+
+    @include breakpoint($mob) {
+      display: inline-block;
+      padding: 0 .8rem 0 0;
+      line-height: 1.8rem;
+      margin-right: .5rem;
+    }
+
+    a {
+      @media screen and (min-width: $mob) {
+        display: block;
+      }
+    }
+  }
+}

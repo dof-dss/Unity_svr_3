@@ -1,0 +1,20 @@
+uuid: 5b03af7e-9d34-4c5b-a292-80175ac0a3f2
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+  theme:
+    - liofa_theme
+id: liofa_theme_languageswitcher
+theme: liofa_theme
+region: search
+weight: -7
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Language switcher'
+  label_display: '0'
+  provider: language
+visibility: {  }

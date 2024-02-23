@@ -1,0 +1,20 @@
+uuid: 0d499f88-b0d4-444b-9e93-2c03c691c2e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.counties
+  module:
+    - metatag
+id: taxonomy_term.counties.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: counties
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The computed meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag_computed

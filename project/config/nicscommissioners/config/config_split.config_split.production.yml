@@ -1,0 +1,16 @@
+uuid: 7b50ff72-7751-4133-a4d4-be59b00d5209
+langcode: en
+status: true
+dependencies: {  }
+id: production
+label: Production
+description: ''
+weight: 0
+folder: ../project/config/nicscommissioners/production
+module:
+  fastly: 0
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true

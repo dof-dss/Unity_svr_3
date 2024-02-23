@@ -1,0 +1,18 @@
+uuid: 6332e4ea-44d1-45fb-b97a-e43804670b56
+langcode: ga
+status: true
+dependencies:
+  config:
+    - entityqueue.entity_queue.slideshow
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: entity_subqueue.slideshow
+target_entity_type_id: entity_subqueue
+target_bundle: slideshow
+default_langcode: site_default
+language_alterable: false

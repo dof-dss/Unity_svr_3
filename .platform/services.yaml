@@ -21,6 +21,8 @@ db:
             - lgbcnidb
             - semcommitteedb
             - nibureaudb
+            - nicscommissionersdb
+            - liofadb
         endpoints:
             pacni:
                 default_schema: pacnidb
@@ -66,6 +68,14 @@ db:
                 default_schema: nibureaudb
                 privileges:
                     nibureaudb: admin
+            nicscommissioners:
+                default_schema: nicscommissionersdb
+                privileges:
+                    nicscommissionersdb: admin
+            liofa:
+                default_schema: liofadb
+                privileges:
+                    liofadb: admin
 solr_8_11:
     type: 'solr:8.11'
     disk: 1024
@@ -91,6 +101,10 @@ solr_8_11:
                 conf_dir: !archive solr_config/
             nibureau_index:
                 conf_dir: !archive solr_config/
+            nicscommissioners_index:
+                conf_dir: !archive solr_config/
+            liofa_index:
+                conf_dir: !archive solr_config/
         endpoints:
             pacni:
                 core: pacni_index
@@ -112,5 +126,9 @@ solr_8_11:
                 core: semcommittee_index
             nibureau:
                 core: nibureau_index
+            nicscommissioners:
+                core: nicscommissioners_index
+            liofa:
+                core: liofa_index
 redis:
     type: 'redis:6.0'

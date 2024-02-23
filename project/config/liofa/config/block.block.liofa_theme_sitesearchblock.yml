@@ -1,0 +1,25 @@
+uuid: d100f588-f6ec-4539-8496-c595ec449c69
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - unity_search_pages
+  theme:
+    - liofa_theme
+id: liofa_theme_sitesearchblock
+theme: liofa_theme
+region: search
+weight: -8
+provider: null
+plugin: site_search_block
+settings:
+  id: site_search_block
+  label: 'Site search block'
+  label_display: '0'
+  provider: unity_search_pages
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '/search*'

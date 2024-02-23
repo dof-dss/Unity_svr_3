@@ -1,0 +1,18 @@
+uuid: dc87f7cf-a738-4781-9a3c-765df1c764c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.organisation
+id: node.organisation.created
+field_name: created
+entity_type: node
+bundle: organisation
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

@@ -1,0 +1,20 @@
+uuid: 8cec642e-ebd3-49df-aeb6-9167d16013ee
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - nicscommissioners_theme
+id: mainpagecontent
+theme: nicscommissioners_theme
+region: content
+weight: -4
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

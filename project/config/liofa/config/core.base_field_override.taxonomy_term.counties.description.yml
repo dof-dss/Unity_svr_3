@@ -1,0 +1,21 @@
+uuid: b9a084d3-236d-44f0-bd08-dacfea498abe
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.counties
+  module:
+    - text
+id: taxonomy_term.counties.description
+field_name: description
+entity_type: taxonomy_term
+bundle: counties
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

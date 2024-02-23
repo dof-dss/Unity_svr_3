@@ -1,0 +1,87 @@
+uuid: 6417e273-f0af-4a3b-bc84-08c43643c6f5
+langcode: en-gb
+status: true
+dependencies: {  }
+id: upgrade_d7_taxonomy_term_entity_translation_portfolio_categories
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - translation
+  - Content
+  - Multilingual
+migration_group: migrate_drupal_7
+label: 'Taxonomy term entity translations (Portfolio categories)'
+source:
+  plugin: d7_taxonomy_term_entity_translation
+  bundle: portfolio_categories
+process:
+  tid:
+    -
+      plugin: get
+      source: entity_id
+  name:
+    -
+      plugin: get
+      source: name
+  description/value:
+    -
+      plugin: get
+      source: description
+  description/format:
+    -
+      plugin: get
+      source: format
+  langcode:
+    -
+      plugin: get
+      source: language
+  status:
+    -
+      plugin: get
+      source: status
+  content_translation_source:
+    -
+      plugin: get
+      source: source
+  content_translation_outdated:
+    -
+      plugin: get
+      source: translate
+  content_translation_uid:
+    -
+      plugin: get
+      source: uid
+  content_translation_created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: changed
+  forum_container:
+    -
+      plugin: get
+      source: is_container
+  field_metatag:
+    -
+      plugin: d7_metatag_entities
+      source: pseudo_metatag_entities
+destination:
+  plugin: 'entity:taxonomy_term'
+  translations: true
+  destination_module: content_translation
+  default_bundle: portfolio_categories
+migration_dependencies:
+  required:
+    - upgrade_language
+    - upgrade_d7_entity_translation_settings
+    - upgrade_d7_taxonomy_term_tags
+    - upgrade_d7_taxonomy_term_portfolio_categories
+    - upgrade_d7_taxonomy_term_forums
+    - upgrade_d7_taxonomy_term_counties
+    - upgrade_d7_taxonomy_term_org_type
+    - upgrade_d7_taxonomy_term_regions
+  optional: {  }

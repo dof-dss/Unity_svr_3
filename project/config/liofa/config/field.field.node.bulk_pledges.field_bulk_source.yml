@@ -1,0 +1,19 @@
+uuid: 716771a0-1f89-4c7e-bedc-af7eed069c55
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bulk_source
+    - node.type.bulk_pledges
+id: node.bulk_pledges.field_bulk_source
+field_name: field_bulk_source
+entity_type: node
+bundle: bulk_pledges
+label: Source
+description: 'Details of where the pledges were collected from.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

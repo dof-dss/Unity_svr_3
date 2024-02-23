@@ -1,0 +1,33 @@
+uuid: b571365b-b6bf-41ea-8165-b5b289e270ec
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: content_news_item_irish
+label: 'Content - News Item Irish'
+type: 'canonical_entities:node'
+pattern: 'nuacht/[node:title]'
+selection_criteria:
+  ba8633b5-1e2e-475d-9969-88519b020374:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: ba8633b5-1e2e-475d-9969-88519b020374
+    context_mapping:
+      node: node
+    bundles:
+      news_item: news_item
+  67867a19-4d08-4954-b2c4-ae0bd124111c:
+    id: language
+    negate: false
+    uuid: 67867a19-4d08-4954-b2c4-ae0bd124111c
+    context_mapping:
+      language: 'node:langcode:language'
+    langcodes:
+      ga: ga
+selection_logic: and
+weight: -3
+relationships:
+  'node:langcode:language':
+    label: Language

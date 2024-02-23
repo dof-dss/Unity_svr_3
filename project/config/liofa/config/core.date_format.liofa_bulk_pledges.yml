@@ -1,0 +1,8 @@
+uuid: 261d3cd5-b48b-47f8-baa3-0680b79d37c3
+langcode: en
+status: true
+dependencies: {  }
+id: liofa_bulk_pledges
+label: 'liofa bulk pledges'
+locked: false
+pattern: 'l, F d, Y'

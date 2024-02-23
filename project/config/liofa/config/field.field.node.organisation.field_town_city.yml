@@ -1,0 +1,19 @@
+uuid: 94ecb7fa-ef1d-4cd3-b2e5-2fa564d28c96
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_town_city
+    - node.type.organisation
+id: node.organisation.field_town_city
+field_name: field_town_city
+entity_type: node
+bundle: organisation
+label: 'Town or city'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

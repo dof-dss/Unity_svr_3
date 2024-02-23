@@ -1,0 +1,33 @@
+uuid: 12cc47c7-8f5c-4e88-9757-a68649bdb9be
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: content_event_irish
+label: 'Content - Event Irish'
+type: 'canonical_entities:node'
+pattern: 'cad-e-ata-ag-gabhail/[node:title]'
+selection_criteria:
+  f7009eb3-94f7-451e-8911-57d1d594417f:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: f7009eb3-94f7-451e-8911-57d1d594417f
+    context_mapping:
+      node: node
+    bundles:
+      event: event
+  78882afe-5bef-4dbb-8186-ac2f97900284:
+    id: language
+    negate: false
+    uuid: 78882afe-5bef-4dbb-8186-ac2f97900284
+    context_mapping:
+      language: 'node:langcode:language'
+    langcodes:
+      ga: ga
+selection_logic: and
+weight: -13
+relationships:
+  'node:langcode:language':
+    label: Language

@@ -1,0 +1,23 @@
+uuid: 859a7ead-1808-4648-bae7-6b3b73dfe71c
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_county
+    - node.type.organisation
+id: node.organisation.field_county
+field_name: field_county
+entity_type: node
+bundle: organisation
+label: County
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    sort:
+      field: _none
+field_type: entity_reference

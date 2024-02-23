@@ -1,0 +1,30 @@
+uuid: 18870dd4-0316-484a-a5e1-e55007f48f4a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:abb21bc0-5006-4fcb-bca5-20ddf6e19c6f'
+  module:
+    - block_content
+    - system
+  theme:
+    - judiciaryni_theme
+id: judiciaryni_theme_judicialdecisionshelptext
+theme: judiciaryni_theme
+region: search_facets
+weight: -13
+provider: null
+plugin: 'block_content:abb21bc0-5006-4fcb-bca5-20ddf6e19c6f'
+settings:
+  id: 'block_content:abb21bc0-5006-4fcb-bca5-20ddf6e19c6f'
+  label: 'Judicial decisions help text'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/judicial-decisions\r\n/judicial-decisions/type/*\r\n/judicial-decisions/date/*\r\n/judicial-decisions/judiciary/*\r\n"

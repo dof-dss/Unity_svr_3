@@ -1,0 +1,26 @@
+uuid: 9c6d0a4e-172a-45c9-8730-5cb1d68dc223
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: featured_content
+label: 'Featured Content'
+handler: simple
+handler_configuration: {  }
+entity_settings:
+  target_type: node
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      featured_content: featured_content
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+queue_settings:
+  min_size: 0
+  max_size: 3
+  act_as_queue: false
+  reverse: false

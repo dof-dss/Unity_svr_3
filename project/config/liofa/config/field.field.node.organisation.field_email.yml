@@ -1,0 +1,19 @@
+uuid: efcabad9-d8f4-4583-b21e-d5f7aeca2cd1
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_email
+    - node.type.organisation
+id: node.organisation.field_email
+field_name: field_email
+entity_type: node
+bundle: organisation
+label: Email
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

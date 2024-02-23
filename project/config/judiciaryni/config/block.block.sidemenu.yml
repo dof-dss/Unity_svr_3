@@ -31,3 +31,4 @@ visibility:
       node: '@node.node_route_context:node'
     bundles:
       basic_page: basic_page
+      judicial_member: judicial_member

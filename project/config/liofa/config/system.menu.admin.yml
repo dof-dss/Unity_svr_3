@@ -1,0 +1,10 @@
+uuid: d842b4c8-1c83-4ba9-b992-4d1acb166002
+langcode: und
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: RuPCj3V4OO2h-wqZmLjPonNAgo7s8dn9VqLEBIgDihw
+id: admin
+label: Management
+description: 'The <em>Management</em> menu contains links for administrative tasks.'
+locked: true

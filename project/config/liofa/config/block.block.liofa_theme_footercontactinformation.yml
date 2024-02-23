@@ -1,0 +1,25 @@
+uuid: 1caa664a-50de-4ff6-81b5-d52ee0ce7293
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:3cf74679-ad01-43af-9980-a982c66612f5'
+  module:
+    - block_content
+  theme:
+    - liofa_theme
+id: liofa_theme_footercontactinformation
+theme: liofa_theme
+region: footer_first
+weight: 0
+provider: null
+plugin: 'block_content:3cf74679-ad01-43af-9980-a982c66612f5'
+settings:
+  id: 'block_content:3cf74679-ad01-43af-9980-a982c66612f5'
+  label: 'Footer contact information'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

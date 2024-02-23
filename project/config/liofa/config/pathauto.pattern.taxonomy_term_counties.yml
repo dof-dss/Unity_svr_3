@@ -1,0 +1,21 @@
+uuid: 7c418855-7088-4a28-abb6-f4f518250f21
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term_counties
+label: 'Taxonomy term - Counties'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'taxonomy/counties/[term:name]'
+selection_criteria:
+  -
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      counties: counties
+selection_logic: and
+weight: 9
+relationships: {  }

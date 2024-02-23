@@ -1,0 +1,23 @@
+uuid: b377daa8-4d8f-42e9-9a63-a0646e10d69d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - liofa_theme
+id: liofa_theme_sitebranding
+theme: liofa_theme
+region: header
+weight: -2
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }
