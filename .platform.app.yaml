@@ -14,11 +14,6 @@ runtime:
     extensions:
         - apcu
         - redis
-    xdebug:
-      idekey: PHPSTORM
-variables:
-  php:
-    xdebug.mode: "debug"
 disk: 25000
 mounts:
     /web/files:
