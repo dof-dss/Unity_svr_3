@@ -1,0 +1,23 @@
+uuid: 0ec37cd1-a2ce-468e-a672-64d807c44147
+langcode: en
+status: true
+dependencies: {  }
+id: nibureau
+label: Nibureau
+weight: 0
+tag_container_ids:
+  - GTM-W3H62VW
+advanced_settings: {  }
+dimensions_metrics: {  }
+conditions: {  }
+events:
+  custom: {  }
+  generate_lead:
+    value: ''
+    currency: ''
+  login:
+    method: CMS
+  search: {  }
+  sign_up:
+    method: CMS
+  webform_purchase: {  }
