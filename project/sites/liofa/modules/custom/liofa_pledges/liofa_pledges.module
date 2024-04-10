@@ -8,6 +8,7 @@
 use Drupal\Core\Cache\Cache;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\liofa_pledges\Controller\LiofaPledgesController;
+use Drupal\node\NodeInterface;
 use Drupal\webform\WebformSubmissionInterface;
 
 /**
@@ -41,12 +42,31 @@ function liofa_pledges_node_presave(EntityInterface $entity) {
   if ($entity->bundle() === 'bulk_pledges' && $entity->isPublished()) {
     $config = \Drupal::configFactory()
       ->getEditable('liofa_pledges.countsettings');
-    $bulk_pledges_count = $entity->get('field_bulk_number')->value;
+    $bulk_pledge_count = 0;
+    $bulk_pledges_count_on_node = $entity->get('field_bulk_number')->value;
+    $result = \Drupal::entityTypeManager()
+      ->getStorage('node')
+      ->getAggregateQuery('AND')
+      ->accessCheck(FALSE)
+      ->aggregate('field_bulk_number', 'sum')
+      ->condition('type', 'bulk_pledges')
+      ->condition('status', NodeInterface::PUBLISHED)
+      ->execute();
+    if (!empty($result) && is_array($result)) {
+      $bulk_pledge_count = $result[0]['field_bulk_number_sum'] + $bulk_pledges_count_on_node;
+    }
 
-    $bulk_pledges = $config->get('bulk_pledge_count') + $bulk_pledges_count;
+    // Or this works too.
+//    $bulk_pledges_count = $entity->get('field_bulk_number')->value;
+//
+//    $bulk_pledges = $config->get('bulk_pledge_count') + $bulk_pledges_count;
+//
+//    $config
+//      ->set('bulk_pledge_count', $bulk_pledges)
+//      ->save();
 
     $config
-      ->set('bulk_pledge_count', $bulk_pledges)
+      ->set('bulk_pledge_count', $bulk_pledge_count)
       ->save();
     // Update pledge count totals.
     LiofaPledgesController::generateTotals();
