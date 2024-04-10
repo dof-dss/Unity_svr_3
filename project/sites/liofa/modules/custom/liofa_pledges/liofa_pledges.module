@@ -39,6 +39,15 @@ function liofa_pledges_webform_submission_insert(WebformSubmissionInterface $web
 function liofa_pledges_node_presave(EntityInterface $entity) {
   // Update the Bulk pledges added through the content type. Only if published.
   if ($entity->bundle() === 'bulk_pledges' && $entity->isPublished()) {
+    $config = \Drupal::configFactory()
+      ->getEditable('liofa_pledges.countsettings');
+    $bulk_pledges_count = $entity->get('field_bulk_number')->value;
+
+    $bulk_pledges = $config->get('bulk_pledge_count') + $bulk_pledges_count;
+
+    $config
+      ->set('bulk_pledge_count', $bulk_pledges)
+      ->save();
     // Update pledge count totals.
     LiofaPledgesController::generateTotals();
 

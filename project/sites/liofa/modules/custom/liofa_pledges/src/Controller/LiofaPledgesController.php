@@ -70,29 +70,30 @@ class LiofaPledgesController extends ControllerBase {
    */
   public static function generateTotals() {
     $config = \Drupal::configFactory()->getEditable('liofa_pledges.countsettings');
+//    $config->set('bulk_pledge_count', 0)->save();
     // Retrieve pledge count submitted online.
     $onsite_pledges = intval($config->get('pledge_count_submissions'));
     // Now need to get bulk pledges count.
     $bulk_pledge_count = 0;
-    $result = \Drupal::entityTypeManager()->getStorage('node')->getAggregateQuery('AND')
-      ->accessCheck(FALSE)
-      ->aggregate('field_bulk_number', 'sum')
-      ->condition('type', 'bulk_pledges')
-      ->condition('status', NodeInterface::PUBLISHED)
-      ->execute();
-    if (!empty($result) && is_array($result)) {
-      $bulk_pledge_count = $result[0]['field_bulk_number_sum'];
-    }
+//    $result = \Drupal::entityTypeManager()->getStorage('node')->getAggregateQuery('AND')
+//      ->accessCheck(FALSE)
+//      ->aggregate('field_bulk_number', 'sum')
+//      ->condition('type', 'bulk_pledges')
+//      ->condition('status', NodeInterface::PUBLISHED)
+//      ->execute();
+//    if (!empty($result) && is_array($result)) {
+//      $bulk_pledge_count = $result[0]['field_bulk_number_sum'];
+//    }
     // Get pledge count offset.
     $pledge_count_offset = intval($config->get('pledge_count_offset'));
     if (empty($pledge_count_offset)) {
       $pledge_count_offset = 0;
     }
-    // Calculate overall total.
-    $pledge_count_total = $onsite_pledges + $bulk_pledge_count + $pledge_count_offset;
-    $config->set('pledge_count_total', $pledge_count_total)->save();
+    // Calculate overall total. Bulk pledge count is calculated in liofa_pledges.module.
+    $pledge_count_total = $onsite_pledges + $config->get('bulk_pledge_count') + $pledge_count_offset;
     $config->set('onsite_pledges', $onsite_pledges)->save();
-    $config->set('bulk_pledge_count', $bulk_pledge_count)->save();
+//    $config->set('bulk_pledge_count', $bulk_pledge_count)->save();
+    $config->set('pledge_count_total', $pledge_count_total)->save();
   }
 
 }
