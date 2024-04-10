@@ -70,7 +70,6 @@ class LiofaPledgesController extends ControllerBase {
    */
   public static function generateTotals() {
     $config = \Drupal::configFactory()->getEditable('liofa_pledges.countsettings');
-//    $config->set('bulk_pledge_count', 0)->save();
     // Retrieve pledge count submitted online.
     $onsite_pledges = intval($config->get('pledge_count_submissions'));
     // Now need to get bulk pledges count.
