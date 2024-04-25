@@ -20,7 +20,6 @@ label: 'authenticated user'
 weight: 1
 is_admin: false
 permissions:
-  - 'access administration menu'
   - 'access content'
   - 'access media browser'
   - 'access workbench'
