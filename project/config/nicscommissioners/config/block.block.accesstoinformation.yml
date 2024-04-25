@@ -1,9 +1,9 @@
-uuid: 8d57e822-84ef-4f40-b787-07ba081c1aaf
+uuid: 009f7abe-2a97-4703-a7de-834ee193bd5b
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic_block:8484a76f-4a6d-4ed5-8ac3-66605f30f36e'
+    - 'block_content:basic_block:e446cf2f-8b4a-4101-8733-578c1cb96107'
   module:
     - block_content
   theme:
@@ -13,9 +13,9 @@ theme: nicscommissioners_theme
 region: footer_third
 weight: 0
 provider: null
-plugin: 'block_content:8484a76f-4a6d-4ed5-8ac3-66605f30f36e'
+plugin: 'block_content:e446cf2f-8b4a-4101-8733-578c1cb96107'
 settings:
-  id: 'block_content:8484a76f-4a6d-4ed5-8ac3-66605f30f36e'
+  id: 'block_content:e446cf2f-8b4a-4101-8733-578c1cb96107'
   label: 'Access to Information'
   label_display: visible
   provider: block_content

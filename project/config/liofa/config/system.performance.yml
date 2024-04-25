@@ -1,6 +1,6 @@
 _core:
   default_config_hash: 5SEPVX4mf7a0xTaHjTxjQ4hA0sop0V_4z-L7zM4gEq8
-langcode: en-gb
+langcode: en
 cache:
   page:
     max_age: 300

@@ -1,5 +1,5 @@
 uuid: 11c3af43-2463-408f-80af-be59c1215641
-langcode: en-gb
+langcode: en
 status: true
 dependencies: {  }
 id: upgrade_d7_taxonomy_term_forums

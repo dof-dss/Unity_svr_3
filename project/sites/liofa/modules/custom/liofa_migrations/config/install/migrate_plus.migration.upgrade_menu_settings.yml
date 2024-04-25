@@ -1,5 +1,5 @@
 uuid: 9ea8e08c-399f-4da1-984e-3133dee9ec8b
-langcode: en-gb
+langcode: en
 status: true
 dependencies: {  }
 id: upgrade_menu_settings

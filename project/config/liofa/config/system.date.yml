@@ -1,6 +1,6 @@
 _core:
   default_config_hash: 9igS-9qqxUg14iAlnst2AcWBhvahm0EE5E9EzflfTpM
-langcode: en-gb
+langcode: en
 first_day: 0
 country:
   default: GB

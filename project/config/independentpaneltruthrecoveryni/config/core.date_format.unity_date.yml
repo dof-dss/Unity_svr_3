@@ -1,0 +1,10 @@
+uuid: d113a57d-d41a-456b-bc31-f617ea470952
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: n5SoPUrV3_e4spmi22hPxqNj7GV0WZ1Of-t01shiwUU
+id: unity_date
+label: 'Unity date'
+locked: false
+pattern: 'd F Y'

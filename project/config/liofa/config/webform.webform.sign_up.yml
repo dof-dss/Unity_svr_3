@@ -16,12 +16,20 @@ elements: |-
   name:
     '#type': textfield
     '#title': Name
+    '#required': true
   email_address:
     '#type': email
     '#title': 'Email address'
+    '#required': true
   postcode:
     '#type': textfield
     '#title': Postcode
+    '#pattern': '^[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}$'
+    '#pattern_error': 'Enter a valid UK postcode'
+  actions:
+    '#type': webform_actions
+    '#title': 'Submit button(s)'
+    '#submit__label': 'Submit Sign up'
 css: ''
 javascript: ''
 settings:
@@ -30,7 +38,7 @@ settings:
   ajax_progress_type: ''
   ajax_effect: ''
   ajax_speed: null
-  page: true
+  page: false
   page_submit_path: ''
   page_confirm_path: ''
   page_theme_name: ''
@@ -129,10 +137,10 @@ settings:
   confirmation_type: page
   confirmation_url: ''
   confirmation_title: ''
-  confirmation_message: ''
+  confirmation_message: 'Thank you for your submission.'
   confirmation_attributes: {  }
   confirmation_back: true
-  confirmation_back_label: ''
+  confirmation_back_label: 'Back to sign up form'
   confirmation_back_attributes: {  }
   confirmation_exclude_query: false
   confirmation_exclude_token: false
@@ -151,7 +159,7 @@ settings:
   entity_limit_user_interval: null
   purge: none
   purge_days: null
-  results_disabled: false
+  results_disabled: true
   results_disabled_ignore: false
   results_customize: false
   token_view: false
@@ -205,5 +213,42 @@ access:
     roles: {  }
     users: {  }
     permissions: {  }
-handlers: {  }
+handlers:
+  email:
+    id: email
+    handler_id: email
+    label: Email
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: liofa@communities-ni.gov.uk
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: webmaster@liofa.eu
+      from_options: {  }
+      from_name: 'Liofa website'
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Líofa pledge submitted via website'
+      body: _default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
 variants: {  }

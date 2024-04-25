@@ -1,5 +1,5 @@
 uuid: 78286d88-1087-4f92-88f8-c632732139ee
-langcode: en-gb
+langcode: en
 status: true
 dependencies:
   config:
@@ -35,4 +35,5 @@ hidden:
   field_media_file: true
   langcode: true
   name: true
+  search_api_excerpt: true
   uid: true

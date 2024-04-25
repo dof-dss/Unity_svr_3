@@ -1,0 +1,183 @@
+/*
+ * @file
+ * Defines the components for the theme.
+ */
+@import 'init/index';
+@import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
+
+.top_left #logo img {
+  height: 8.5rem;
+  @media screen and (max-width: $tab) {
+    position: relative;
+    height: 7.5rem;
+  }
+}
+
+.region-primary-menu .menu_wrapper {
+  background: #e7e7e7
+}
+
+#main-menu {
+  background: #e7e7e7;
+
+  .menu-link,
+  .menu .active,
+  .menu-item.open .menu-toggle-btn {
+    color: $black;
+    @include adjust-font-size-to(16px);
+  }
+
+  .menu .menu-item .active {
+    border-bottom-color: $brand-primary;
+  }
+
+  .menu-link {
+    &:hover,
+    &:focus {
+      background: $brand-primary;
+      color: $white;
+    }
+  }
+
+  .menu-main_sub .menu-item span.active {
+    @include adjust-font-size-to(14px);
+    border-bottom-color: $brand-secondary;
+    padding: 1rem;
+  }
+
+  .menu-main_sub {
+    background: $brand-primary;
+
+    .menu-item {
+      .active {
+        background: $brand-secondary;
+        color: $white;
+      }
+
+      a {
+        &:hover,
+        &:focus {
+          color: $white;
+          background: $brand-secondary;
+        }
+      }
+    }
+  }
+}
+
+.region-front-welcome {
+  margin-top: 0;
+
+  .block h2 {
+    text-align: left;
+  }
+
+
+  #block-homepageintro {
+    background: resolve('header-bg.png');
+    background-size: cover;
+    height: 20rem;
+    width: 100%;
+    @media screen and (max-width: $tab) {
+      background: #635474;
+    }
+
+    p {
+      color: $white;
+      padding: 2%;
+      width: 70%;
+      text-align: left;
+      @include adjust-font-size-to(20px);
+      @media screen and (max-width: $tab) {
+        @include adjust-font-size-to(18px);
+        width: 100%;
+      }
+    }
+  }
+}
+
+#content {
+  h2 {
+    margin-top: 0;
+  }
+
+  .media-image {
+    margin-bottom: 0;
+  }
+}
+
+.region-homepage-blocks {
+  .homepage--card-deck {
+    .cards-pack {
+      margin: 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 1em;
+
+      @media screen and (min-width: $phab) {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @media screen and (min-width: $tab) {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+
+    .card {
+      list-style: none;
+      text-align: left;
+
+      .card__link::after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: 3rem;
+        right: 0.5rem;
+        width: 3rem;
+        height: 3rem;
+        mask: no-repeat 100% 100% resolve('arrow_forward_black.svg');
+        mask-size: cover;
+        background-color: #000;
+      }
+
+      .media-image {
+        display: block;
+        margin: 0;
+        position: absolute;
+        right: 1.5rem;
+        bottom: 1.5rem;
+        width: 10rem;
+        height: auto;
+      }
+    }
+  }
+
+  .homepage--card-deck {
+    .card__link {
+      border-bottom: 0 !important;
+      background: #e7e7e7;
+      border-left: 5px solid transparent;
+      color: #000000;
+      display: block;
+      height: 100%;
+      min-height: 240px;
+      padding: 3rem 5rem 9rem 1.5rem !important;
+      position: relative;
+      text-decoration: none;
+      @include adjust-font-size-to(21px);
+
+      &:hover,
+      &:focus {
+        background: #e7e7e7;
+        color: #764c63;
+        border-left-color: #764c63;
+        text-decoration: underline;
+      }
+
+      &:focus {
+        outline: 2px solid $brand-primary;
+      }
+    }
+  }
+}
+

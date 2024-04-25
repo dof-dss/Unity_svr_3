@@ -1,0 +1,52 @@
+<?php
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_ENTITY_presave() for nodes.
+ */
+function liofa_common_entity_presave(EntityInterface $entity) {
+  if ($entity instanceof NodeInterface) {
+    // Bypass Feature and Bulk pledges content types as they aren't translatable.
+    if ($entity->bundle() === 'feature' || $entity->bundle() === 'bulk_pledges') {
+      return;
+    }
+    $node_language = $entity->language()->getId();
+    // Check there is no translation currently on the site for this node.
+    if ($node_language === 'en' && !$entity->hasTranslation('ga')) {
+      \Drupal::messenger()
+        ->addMessage(t("Please update the Irish version for this content. The site won't function correctly without a published translated version."), "error");
+    }
+    elseif ($node_language === 'ga' && !$entity->hasTranslation('en')) {
+      \Drupal::messenger()
+        ->addMessage(t("Please update the English version for this content. The site won't function correctly without a published translated version."), "error");
+    }
+  }
+}
+
+// Code to stop a user saving a node unless it has a translation. Code isn't needed now but could be in the future.
+
+///**
+//* Implements hook_form_FORM_ID_form_alter().
+// */
+//function liofa_common_form_node_form_alter(&$form, FormStateInterface $form_state) {
+//    $form['#validate'][] = 'liofa_common_node_form_validate';
+//
+//}
+//
+///**
+// * Validate handler for the events form timefield field.
+// *
+// * @see liofa_common_form_node_form_alter()
+// */
+//function liofa_common_node_form_validate($form, FormStateInterface $form_state) {
+//  $node = $form_state->getFormObject()->getEntity();
+//  if ($node->get('moderation_state', 'published')) {
+//    if (!$node->hasTranslation('ga') && $node->hasField('moderation_state') && $form_state->getValue('moderation_state')[0]['value'] === 'published') {
+//      // Don't let the end time be before the start time.
+//      $form_state->setErrorbyName('', t('You cannot publish the page until a translation has been created.'));
+//    }
+//  }
+//}

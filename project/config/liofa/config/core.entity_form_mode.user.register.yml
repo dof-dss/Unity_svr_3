@@ -1,5 +1,5 @@
 uuid: dc240f3f-e370-4a65-804d-6955ff6dcadf
-langcode: en-gb
+langcode: en
 status: true
 dependencies:
   module:

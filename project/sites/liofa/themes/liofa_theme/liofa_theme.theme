@@ -52,7 +52,7 @@ function liofa_theme_theme_suggestions_block_alter(array &$suggestions, array $v
   $homepage_feature_blocks = [
     'liofa_theme_signuptoliofa',
     'liofa_theme_irishclasses',
-    'liofa_theme_liofaresources'
+    'liofa_theme_thegaeltacht'
   ];
 
   if (in_array($id, $homepage_feature_blocks)) {
@@ -62,17 +62,14 @@ function liofa_theme_theme_suggestions_block_alter(array &$suggestions, array $v
 }
 
 /**
- * Implements hook_theme_suggestions_HOOK_alter().
+ * Implements hook_preprocess_HOOK().
  */
-function liofa_theme_theme_suggestions_views_view_unformatted_alter(array &$suggestions, array $variables) {
-  $display_id = $variables['view']->element['#display_id'];
-
-  $organisation_views = [
-    'classes_by_county',
-    'irish_language_groups'
-  ];
-
-  if (in_array($display_id, $organisation_views)) {
-    $suggestions[] = 'views_view_unformatted__organisations_accordion';
+function liofa_theme_preprocess_views_view_unformatted(&$variables) {
+  foreach ($variables['rows'] as $row) {
+    if (!empty($row['content']['#row']->node__field_county_field_county_target_id)) {
+      // Get the Taxonomy Term ID of the county and store it in a variable to use in twig.
+      $county_tid = $row['content']['#row']->node__field_county_field_county_target_id;
+      $variables['county_tid'] = $county_tid;
+    }
   }
 }

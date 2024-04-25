@@ -1,5 +1,5 @@
 uuid: cba05afd-adb2-4a78-84a1-25db328b188d
-langcode: en-gb
+langcode: en
 status: true
 dependencies:
   config:

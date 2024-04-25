@@ -10,7 +10,6 @@ dependencies:
   content:
     - 'taxonomy_term:org_type:03129731-7402-4e45-9f49-4523aaae4dca'
     - 'taxonomy_term:org_type:d4a1a5fd-d617-44f4-ab3e-79043e16d23d'
-    - 'taxonomy_term:org_type:d4f37e5a-0a4b-403a-b905-79878ebb0340'
     - 'taxonomy_term:regions:7920c8a2-9512-4f8c-baa0-7bbb05589795'
     - 'taxonomy_term:regions:ad73bb96-e1da-4d52-acb7-bf0b7afdaa47'
   module:
@@ -48,8 +47,8 @@ display:
             alter_text: false
             text: ''
             make_link: false
-            path: ''
-            absolute: false
+            path: 'learning-irish/classes/{{ field_county__target_id }}'
+            absolute: true
             external: false
             replace_spaces: false
             path_case: none
@@ -97,21 +96,21 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        title:
-          id: title
-          table: node_field_data
-          field: title
-          relationship: none
+        tid:
+          id: tid
+          table: taxonomy_term_field_data
+          field: tid
+          relationship: field_county
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: title
+          entity_type: taxonomy_term
+          entity_field: tid
           plugin_id: field
           label: ''
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"accordion-row\">\r\n<h3>{{ title }}</h3>\r\n</div>"
+            text: '{{ field_county }}'
             make_link: false
             path: ''
             absolute: false
@@ -149,9 +148,10 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: string
+          type: number_integer
           settings:
-            link_to_entity: true
+            thousand_separator: ''
+            prefix_suffix: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -327,54 +327,12 @@ display:
           hierarchy: false
           limit: true
           error_message: true
-        langcode:
-          id: langcode
-          table: node_field_data
-          field: langcode
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          entity_field: langcode
-          plugin_id: language
-          operator: in
-          value:
-            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
       style:
         type: default
         options:
           grouping:
             -
-              field: field_county
+              field: tid
               rendered: false
               rendered_strip: false
           row_class: accordion-content
@@ -403,7 +361,7 @@ display:
           group_type: group
           admin_label: 'field_county: Taxonomy term'
           plugin_id: standard
-          required: false
+          required: true
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -423,7 +381,11 @@ display:
     display_plugin: page
     position: 1
     display_options:
+      defaults:
+        group_by: false
+      group_by: false
       display_description: ''
+      rendering_language: '***LANGUAGE_language_interface***'
       display_extenders:
         metatag_display_extender:
           metatags: {  }
@@ -432,7 +394,6 @@ display:
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - user
         - 'user.node_grants:view'
@@ -560,48 +521,6 @@ display:
           hierarchy: false
           limit: true
           error_message: true
-        langcode:
-          id: langcode
-          table: node_field_data
-          field: langcode
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          entity_field: langcode
-          plugin_id: language
-          operator: in
-          value:
-            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
       filter_groups:
         operator: AND
         groups:
@@ -611,6 +530,7 @@ display:
         filters: false
         filter_groups: false
       display_description: ''
+      rendering_language: '***LANGUAGE_language_interface***'
       display_extenders:
         metatag_display_extender:
           metatags: {  }
@@ -619,7 +539,6 @@ display:
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - user
         - 'user.node_grants:view'

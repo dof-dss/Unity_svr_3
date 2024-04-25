@@ -1,5 +1,5 @@
 uuid: bb8902f8-3eef-4672-82fd-31ebd970aaa9
-langcode: en-gb
+langcode: en
 status: false
 dependencies:
   module:
@@ -32,3 +32,11 @@ filters:
     weight: 0
     settings:
       replace_empty: '0'
+  slick_filter:
+    id: slick_filter
+    provider: slick
+    status: false
+    weight: 4
+    settings:
+      optionset: default
+      media_switch: ''

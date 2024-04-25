@@ -1,0 +1,29 @@
+uuid: 4350e8ea-a305-4338-9f84-4e3fc3b35a62
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.webform_default
+  module:
+    - file
+    - filter
+    - media
+    - node
+    - pathauto
+    - system
+_core:
+  default_config_hash: z-UB57Tg7OS627ItYHGrWlRMLhAT7P1VO2tDm6Wty0c
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access content'
+  - 'delete own files'
+  - 'notify of path changes'
+  - 'use text format basic_html'
+  - 'use text format webform_default'
+  - 'view all revisions'
+  - 'view media'
+  - 'view own unpublished content'

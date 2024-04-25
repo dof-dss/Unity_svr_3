@@ -1,5 +1,5 @@
 uuid: 6eb3e11a-27de-4159-8c31-272312505cd1
-langcode: en-gb
+langcode: en
 status: true
 dependencies: {  }
 id: upgrade_d7_node_complete_home_page_banner

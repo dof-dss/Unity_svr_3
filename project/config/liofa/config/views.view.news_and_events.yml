@@ -123,7 +123,7 @@ display:
           plugin_id: text
           empty: true
           content:
-            value: "====== en ======\r\nSorry, no current press releases were found.\r\n====== ga ======\r\nNíl aon preasráiteas ar fáil."
+            value: 'Sorry, no current press releases were found.'
             format: basic_html
           tokenize: false
       sorts:
@@ -311,7 +311,20 @@ display:
         type: none
         options:
           offset: 0
-      empty: {  }
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: true
+          content:
+            value: 'Sorry, no current press releases were found.'
+            format: basic_html
+          tokenize: false
       defaults:
         empty: false
         pager: false

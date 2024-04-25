@@ -1,5 +1,5 @@
 uuid: 4b21897f-9df6-4b13-90c4-2406909dc277
-langcode: en-gb
+langcode: en
 status: true
 dependencies: { }
 id: upgrade_d7_node_complete_news_item

@@ -1,5 +1,5 @@
 uuid: e60ca7af-f297-4253-923c-32906fb78a13
-langcode: en-gb
+langcode: en
 status: true
 dependencies: {  }
 id: upgrade_d7_taxonomy_term_entity_translation_counties

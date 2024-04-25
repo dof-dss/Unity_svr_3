@@ -12,7 +12,7 @@ bundle: counties
 label: Genitive
 description: 'For Irish counties, the genitive version - for example, the genitive version of Dun na nGall is Dhun na nGall'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

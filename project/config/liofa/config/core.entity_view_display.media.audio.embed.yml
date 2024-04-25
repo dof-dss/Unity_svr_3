@@ -1,5 +1,5 @@
 uuid: 2ed1b1a2-e6a5-4a4f-a405-51c1da14aee2
-langcode: en-gb
+langcode: en
 status: true
 dependencies:
   config:
@@ -35,5 +35,6 @@ hidden:
   created: true
   langcode: true
   name: true
+  search_api_excerpt: true
   thumbnail: true
   uid: true

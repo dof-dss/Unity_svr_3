@@ -1,0 +1,25 @@
+uuid: de1e3b80-cd05-4af1-9a78-2a65064820c1
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:feature_block:67bb2871-e190-45df-b727-59fcd6f5126a'
+  module:
+    - block_content
+  theme:
+    - liofa_theme
+id: liofa_theme_thegaeltacht
+theme: liofa_theme
+region: top_third
+weight: 0
+provider: null
+plugin: 'block_content:67bb2871-e190-45df-b727-59fcd6f5126a'
+settings:
+  id: 'block_content:67bb2871-e190-45df-b727-59fcd6f5126a'
+  label: 'The Gaeltacht'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

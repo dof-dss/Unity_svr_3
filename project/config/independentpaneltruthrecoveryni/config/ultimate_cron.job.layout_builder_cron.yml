@@ -1,0 +1,17 @@
+uuid: fdafd15a-1516-4900-8712-c797f52e6879
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_builder
+title: 'Default cron handler'
+id: layout_builder_cron
+weight: 0
+module: layout_builder
+callback: layout_builder_cron
+scheduler:
+  id: simple
+launcher:
+  id: serial
+logger:
+  id: database

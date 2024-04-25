@@ -1,5 +1,5 @@
 uuid: d7085d71-c2dd-4c13-b98f-2b58eda284d8
-langcode: en-gb
+langcode: en
 status: true
 dependencies: {  }
 id: upgrade_taxonomy_settings

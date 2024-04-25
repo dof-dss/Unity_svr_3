@@ -11,12 +11,12 @@ dependencies:
 id: liofa_theme_irishclasses
 theme: liofa_theme
 region: top_second
-weight: 0
+weight: -9
 provider: null
 plugin: 'block_content:4cdb2b8a-e14d-4123-ac58-4178f548dbc9'
 settings:
   id: 'block_content:4cdb2b8a-e14d-4123-ac58-4178f548dbc9'
-  label: 'Irish classes'
+  label: 'Ranganna Gaeilge'
   label_display: visible
   provider: block_content
   status: true

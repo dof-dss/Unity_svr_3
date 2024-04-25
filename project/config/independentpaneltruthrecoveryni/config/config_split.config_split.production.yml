@@ -1,0 +1,16 @@
+uuid: 41117209-7766-4dd6-987f-3e20e6fcc647
+langcode: en
+status: true
+dependencies: {  }
+id: production
+label: Production
+description: ''
+weight: 0
+folder: ../project/config/independentpaneltruthrecoveryni/production
+module:
+  fastly: 0
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true

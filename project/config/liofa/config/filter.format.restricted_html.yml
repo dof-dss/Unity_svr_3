@@ -1,5 +1,5 @@
 uuid: 7cb2be33-783d-4813-9659-71514be7f364
-langcode: en-gb
+langcode: en
 status: true
 dependencies: {  }
 _core:
@@ -30,3 +30,11 @@ filters:
     weight: 0
     settings:
       filter_url_length: 72
+  slick_filter:
+    id: slick_filter
+    provider: slick
+    status: false
+    weight: 4
+    settings:
+      optionset: default
+      media_switch: ''

@@ -1,5 +1,5 @@
 uuid: dc1a295c-93c8-4b37-9205-365c81d98567
-langcode: en-gb
+langcode: en
 status: true
 dependencies:
   config:
@@ -29,5 +29,6 @@ hidden:
   created: true
   langcode: true
   name: true
+  search_api_excerpt: true
   thumbnail: true
   uid: true

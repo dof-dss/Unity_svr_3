@@ -1,6 +1,6 @@
 _core:
   default_config_hash: yCD3FfFDcI2kR9-TS1XN7FuZFtnmmCRWcuZ2bAljgWw
-langcode: en-gb
+langcode: en
 entity_type_groups:
   node:
     application:

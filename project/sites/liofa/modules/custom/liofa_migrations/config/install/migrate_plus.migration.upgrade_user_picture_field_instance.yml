@@ -1,5 +1,5 @@
 uuid: ca4ef023-735e-44c8-8008-a42000f41d5b
-langcode: en-gb
+langcode: en
 status: true
 dependencies: {  }
 id: upgrade_user_picture_field_instance

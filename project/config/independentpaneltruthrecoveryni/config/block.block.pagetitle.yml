@@ -1,0 +1,24 @@
+uuid: 9c4e706e-69b5-4104-8fc7-cfa864885127
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - independentpaneltruthrecoveryni_theme
+id: pagetitle
+theme: independentpaneltruthrecoveryni_theme
+region: content
+weight: -8
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "<front>\r\n/search\r\n/publications\r\n/publications/date/*\r\n/news\r\n/news/date/*"

@@ -12,7 +12,7 @@ field_name: field_publication_date
 entity_type: node
 bundle: press_clippings
 label: 'Publication date'
-description: 'Enter the publiation date of the press clipping here.'
+description: 'Enter the publication date of the press clipping here.'
 required: true
 translatable: false
 default_value:

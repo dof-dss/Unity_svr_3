@@ -1,0 +1,12 @@
+workflows:
+  nics_editorial_workflow_workflow:
+    disabled_transitions:
+      create_new_draft: '0'
+      submit_for_review: '0'
+      quick_publish: '0'
+      reject: '0'
+      publish: '0'
+      archive: '0'
+      restore_to_draft: '0'
+      restore: '0'
+      draft_of_published: '0'

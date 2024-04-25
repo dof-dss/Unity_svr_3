@@ -1,6 +1,6 @@
 _core:
   default_config_hash: 5ZR2rETEQeI922jZ_ObHCnuueEJHgU7_vyBgdP0q7Ls
-langcode: en-gb
+langcode: en
 verbose: 1
 types:
   block_content: {  }

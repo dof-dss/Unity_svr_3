@@ -1,0 +1,30 @@
+uuid: 1d20a709-96d8-43c9-a198-56e362522b6c
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:41b0b191-910b-4503-9c3d-a0789bb0c0b2'
+  module:
+    - block_content
+    - system
+  theme:
+    - liofa_theme
+id: liofa_theme_liofapledgesblock
+theme: liofa_theme
+region: sidebar_second
+weight: -8
+provider: null
+plugin: 'block_content:41b0b191-910b-4503-9c3d-a0789bb0c0b2'
+settings:
+  id: 'block_content:41b0b191-910b-4503-9c3d-a0789bb0c0b2'
+  label: 'Líofa Latest'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "/content/forms/sign-liofa\r\n/content/forms/claraigh-le-liofa"

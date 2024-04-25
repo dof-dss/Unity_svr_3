@@ -1,5 +1,5 @@
 uuid: a6d05b85-a67d-4585-b331-334acb138fb6
-langcode: en-gb
+langcode: en
 status: true
 dependencies: {  }
 name: 'Organisation type'

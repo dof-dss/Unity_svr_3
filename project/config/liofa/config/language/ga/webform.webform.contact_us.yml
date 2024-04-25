@@ -1,0 +1,13 @@
+elements: |
+  first_name:
+    '#title': Ainm
+  last_name:
+    '#title': Sloinne
+  contact_email:
+    '#title': Ríomhphost
+  contact_telephone:
+    '#title': Teileafón
+  contact_help:
+    '#title': 'An dtiocfadh linn cuidiú leat?'
+  actions:
+    '#submit__label': 'Cuir Déan teagmháil linn'

@@ -1,5 +1,5 @@
 uuid: faa850aa-5150-41c7-a2c8-29d0beeab770
-langcode: en-gb
+langcode: en
 status: true
 dependencies:
   config:

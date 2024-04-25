@@ -1,5 +1,5 @@
 uuid: 908dc48f-455d-4087-95bc-085f3cbb6381
-langcode: en-gb
+langcode: en
 status: true
 dependencies: {  }
 id: upgrade_d7_taxonomy_term_localized_translation

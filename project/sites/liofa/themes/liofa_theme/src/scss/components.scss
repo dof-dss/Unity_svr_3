@@ -5,6 +5,52 @@
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
 
+#block-liofa-theme-languageswitcher {
+
+  ul {
+    list-style: none;
+    float: right;
+    margin: 0;
+  }
+
+  li {
+    float: left;
+    padding: 5px;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+      text-decoration-color: $link;
+    }
+
+    .is-active {
+      background: $brand-primary;
+      color: $white;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+        text-decoration-color: $white;
+      }
+    }
+  }
+
+  a {
+    @include adjust-font-size-to(16px);
+    display: block;
+    border: $black 2px solid;
+    padding: 4px;
+    @media screen and (max-width: $tab) {
+      background: $white;
+    }
+  }
+}
+
+
+#main-menu .hamburger {
+  top: -11.5rem;
+}
+
 #main-menu .menu .menu-item .active,
 #main-menu .menu .menu-item .active + .menu-main_sub .title a {
   border-bottom-color: $brand-secondary;
@@ -17,7 +63,7 @@ address {
 .node-type-organisation,
 article .block-link {
   .media-image[data-picture-mapping="inline"] img {
-    float: left;
+    float: none;
     margin-left: 0;
   }
 }
@@ -43,6 +89,7 @@ article.block-link-with-wrapper {
 
   .block-link-wrapper {
     display: flex;
+    flex-flow: wrap;
   }
 
   h2 {
@@ -54,11 +101,16 @@ article.block-link-with-wrapper {
   .block-link__image {
     width: 34rem;
     padding-right: 2rem;
+    flex-basis: 15rem;
   }
 
   .block-link__body {
     position: relative;
-    padding-right: 1rem;
+    padding-right: 2rem;
+
+    @include breakpoint($mob) {
+      flex: 2;
+    }
 
     &:after {
       content: '';
@@ -198,6 +250,8 @@ article.block-link {
 }
 
 #bottom-area.container-wrap {
+  margin-top: 3rem;
+
   @media screen and (max-width: $tab) {
     margin: 1rem;
   }
@@ -225,16 +279,21 @@ article.block-link {
 #footer-area {
   .column:last-child {
     float: left;
-    width: 30rem;
+    width: 25rem;
     margin: 0;
   }
 }
 
-#block-liofa-theme-footercontactinformation {
-  .content a {
+#footer-area #block-liofa-theme-footercontactinformation {
+  .content div p a {
     margin: 0;
     padding: 0;
     border: none;
+
+    &:hover,
+    &:focus {
+      border: none;
+    }
   }
 
   .media-image {
@@ -256,4 +315,32 @@ article.block-link {
 
 .path-gaeltacht .item-list ul {
   margin: 1.2rem 0 1.8rem 2.4rem;
+}
+
+.front .region-sidebar-second,
+.region-sidebar-second .block {
+  .content {
+    background: $grey-light;
+    padding: 3rem 1rem;
+    text-align: center;
+
+    h3 {
+      @include adjust-font-size-to(50px);
+      margin: 2.5rem 0 3rem;
+    }
+
+    p {
+      text-transform: uppercase;
+    }
+  }
+}
+
+.front .region-sidebar-second {
+  margin-bottom: 2rem;
+
+  @media screen and (min-width: 910px) {
+    float: right;
+    width: 33rem;
+    margin-bottom: 0;
+  }
 }

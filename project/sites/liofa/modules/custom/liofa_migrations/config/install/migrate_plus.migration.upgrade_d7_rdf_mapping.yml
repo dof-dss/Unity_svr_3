@@ -1,5 +1,5 @@
 uuid: ffde2357-7fe4-422e-99e8-3b46714bbacd
-langcode: en-gb
+langcode: en
 status: true
 dependencies: {  }
 id: upgrade_d7_rdf_mapping

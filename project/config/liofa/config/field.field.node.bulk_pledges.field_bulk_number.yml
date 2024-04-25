@@ -1,5 +1,5 @@
 uuid: 8f1e3174-6f26-4e1b-9767-930d9d56470a
-langcode: en-gb
+langcode: en
 status: true
 dependencies:
   config:
@@ -12,11 +12,11 @@ bundle: bulk_pledges
 label: 'Number of pledges'
 description: 'The number of pledges collected.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  min: 0
+  min: 1
   max: null
   prefix: ''
   suffix: ''

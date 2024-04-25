@@ -13,7 +13,7 @@ bundle: feature
 label: Photo
 description: 'Please choose an image  to be displayed with this feature item. '
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

@@ -45,7 +45,6 @@ module:
   facets: 0
   facets_pretty_paths: 0
   facets_summary: 0
-  fastly: 0
   field: 0
   field_group: 0
   field_ui: 0
@@ -152,7 +151,6 @@ theme:
   stark: 0
   seven: 0
   stable: 0
-  adminimal_theme: 0
   nicsdru_unity_theme: 0
   nicscommissioners_theme: 0
   claro: 0

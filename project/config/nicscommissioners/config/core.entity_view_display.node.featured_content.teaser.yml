@@ -18,9 +18,10 @@ content:
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 0
     region: content
 hidden:
+  content_moderation_control: true
   field_link: true
   field_meta_tags: true
   field_photo: true

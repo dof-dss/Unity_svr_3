@@ -1,5 +1,5 @@
 uuid: e55fee7b-24c7-4bb5-8738-26ce8de4599a
-langcode: en-gb
+langcode: en
 status: true
 dependencies: {  }
 id: upgrade_d7_system_performance

@@ -1,6 +1,6 @@
 _core:
   default_config_hash: 4JpC3F2x_VsACQQuTI4JOMCLDQcjUp0gTMJspJQ2M7s
-langcode: en-gb
+langcode: en
 report-only:
   enable: true
   directives:

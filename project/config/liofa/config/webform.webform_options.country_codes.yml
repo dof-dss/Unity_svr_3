@@ -1,5 +1,5 @@
 uuid: 25ca00dd-50cb-4d93-b008-62f2f471d607
-langcode: en-gb
+langcode: en
 status: true
 dependencies:
   enforced:

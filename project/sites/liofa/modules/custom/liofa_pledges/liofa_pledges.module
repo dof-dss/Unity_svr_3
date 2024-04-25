@@ -1,5 +1,13 @@
 <?php
 
+/**
+ * @file
+ * Contains Liofa pledges code.
+ */
+
+use Drupal\Core\Cache\Cache;
+use Drupal\liofa_pledges\Controller\LiofaPledgesController;
+use Drupal\node\NodeInterface;
 use Drupal\webform\WebformSubmissionInterface;
 
 /**
@@ -16,7 +24,51 @@ function liofa_pledges_webform_submission_insert(WebformSubmissionInterface $web
     $config
       ->set('pledge_count_submissions', $onsite_pledges)
       ->save();
+
+    // Update pledge count totals.
+    LiofaPledgesController::generateTotals();
+
+    // Invalidate custom cache tag.
+    Cache::invalidateTags(['liofa_pledges']);
   }
 }
 
+/**
+ * Implements hook_entity_type_insert() for nodes.
+ */
+function liofa_pledges_node_insert(NodeInterface $node) {
+  update_counts($node);
+}
 
+/**
+ * Implements hook_entity_type_update() for nodes.
+ */
+function liofa_pledges_node_update(NodeInterface $node) {
+  update_counts($node);
+}
+
+function update_counts(NodeInterface $node) {
+  // Update the Bulk pledges added through the content type. Only if published.
+  if ($node->getType() === 'bulk_pledges' && $node->isPublished()) {
+    // Update pledge count totals.
+    LiofaPledgesController::generateTotals();
+
+    // Invalidate custom cache tag.
+    Cache::invalidateTags(['liofa_pledges']);
+  }
+}
+
+/**
+ * Implements hook_preprocess_block().
+ * Getting the liofa_pledges overall count and storing it in a variable to use
+ * in
+ * themes/liofa_theme/templates/block/block--liofa-theme-liofapledgesblock.html.twig.
+ */
+function liofa_pledges_preprocess_block(&$variables) {
+  if (!empty($variables['elements']['#id']) && $variables['elements']['#id'] == 'liofa_theme_liofapledgesblock') {
+    $variables['pledge_count'] = number_format(\Drupal::config('liofa_pledges.countsettings')
+      ->get('pledge_count_total'));
+    // Custom cache tag for pledge counts.
+    $variables['#cache']['tags'][] = 'liofa_pledges';
+  }
+}

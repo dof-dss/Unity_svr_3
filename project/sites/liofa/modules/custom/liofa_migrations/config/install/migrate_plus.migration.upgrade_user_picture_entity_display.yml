@@ -1,5 +1,5 @@
 uuid: 0862fc42-1a8f-4f97-b452-f44dc21d7af3
-langcode: en-gb
+langcode: en
 status: true
 dependencies: {  }
 id: upgrade_user_picture_entity_display

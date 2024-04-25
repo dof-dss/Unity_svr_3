@@ -129,9 +129,7 @@ field_settings:
     boost: 13.0
     configuration:
       type: union
-      separator: |+
-
-
+      separator: |
 
       fields:
         - 'entity:node/body'

@@ -1,9 +1,9 @@
 _core:
   default_config_hash: IqFDJOUXgoqYSm39bzsb0BVMDSkw3b4-KD4YSUgMw7U
-langcode: en-gb
+langcode: en
 uuid: da1ec085-4c7b-43e8-8604-d489ef06e787
 name: Liofa
-mail: eddwebdev@finance-ni.gov.uk
+mail: webmaster@liofa.eu
 slogan: ''
 page:
   403: ''

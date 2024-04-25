@@ -1,5 +1,5 @@
 uuid: c1f477b4-b5d4-47c6-a61d-3e174e2111da
-langcode: en-gb
+langcode: en
 status: true
 dependencies:
   config:
@@ -14,10 +14,17 @@ dependencies:
     - node.type.news
     - node.type.organisation
     - node.type.webform
+    - taxonomy.vocabulary.counties
+    - taxonomy.vocabulary.forums
+    - taxonomy.vocabulary.org_type
+    - taxonomy.vocabulary.portfolio_categories
+    - taxonomy.vocabulary.regions
+    - taxonomy.vocabulary.tags
     - workflows.workflow.nics_editorial_workflow
   module:
     - block
     - content_moderation
+    - content_translation
     - entityqueue
     - file
     - media
@@ -56,6 +63,9 @@ permissions:
   - 'administer redirects'
   - 'audit content'
   - 'create audio media'
+  - 'create basic_page content'
+  - 'create bulk_pledges content'
+  - 'create content translations'
   - 'create document media'
   - 'create feature content'
   - 'create file media'
@@ -64,7 +74,6 @@ permissions:
   - 'create organisation content'
   - 'create remote_video media'
   - 'create url aliases'
-  - 'create webform content'
   - 'delete all revisions'
   - 'delete any audio media'
   - 'delete any basic_page content'
@@ -79,10 +88,13 @@ permissions:
   - 'delete any remote_video media'
   - 'delete basic_page revisions'
   - 'delete bulk_pledges revisions'
+  - 'delete content translations'
   - 'delete feature revisions'
   - 'delete news revisions'
   - 'delete organisation revisions'
   - 'delete own audio media'
+  - 'delete own basic_page content'
+  - 'delete own bulk_pledges content'
   - 'delete own document media'
   - 'delete own feature content'
   - 'delete own file media'
@@ -91,6 +103,8 @@ permissions:
   - 'delete own organisation content'
   - 'delete own remote_video media'
   - 'edit any audio media'
+  - 'edit any basic_page content'
+  - 'edit any bulk_pledges content'
   - 'edit any document media'
   - 'edit any feature content'
   - 'edit any file media'
@@ -100,6 +114,8 @@ permissions:
   - 'edit any remote_video media'
   - 'edit basic meta tags'
   - 'edit own audio media'
+  - 'edit own basic_page content'
+  - 'edit own bulk_pledges content'
   - 'edit own document media'
   - 'edit own feature content'
   - 'edit own file media'
@@ -119,6 +135,17 @@ permissions:
   - 'revert feature revisions'
   - 'revert news revisions'
   - 'revert organisation revisions'
+  - 'translate basic_page node'
+  - 'translate counties taxonomy_term'
+  - 'translate forums taxonomy_term'
+  - 'translate news node'
+  - 'translate org_type taxonomy_term'
+  - 'translate organisation node'
+  - 'translate portfolio_categories taxonomy_term'
+  - 'translate regions taxonomy_term'
+  - 'translate tags taxonomy_term'
+  - 'translate webform node'
+  - 'update content translations'
   - 'update slideshow entityqueue'
   - 'use moderation sidebar'
   - 'use nics_editorial_workflow transition archive'

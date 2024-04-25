@@ -9,7 +9,7 @@ dependencies:
 id: liofa_theme_sitebranding
 theme: liofa_theme
 region: header
-weight: -2
+weight: -9
 provider: null
 plugin: system_branding_block
 settings:

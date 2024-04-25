@@ -1,6 +1,6 @@
 _core:
   default_config_hash: U3bch6QlHy9RyVtqTqAjgLm3MI5tw4ODY3316QCZSzI
-langcode: en-gb
+langcode: en
 enabled: true
 location: /app/log/liofa
 rotation:

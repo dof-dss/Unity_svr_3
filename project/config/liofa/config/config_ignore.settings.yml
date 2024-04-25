@@ -1,4 +1,12 @@
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
-langcode: en-gb
-ignored_config_entities: {  }
+langcode: en
+ignored_config_entities:
+  - liofa_pledges.countsettings
+  - 'liofa_theme.settings:twitter_profile_url'
+  - 'liofa_theme.settings:facebook_profile_url'
+  - 'liofa_theme.settings:linkedin_profile_url'
+  - 'liofa_theme.settings:pinterest_profile_url'
+  - 'liofa_theme.settings:youtube_profile_url'
+  - 'liofa_theme.settings:instagram_profile_url'
+  - block.block.sociallinks

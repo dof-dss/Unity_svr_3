@@ -5,12 +5,12 @@ dependencies:
   config:
     - field.field.node.news.body
     - field.field.node.news.field_attachment
-    - field.field.node.news.field_date_end
     - field.field.node.news.field_meta_tags
     - field.field.node.news.field_photo
     - field.field.node.news.field_published_date
     - field.field.node.news.field_summary
     - node.type.news
+    - workflows.workflow.nics_editorial_workflow
   module:
     - content_moderation
     - datetime
@@ -49,12 +49,6 @@ content:
     third_party_settings:
       media_library_edit:
         show_edit: '1'
-  field_date_end:
-    type: datetime_default
-    weight: 5
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_meta_tags:
     type: metatag_firehose
     weight: 17

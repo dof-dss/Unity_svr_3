@@ -1,5 +1,5 @@
 uuid: 0d18a0f2-471a-46a2-a647-70faad15792a
-langcode: en-gb
+langcode: en
 status: true
 dependencies: {  }
 id: upgrade_d7_menu_links

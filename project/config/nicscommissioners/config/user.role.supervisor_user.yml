@@ -107,6 +107,7 @@ permissions:
   - 'edit own image media'
   - 'edit own publication content'
   - 'edit own remote_video media'
+  - 'manipulate entityqueues'
   - 'reschedule scheduled transitions node basic_page'
   - 'reschedule scheduled transitions node board_member'
   - 'reschedule scheduled transitions node publication'

@@ -8,19 +8,21 @@ sites:
         name: 'Planning Appeals Commission'
         url: pacni.gov.uk
         solr: pacni
+        www: true
         cron_spec: '10 * * * *'
         cron_cmd: 'cd web/sites/pacni ; drush core-cron'
         database: pacni
-        status: development
+        status: production
         default: false
     judiciaryni:
         name: 'Judiciary NI'
         url: judiciaryni.uk
         solr: judiciaryni
+        www: true
         cron_spec: '10 * * * *'
         cron_cmd: 'cd web/sites/judiciaryni ; drush core-cron'
         database: judiciaryni
-        status: development
+        status: production
         default: false
     boundarycommission:
         name: 'Boundary Commission'
@@ -72,19 +74,21 @@ sites:
         name: 'Parole Commissioners for Northern Ireland'
         url: parolecomni.org.uk
         solr: parolecomni
+        www: true
         cron_spec: '10 * * * *'
         cron_cmd: 'cd web/sites/parolecomni ; drush core-cron'
         database: parolecomni
-        status: development
+        status: production
         default: false
     lgbcni:
         name: 'Local Government Boundaries Commissioner for Northern Ireland'
         url: lgbc-ni.org.uk
         solr: lgbcni
+        www: true
         cron_spec: '10 * * * *'
         cron_cmd: 'cd web/sites/lgbcni ; drush core-cron'
         database: lgbcni
-        status: development
+        status: production
         default: false
     semcommittee:
         name: 'The Single Electricity Market Committee'
@@ -100,10 +104,11 @@ sites:
         name: 'Northern Ireland Bureau'
         url: nibureau.com
         solr: nibureau
+        www: true
         cron_spec: '10 * * * *'
         cron_cmd: 'cd web/sites/nibureau ; drush core-cron'
         database: nibureau
-        status: development
+        status: production
         default: false
     nicscommissioners:
         name: 'Civil Service Commissioners for Northern Ireland'
@@ -113,7 +118,7 @@ sites:
         cron_spec: '10 * * * *'
         cron_cmd: 'cd web/sites/nicscommissioners ; drush core-cron'
         database: nicscommissioners
-        status: development
+        status: production
         default: false
     liofa:
         name: Liofa
@@ -123,5 +128,15 @@ sites:
         cron_spec: '10 * * * *'
         cron_cmd: 'cd web/sites/liofa ; drush core-cron'
         database: liofa
+        status: production
+        default: false
+    independentpaneltruthrecoveryni:
+        name: 'Independent Panel Truth Recovery NI'
+        url: independentpanel.truthrecoveryni.co.uk
+        solr: independentpaneltruthrecoveryni
+        www: true
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/independentpaneltruthrecoveryni ; drush core-cron'
+        database: independentpaneltruthrecoveryni
         status: development
         default: false

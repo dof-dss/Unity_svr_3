@@ -1,5 +1,5 @@
 uuid: 614a8d8e-01cd-4288-a5ec-b0d40f71ab95
-langcode: en-gb
+langcode: en
 status: true
 dependencies: {  }
 title: 'Runs internal cleanup operations'

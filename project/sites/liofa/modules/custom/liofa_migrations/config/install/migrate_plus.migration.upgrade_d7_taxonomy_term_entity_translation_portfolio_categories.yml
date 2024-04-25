@@ -1,5 +1,5 @@
 uuid: 6417e273-f0af-4a3b-bc84-08c43643c6f5
-langcode: en-gb
+langcode: en
 status: true
 dependencies: {  }
 id: upgrade_d7_taxonomy_term_entity_translation_portfolio_categories

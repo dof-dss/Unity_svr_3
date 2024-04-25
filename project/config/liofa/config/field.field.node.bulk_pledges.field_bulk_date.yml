@@ -1,5 +1,5 @@
 uuid: c3b4dc28-cc00-4f84-b831-325908771d92
-langcode: en-gb
+langcode: en
 status: true
 dependencies:
   config:
@@ -14,8 +14,11 @@ bundle: bulk_pledges
 label: Date
 description: 'The date on which the pledges were collected..'
 required: false
-translatable: false
-default_value: {  }
+translatable: true
+default_value:
+  -
+    default_date_type: now
+    default_date: now
 default_value_callback: ''
 settings: {  }
 field_type: datetime

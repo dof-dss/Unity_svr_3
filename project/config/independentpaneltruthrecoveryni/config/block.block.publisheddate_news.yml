@@ -1,0 +1,29 @@
+uuid: addc53c1-8536-4150-b8a5-9c0333656f65
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.published_date_news
+  module:
+    - facets
+    - system
+  theme:
+    - independentpaneltruthrecoveryni_theme
+id: publisheddate_news
+theme: independentpaneltruthrecoveryni_theme
+region: search_facets
+weight: -6
+provider: null
+plugin: 'facet_block:published_date_news'
+settings:
+  id: 'facet_block:published_date_news'
+  label: 'Published Date'
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: publisheddate_news
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/news\r\n/news/date/*"

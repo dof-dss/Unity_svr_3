@@ -1,5 +1,5 @@
 uuid: 6fe8dafc-ef2b-44c3-a2e6-045e200c6c1f
-langcode: en-gb
+langcode: en
 status: true
 dependencies: {  }
 id: upgrade_d7_taxonomy_term_entity_translation_tags

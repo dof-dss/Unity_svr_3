@@ -1,5 +1,5 @@
 uuid: 4f066832-3204-4e82-ac19-7c11c29f2a0b
-langcode: en-gb
+langcode: en
 status: true
 dependencies:
   config:
@@ -14,7 +14,7 @@ bundle: faq_accordion
 label: Question
 description: ''
 required: true
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

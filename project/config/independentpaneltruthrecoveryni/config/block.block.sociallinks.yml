@@ -1,0 +1,25 @@
+uuid: f991e8db-8c6c-44f9-9d8d-9225319b815d
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:52761401-8ec5-4029-b5d1-d827380211c2'
+  module:
+    - block_content
+  theme:
+    - independentpaneltruthrecoveryni_theme
+id: sociallinks
+theme: independentpaneltruthrecoveryni_theme
+region: footer_first
+weight: 0
+provider: null
+plugin: 'block_content:52761401-8ec5-4029-b5d1-d827380211c2'
+settings:
+  id: 'block_content:52761401-8ec5-4029-b5d1-d827380211c2'
+  label: 'Social links'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

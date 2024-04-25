@@ -1,0 +1,29 @@
+uuid: bc681bba-4b31-4cfa-9b5c-1df17e16d3b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.homepage_cards
+  module:
+    - system
+    - views
+  theme:
+    - independentpaneltruthrecoveryni_theme
+id: views_block__homepage_cards_homepage_cards
+theme: independentpaneltruthrecoveryni_theme
+region: homepage_blocks
+weight: -7
+provider: null
+plugin: 'views_block:homepage_cards-homepage_cards'
+settings:
+  id: 'views_block:homepage_cards-homepage_cards'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /home

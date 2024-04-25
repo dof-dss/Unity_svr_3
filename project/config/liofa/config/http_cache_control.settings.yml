@@ -1,6 +1,6 @@
 _core:
   default_config_hash: Gte2C0a61n4X074GDAMPexe0uVAopKhjfsUmED2nu5s
-langcode: en-gb
+langcode: en
 cache:
   http:
     s_maxage: 0

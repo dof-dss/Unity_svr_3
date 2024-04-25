@@ -1,6 +1,6 @@
 _core:
   default_config_hash: 3B0D_qMStGmq1f-TNB5160iJHqlnor_5FQlRrFajx-Q
-langcode: en-gb
+langcode: en
 determine_menu: true
 disable_admin_page: true
 append_current_page: true

@@ -1,5 +1,5 @@
 uuid: 4a15ee20-ec3c-4220-98f1-6c99176c8529
-langcode: en-gb
+langcode: en
 status: true
 dependencies: {  }
 id: upgrade_d7_user_role

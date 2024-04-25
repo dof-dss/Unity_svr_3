@@ -1,5 +1,5 @@
 uuid: 31c79c4b-6f24-4058-8dcf-9f2031ade9e9
-langcode: en-gb
+langcode: en
 status: true
 dependencies: {  }
 id: upgrade_d7_taxonomy_term_portfolio_categories

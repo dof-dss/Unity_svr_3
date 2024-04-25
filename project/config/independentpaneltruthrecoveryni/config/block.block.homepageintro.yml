@@ -1,0 +1,30 @@
+uuid: 41edb007-f7d9-4fec-aff5-b89b20c4db83
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:7f8b6b0f-2bbb-4ed0-b696-3cb001528724'
+  module:
+    - block_content
+    - system
+  theme:
+    - independentpaneltruthrecoveryni_theme
+id: homepageintro
+theme: independentpaneltruthrecoveryni_theme
+region: front_welcome
+weight: -8
+provider: null
+plugin: 'block_content:7f8b6b0f-2bbb-4ed0-b696-3cb001528724'
+settings:
+  id: 'block_content:7f8b6b0f-2bbb-4ed0-b696-3cb001528724'
+  label: 'Homepage intro'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

@@ -1,5 +1,5 @@
 uuid: d1425a4b-be66-46ab-936e-74159f9a75bc
-langcode: en-gb
+langcode: en
 status: true
 dependencies: {  }
 id: upgrade_d7_taxonomy_vocabulary

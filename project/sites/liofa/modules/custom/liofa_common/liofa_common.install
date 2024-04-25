@@ -1,0 +1,10 @@
+<?php
+use Drupal\field\Entity\FieldConfig;
+
+/**
+ * Implements hook_update_N() to delete field.
+ */
+function liofa_common_update_8002() {
+  // Deleting Display until field in News content type and all its data.
+  FieldConfig::loadByName('node', 'news', 'field_date_end')->delete();
+}

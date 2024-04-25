@@ -1,0 +1,5 @@
+name: 'Judiciary NI Custom Redirects'
+type: module
+description: 'Judiciary NI Custom Redirects'
+core_version_requirement: 8.x || ^9 || ^10
+package: 'Custom'

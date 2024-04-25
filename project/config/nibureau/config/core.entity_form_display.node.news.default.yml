@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.news.field_meta_tags
     - field.field.node.news.field_photo
     - field.field.node.news.field_published_date
-    - field.field.node.news.field_teaser
     - node.type.news
     - workflows.workflow.nics_editorial_workflow
   module:
@@ -62,14 +61,6 @@ content:
     weight: 10
     region: content
     settings: {  }
-    third_party_settings: {  }
-  field_teaser:
-    type: string_textfield
-    weight: 11
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
   flag:
     weight: 10

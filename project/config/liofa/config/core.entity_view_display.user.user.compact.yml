@@ -1,5 +1,5 @@
 uuid: 370f8610-4ec1-49d1-9e3c-ad95b44be3fb
-langcode: en-gb
+langcode: en
 status: true
 dependencies:
   config:
@@ -32,3 +32,4 @@ hidden:
   field_user_lastname: true
   langcode: true
   member_for: true
+  search_api_excerpt: true

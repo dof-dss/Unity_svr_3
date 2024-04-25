@@ -1,5 +1,5 @@
 uuid: d736859e-f5aa-4e1c-8aee-7144b05e47af
-langcode: en-gb
+langcode: en
 status: true
 dependencies: {  }
 id: upgrade_d7_node_complete_bulk_pledges

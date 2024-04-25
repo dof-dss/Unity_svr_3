@@ -1,5 +1,5 @@
 uuid: a8f08b85-f2ff-4234-abbc-85d80f0c333e
-langcode: en-gb
+langcode: en
 status: true
 dependencies: {  }
 id: upgrade_d7_system_site_translation

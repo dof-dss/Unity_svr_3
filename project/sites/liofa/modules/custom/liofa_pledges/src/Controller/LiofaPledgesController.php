@@ -1,4 +1,5 @@
 <?php
+
 namespace Drupal\liofa_pledges\Controller;
 
 use Drupal\Core\Config\ConfigFactoryInterface;
@@ -23,24 +24,14 @@ class LiofaPledgesController extends ControllerBase {
   protected $config;
 
   /**
-   * Count storage.
-   */
-  protected $onsite_pledges;
-  protected $bulk_pledge_count;
-  protected $pledge_count_offset;
-
-  /**
    * Constructs the LiofaPledgesController object.
    *
    * @param \Drupal\Core\Config\ConfigFactoryInterface $config_factory
    *   The config factory.
-   * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
-   *   The entity type manager
    */
-  public function __construct(ConfigFactoryInterface $config_factory, EntityTypeManagerInterface $entity_type_manager) {
+  public function __construct(ConfigFactoryInterface $config_factory) {
     $this->configFactory = $config_factory;
-    $this->entityTypeManager = $entity_type_manager;
-    $this->config = $this->configFactory->get('liofa_pledges.countsettings');
+    $this->config = $this->configFactory->getEditable('liofa_pledges.countsettings');
   }
 
   /**
@@ -48,8 +39,7 @@ class LiofaPledgesController extends ControllerBase {
    */
   public static function create(ContainerInterface $container) {
     return new static(
-      $container->get('config.factory'),
-      $container->get('entity_type.manager')
+      $container->get('config.factory')
     );
   }
 
@@ -60,17 +50,14 @@ class LiofaPledgesController extends ControllerBase {
    *   A simple renderable array.
    */
   public function pledgesSummary() {
-    $this->generateTotals();
-    // Calculate overall total.
-    $total = $this->onsite_pledges + $this->bulk_pledge_count + $this->pledge_count_offset;
     // Output table.
     $table_html = '<table id="pledges-table">
             <thead><tr><th>Component</th><th class="right">Value</th> </tr></thead>
             <tbody>
-             <tr class="odd"><td>Pledges submitted online</td><td class="right">' . $this->onsite_pledges . '</td> </tr>
-             <tr class="even"><td>Bulk pledges</td><td class="right">' . $this->bulk_pledge_count . '</td> </tr>
-             <tr class="odd"><td>Pledge count offset</td><td class="right">' . $this->pledge_count_offset . '</td> </tr>
-             <tr class="even"><td class="total">Total</td><td class="right total">' . $total . '</td> </tr>
+             <tr class="odd"><td>Pledges submitted online</td><td class="right">' . $this->config->get('onsite_pledges') . '</td> </tr>
+             <tr class="even"><td>Bulk pledges</td><td class="right">' . $this->config->get('bulk_pledge_count') . '</td> </tr>
+             <tr class="odd"><td>Pledge count offset</td><td class="right">' . $this->config->get('pledge_count_offset') . '</td> </tr>
+             <tr class="even"><td class="total">Total</td><td class="right total">' . $this->config->get('pledge_count_total') . '</td> </tr>
             </tbody>
       </table>';
     return [
@@ -78,25 +65,34 @@ class LiofaPledgesController extends ControllerBase {
     ];
   }
 
-  protected function generateTotals() {
+  /**
+   * Generate pledge count totals and store in config.
+   */
+  public static function generateTotals() {
+    $config = \Drupal::configFactory()->getEditable('liofa_pledges.countsettings');
     // Retrieve pledge count submitted online.
-    $this->onsite_pledges = intval($this->config->get('pledge_count_submissions'));
+    $onsite_pledges = intval($config->get('pledge_count_submissions'));
     // Now need to get bulk pledges count.
-    $this->bulk_pledge_count = 0;
-    $result = $this->entityTypeManager->getStorage('node')->getAggregateQuery('AND')
+    $bulk_pledge_count = 0;
+    $result = \Drupal::entityTypeManager()->getStorage('node')->getAggregateQuery('AND')
       ->accessCheck(FALSE)
       ->aggregate('field_bulk_number', 'sum')
       ->condition('type', 'bulk_pledges')
       ->condition('status', NodeInterface::PUBLISHED)
       ->execute();
     if (!empty($result) && is_array($result)) {
-      $this->bulk_pledge_count = $result[0]['field_bulk_number_sum'];
+      $bulk_pledge_count = $result[0]['field_bulk_number_sum'];
     }
     // Get pledge count offset.
-    $this->pledge_count_offset = intval($this->config->get('pledge_count_offset'));
-    if (empty($this->pledge_count_offset)) {
-      $this->pledge_count_offset = 0;
+    $pledge_count_offset = intval($config->get('pledge_count_offset'));
+    if (empty($pledge_count_offset)) {
+      $pledge_count_offset = 0;
     }
+    // Calculate overall total.
+    $pledge_count_total = $onsite_pledges + $bulk_pledge_count + $pledge_count_offset;
+    $config->set('pledge_count_total', $pledge_count_total)->save();
+    $config->set('onsite_pledges', $onsite_pledges)->save();
+    $config->set('bulk_pledge_count', $bulk_pledge_count)->save();
   }
 
 }

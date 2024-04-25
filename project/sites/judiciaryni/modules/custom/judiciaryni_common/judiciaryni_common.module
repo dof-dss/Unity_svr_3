@@ -28,7 +28,7 @@ function judiciaryni_common_entity_presave(EntityInterface $entity) {
     $judge_name = $entity->get('field_surname')->value;
     $judge_sex = $entity->get('field_sex_of_member')->value;
     $tier_tid = $entity->get('field_judicial_tier')->target_id;
-    $judge_title = $entity->get('field_prefix_title')->value;
+    $judge_title = ucfirst($entity->get('field_prefix_title')->value);
     $short_title = $judge_title . ' ' . $judge_name;
 
     if (!empty($tier_tid)) {
