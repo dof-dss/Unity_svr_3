@@ -29,7 +29,6 @@ label: 'author user'
 weight: 2
 is_admin: null
 permissions:
-  - 'access administration pages'
   - 'access content overview'
   - 'access toolbar'
   - 'administer main menu items'
