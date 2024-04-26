@@ -32,7 +32,5 @@ permissions:
   - 'view all revisions'
   - 'view files'
   - 'view media'
-  - 'view moderation history'
-  - 'view moderation messages'
   - 'view own unpublished content'
   - 'view revisions'
