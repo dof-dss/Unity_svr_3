@@ -17,7 +17,6 @@ label: 'authenticated user'
 weight: 1
 is_admin: false
 permissions:
-  - 'access administration menu'
   - 'access content'
   - 'access media browser'
   - 'access workbench'
@@ -29,8 +28,6 @@ permissions:
   - 'revert revisions'
   - 'use media wysiwyg'
   - 'use text format basic_html'
-  - 'use text format filtered_html'
-  - 'use text format filtered_html_with_no_images'
   - 'use text format webform_default'
   - 'view all revisions'
   - 'view files'
