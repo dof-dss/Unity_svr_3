@@ -16,8 +16,6 @@ is_admin: false
 permissions:
   - 'access content'
   - 'diff view changes'
-  - 'download any document files'
-  - 'download own document files'
   - 'notify of path changes'
   - 'use text format filtered_html'
   - 'view all revisions'
