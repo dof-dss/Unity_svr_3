@@ -36,7 +36,6 @@ label: 'supervisor user'
 weight: -6
 is_admin: null
 permissions:
-  - 'access administration menu'
   - 'access administration pages'
   - 'access content overview'
   - 'access contextual links'
