@@ -137,7 +137,6 @@ permissions:
   - 'view latest version'
   - 'view moderation history'
   - 'view moderation messages'
-  - 'view own files'
   - 'view own unpublished media'
   - 'view publication revisions'
   - 'view scheduled transitions node basic_page'
