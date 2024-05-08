@@ -14,6 +14,5 @@ label: 'anonymous user'
 weight: -10
 is_admin: false
 permissions:
-  - 'diff view changes'
   - 'display eu cookie compliance popup'
   - 'use text format restricted_html'

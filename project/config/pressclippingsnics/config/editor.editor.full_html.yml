@@ -60,8 +60,11 @@ settings:
             - Maximize
             - Source
   plugins:
+    drupallink:
+      linkit_enabled: false
+      linkit_profile: ''
     stylescombo:
-      styles: ''
+      styles: "p.info-notice|Information notice\r\na.btn|Button"
 image_upload:
   status: true
   scheme: public

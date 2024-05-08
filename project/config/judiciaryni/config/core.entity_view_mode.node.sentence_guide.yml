@@ -6,5 +6,6 @@ dependencies:
     - node
 id: node.sentence_guide
 label: 'sentence guide'
+description: ''
 targetEntityType: node
 cache: true

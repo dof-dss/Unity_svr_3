@@ -15,10 +15,7 @@ weight: -9
 is_admin: false
 permissions:
   - 'access content'
-  - 'diff view changes'
   - 'notify of path changes'
-  - 'use text format filtered_html'
   - 'view all revisions'
-  - 'view files'
   - 'view media'
   - 'view own unpublished content'

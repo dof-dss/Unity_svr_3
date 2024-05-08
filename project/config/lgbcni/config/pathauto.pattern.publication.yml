@@ -1,24 +1,22 @@
-uuid: 4b53f6fa-e3dc-4265-bd0a-f0db40254062
+uuid: 0a3cdf47-5351-42c8-9e2a-dc977eb4ea86
 langcode: en
 status: true
 dependencies:
   module:
     - node
-_core:
-  default_config_hash: Nw0DBgpepA9Keybg03nN9RXaeOQ_yuCkhJQhMtARKto
-id: publication_pattern
-label: 'Publication pattern'
+id: publication
+label: 'Publication Pattern'
 type: 'canonical_entities:node'
 pattern: 'publications/[node:title]'
 selection_criteria:
-  c79f8a57-5e28-4ca6-9744-5981bf13982e:
+  1ee2c876-d449-4da3-b880-f87bb3473caf:
     id: 'entity_bundle:node'
     negate: false
-    uuid: c79f8a57-5e28-4ca6-9744-5981bf13982e
+    uuid: 1ee2c876-d449-4da3-b880-f87bb3473caf
     context_mapping:
       node: node
     bundles:
-      publication: publication
+      publication_page: publication_page
 selection_logic: and
 weight: -5
 relationships: {  }

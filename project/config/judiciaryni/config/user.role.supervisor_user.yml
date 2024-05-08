@@ -20,6 +20,7 @@ dependencies:
     - contextual
     - entityqueue
     - file
+    - help
     - media
     - menu_admin_per_menu
     - moderation_sidebar
@@ -42,6 +43,7 @@ permissions:
   - 'access content overview'
   - 'access contextual links'
   - 'access files overview'
+  - 'access help pages'
   - 'access toolbar'
   - 'add content to books'
   - 'add scheduled transitions node basic_page'

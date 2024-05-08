@@ -18,7 +18,6 @@ dependencies:
     - content_moderation
     - contextual
     - file
-    - file_delete_ui
     - media
     - menu_admin_per_menu
     - moderation_sidebar

@@ -1,11 +1,12 @@
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
+mode: simple
 ignored_config_entities:
-  - 'judiciaryni_theme.settings:twitter_profile_url'
+  - block.block.sociallinks
+  - 'judiciaryni_theme.settings:basic_page_structure'
   - 'judiciaryni_theme.settings:facebook_profile_url'
+  - 'judiciaryni_theme.settings:instagram_profile_url'
   - 'judiciaryni_theme.settings:linkedin_profile_url'
   - 'judiciaryni_theme.settings:pinterest_profile_url'
+  - 'judiciaryni_theme.settings:twitter_profile_url'
   - 'judiciaryni_theme.settings:youtube_profile_url'
-  - 'judiciaryni_theme.settings:instagram_profile_url'
-  - 'judiciaryni_theme.settings:basic_page_structure'
-  - block.block.sociallinks

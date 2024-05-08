@@ -231,7 +231,7 @@ display:
       cache:
         type: custom_tag
         options:
-          custom_tag: 'handy_cache_tags:node:judicial_decision'
+          custom_tag: "handy_cache_tags:node:judicial_decision\r\nnode_list:judicial_decision"
       empty: {  }
       sorts:
         field_publication_date_value:
@@ -334,7 +334,9 @@ display:
     display_options:
       display_description: ''
       display_extenders:
-        metatag_display_extender: {  }
+        metatag_display_extender:
+          metatags: {  }
+          tokenize: false
     cache_metadata:
       max-age: -1
       contexts:
@@ -962,7 +964,6 @@ display:
           title: ''
           default_argument_type: node
           default_argument_options: {  }
-          default_argument_skip_url: false
           summary_options:
             base_path: ''
             count: true

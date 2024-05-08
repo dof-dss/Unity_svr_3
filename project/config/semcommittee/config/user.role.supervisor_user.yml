@@ -21,7 +21,6 @@ dependencies:
     - contextual
     - entityqueue
     - file
-    - file_delete_ui
     - layout_builder
     - media
     - menu_admin_per_menu

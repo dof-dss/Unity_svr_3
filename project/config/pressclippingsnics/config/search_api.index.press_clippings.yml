@@ -73,7 +73,7 @@ field_settings:
     datasource_id: 'entity:node'
     property_path: field_press_type
     type: integer
-    boost: !!float 3
+    boost: 3.0
     dependencies:
       config:
         - field.storage.node.field_press_type
@@ -90,7 +90,7 @@ field_settings:
     datasource_id: 'entity:node'
     property_path: title
     type: text
-    boost: !!float 5
+    boost: 5.0
     dependencies:
       module:
         - node

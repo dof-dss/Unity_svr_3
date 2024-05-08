@@ -15,7 +15,6 @@ dependencies:
     - content_moderation
     - contextual
     - file
-    - file_delete_ui
     - filter
     - media
     - menu_admin_per_menu
