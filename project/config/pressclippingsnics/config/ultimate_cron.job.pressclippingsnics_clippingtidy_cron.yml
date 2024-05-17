@@ -6,7 +6,7 @@ dependencies:
     - pressclippingsnics_clippingtidy
 title: 'Press Clipping content archiver '
 id: pressclippingsnics_clippingtidy_cron
-weight: 0
+weight: 4
 module: pressclippingsnics_clippingtidy
 callback: pressclippingsnics_clippingtidy_cron
 scheduler:

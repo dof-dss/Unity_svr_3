@@ -60,7 +60,7 @@ display:
           expose:
             label: Type
   all_drafts:
-    display_title: 'All Drafts Page'
+    display_title: 'All Drafts'
     display_options:
       title: 'All drafts'
       filters:
@@ -79,7 +79,7 @@ display:
           expose:
             label: 'Moderation state'
   my_drafts:
-    display_title: 'My Drafts Page'
+    display_title: 'My Drafts'
     display_options:
       title: 'My Drafts'
       filters:

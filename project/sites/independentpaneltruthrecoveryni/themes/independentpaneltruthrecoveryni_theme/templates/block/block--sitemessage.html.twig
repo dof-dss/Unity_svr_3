@@ -1,0 +1,17 @@
+{#
+/**
+* @file
+* Block template for alert message at top of all pages on Independent Panel Truth Recovery site.
+#}
+{% set classes = [
+  'block',
+  'block-' ~ configuration.provider|clean_class,
+  'block-' ~ plugin_id|clean_class,
+] %}
+
+<div id="site-message-banner" class="clearfix">
+  <span {{ item.attributes.addClass('important_site_message') }}>
+    <strong id="site-message-icon"><span class="visually-hidden">Important information</span></strong>
+      {{ content }}
+  </span>
+</div>

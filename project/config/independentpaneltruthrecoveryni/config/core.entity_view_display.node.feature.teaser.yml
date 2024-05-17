@@ -26,9 +26,10 @@ content:
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 1
     region: content
 hidden:
+  content_moderation_control: true
   field_link: true
   langcode: true
   search_api_excerpt: true

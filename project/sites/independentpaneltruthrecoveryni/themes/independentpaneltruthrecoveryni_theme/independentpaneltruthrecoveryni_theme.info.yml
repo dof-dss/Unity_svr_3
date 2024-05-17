@@ -17,6 +17,7 @@ libraries-override:
 base theme: nicsdru_unity_theme
 
 regions:
+  site_message: 'Site message'
   header: 'Site branding'
   search: 'Search'
   primary_menu: 'Main menu'

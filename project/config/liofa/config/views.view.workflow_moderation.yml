@@ -926,7 +926,7 @@ display:
         - 'config:workflow_list'
   all_drafts:
     id: all_drafts
-    display_title: 'All Drafts Page'
+    display_title: 'All Drafts'
     display_plugin: page
     position: 2
     display_options:
@@ -1233,7 +1233,7 @@ display:
         - 'config:workflow_list'
   my_drafts:
     id: my_drafts
-    display_title: 'My Drafts Page'
+    display_title: 'My Drafts'
     display_plugin: page
     position: 2
     display_options:
