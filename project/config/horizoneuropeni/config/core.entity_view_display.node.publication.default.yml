@@ -11,8 +11,32 @@ dependencies:
     - node.type.publication
   module:
     - datetime
+    - field_group
+    - metatag
     - text
     - user
+third_party_settings:
+  field_group:
+    group_additional_content_details:
+      children:
+        - field_meta_tags
+        - field_summary
+      label: 'Additional content details'
+      parent_name: ''
+      region: content
+      weight: 3
+      format_type: html_element
+      format_settings:
+        classes: field-collection
+        show_empty_fields: false
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
 _core:
   default_config_hash: dGe_U65t-a-PtVI1RO755kulh2XfPgvblOXVKquzmyU
 id: node.publication.default
@@ -36,6 +60,13 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
+  field_meta_tags:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
   field_published_date:
     type: datetime_default
     label: inline
@@ -45,10 +76,15 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  field_summary:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
 hidden:
   content_moderation_control: true
-  field_meta_tags: true
-  field_summary: true
   langcode: true
   links: true
   search_api_excerpt: true

@@ -98,14 +98,18 @@
   {% if page.top_first or page.top_second or page.top_third %}
     <div id="top-area" class="clearfix">
       {% if page.top_first %}
-        <div class="row">
+      <div id="container">
+        <div class="container-wrap">
           {{ page.top_first }}
         </div>
+      </div>
       {% endif %}
       {% if page.top_second %}
-        <div class="row">
+      <div id="container">
+        <div class="container-wrap">
           {{ page.top_second }}
         </div>
+      </div>
       {% endif %}
       {% if page.top_third %}
         <div class="column">

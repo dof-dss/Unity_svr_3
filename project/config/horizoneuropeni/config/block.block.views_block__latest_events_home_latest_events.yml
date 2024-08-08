@@ -1,0 +1,29 @@
+uuid: 64ab7508-fdd5-410b-acb5-7f61badb8038
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.latest_events
+  module:
+    - system
+    - views
+  theme:
+    - horizoneuropeni_theme
+id: views_block__latest_events_home_latest_events
+theme: horizoneuropeni_theme
+region: top_second
+weight: 0
+provider: null
+plugin: 'views_block:latest_events-home_latest_events'
+settings:
+  id: 'views_block:latest_events-home_latest_events'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
