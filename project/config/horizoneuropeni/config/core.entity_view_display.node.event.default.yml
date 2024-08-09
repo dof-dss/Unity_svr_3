@@ -3,51 +3,72 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.event.body
     - field.field.node.event.field_contact_details
     - field.field.node.event.field_cost
-    - field.field.node.event.field_event_dates
-    - field.field.node.event.field_event_description
+    - field.field.node.event.field_event_date
     - field.field.node.event.field_location
+    - field.field.node.event.field_start_time
     - node.type.event
   module:
-    - datetime_range
+    - smart_date
+    - text
+    - timefield
     - user
 id: node.event.default
 targetEntityType: node
 bundle: event
 mode: default
 content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
   field_contact_details:
     type: basic_string
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 4
+    weight: 5
     region: content
   field_cost:
     type: string
-    label: above
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
-  field_event_dates:
-    type: daterange_default
+  field_event_date:
+    type: smartdate_custom
     label: above
     settings:
-      timezone_override: ''
-      format_type: long
-      separator: '-'
+      separator: ' - '
+      time_diff:
+        future_format: '@interval hence'
+        past_format: '@interval ago'
+        granularity: '2'
+        refresh: '60'
+        enabled: 0
+        description: ''
+      date_format: 'd F Y'
+      custom_date_format: ''
+      timezone: ''
+      tooltip:
+        date_format: long
+        custom_date_format: ''
+      join: ', '
+      time_format: 'g:ia'
+      time_hour_format: 'g:ia'
+      allday_label: ''
+      date_first: '1'
+      ampm_reduce: '1'
+      site_time_toggle: '1'
     third_party_settings: {  }
-    weight: 0
-    region: content
-  field_event_description:
-    type: basic_string
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 3
+    weight: 1
     region: content
   field_location:
     type: string
@@ -55,7 +76,20 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 1
+    weight: 0
+    region: content
+  field_start_time:
+    type: timefield_default_formatter
+    label: above
+    settings:
+      display_format:
+        hour: g
+        minute: i
+        separator: ':'
+        period: a
+        periodSeparator: ''
+    third_party_settings: {  }
+    weight: 2
     region: content
 hidden:
   content_moderation_control: true

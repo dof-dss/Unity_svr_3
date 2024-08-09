@@ -1,0 +1,19 @@
+uuid: 7c09f3ef-08c7-48f6-a184-ff51e7061717
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_also_known_as
+    - node.type.institutions
+id: node.institutions.field_also_known_as
+field_name: field_also_known_as
+entity_type: node
+bundle: institutions
+label: 'Also known as'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

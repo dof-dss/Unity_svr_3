@@ -1,0 +1,29 @@
+uuid: 317fc713-434f-4fe2-a837-9501bdb231aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.published_date_publications
+  module:
+    - facets
+    - system
+  theme:
+    - horizoneuropeni_theme
+id: publisheddate_publications
+theme: horizoneuropeni_theme
+region: search_facets
+weight: -2
+provider: null
+plugin: 'facet_block:published_date_publications'
+settings:
+  id: 'facet_block:published_date_publications'
+  label: 'Published Date'
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: publisheddate_publications
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/publications\r\n/publications/date/*"

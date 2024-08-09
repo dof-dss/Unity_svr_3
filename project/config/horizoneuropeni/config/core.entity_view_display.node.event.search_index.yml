@@ -1,0 +1,84 @@
+uuid: 0fb32b9f-7152-48ab-a3ae-51aa92f7c837
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.event.body
+    - field.field.node.event.field_contact_details
+    - field.field.node.event.field_cost
+    - field.field.node.event.field_event_date
+    - field.field.node.event.field_location
+    - field.field.node.event.field_start_time
+    - node.type.event
+  module:
+    - layout_builder
+    - smart_date
+    - timefield
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.event.search_index
+targetEntityType: node
+bundle: event
+mode: search_index
+content:
+  field_event_date:
+    type: smartdate_custom
+    label: hidden
+    settings:
+      separator: ' - '
+      time_diff:
+        future_format: '@interval hence'
+        past_format: '@interval ago'
+        granularity: '2'
+        refresh: '60'
+        enabled: 0
+        description: ''
+      date_format: 'd F Y'
+      custom_date_format: ''
+      timezone: ''
+      tooltip:
+        date_format: long
+        custom_date_format: ''
+      join: ', '
+      time_format: 'g:ia'
+      time_hour_format: 'g:ia'
+      allday_label: ''
+      date_first: '1'
+      ampm_reduce: '1'
+      site_time_toggle: '1'
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_location:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_start_time:
+    type: timefield_default_formatter
+    label: hidden
+    settings:
+      display_format:
+        hour: g
+        minute: i
+        separator: ':'
+        period: a
+        periodSeparator: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  body: true
+  content_moderation_control: true
+  field_contact_details: true
+  field_cost: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

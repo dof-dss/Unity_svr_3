@@ -1,0 +1,28 @@
+uuid: ab4884ae-53f5-40ab-aa47-ba54d60b2039
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.institutions_search
+  module:
+    - system
+    - views
+  theme:
+    - independentpaneltruthrecoveryni_theme
+id: independentpaneltruthrecoveryni_theme_institutions_search_page
+theme: independentpaneltruthrecoveryni_theme
+region: search_facets
+weight: -7
+provider: null
+plugin: 'views_exposed_filter_block:institutions_search-institutions_search_page'
+settings:
+  id: 'views_exposed_filter_block:institutions_search-institutions_search_page'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/institutions\r\n/institutions/type/*"

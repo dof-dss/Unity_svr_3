@@ -1,0 +1,8 @@
+uuid: 09c412dd-62e6-46b7-84c2-5049cf4ece91
+langcode: en
+status: true
+dependencies: {  }
+name: 'Institution types'
+vid: institution_types
+description: 'List of institutions for institution content types'
+weight: 0

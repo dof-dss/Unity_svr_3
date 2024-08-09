@@ -6,6 +6,7 @@ dependencies:
     - node.type.basic_page
     - node.type.board_member
     - node.type.feature
+    - node.type.institutions
     - node.type.landing_page
     - node.type.news
     - node.type.publication
@@ -102,6 +103,7 @@ type_settings:
       - basic_page
       - board_member
       - feature
+      - institutions
       - landing_page
       - news
       - publication

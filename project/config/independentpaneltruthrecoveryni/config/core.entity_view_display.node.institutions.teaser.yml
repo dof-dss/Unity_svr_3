@@ -1,0 +1,40 @@
+uuid: 04542870-ac94-43e8-8b93-4a61e1fcd98a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.institutions.field_also_known_as
+    - field.field.node.institutions.field_dates_of_operation
+    - field.field.node.institutions.field_detail
+    - field.field.node.institutions.field_institution_type
+    - field.field.node.institutions.field_location_s
+    - field.field.node.institutions.field_records
+    - field.field.node.institutions.field_run_by
+    - node.type.institutions
+  module:
+    - user
+id: node.institutions.teaser
+targetEntityType: node
+bundle: institutions
+mode: teaser
+content:
+  field_institution_type:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  content_moderation_control: true
+  field_also_known_as: true
+  field_dates_of_operation: true
+  field_detail: true
+  field_location_s: true
+  field_records: true
+  field_run_by: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

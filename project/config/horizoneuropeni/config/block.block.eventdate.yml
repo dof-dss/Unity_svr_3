@@ -1,0 +1,29 @@
+uuid: b06d0d95-c8b4-4103-8607-cae21837c88b
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.event_date
+  module:
+    - facets
+    - system
+  theme:
+    - horizoneuropeni_theme
+id: eventdate
+theme: horizoneuropeni_theme
+region: search_facets
+weight: -1
+provider: null
+plugin: 'facet_block:event_date'
+settings:
+  id: 'facet_block:event_date'
+  label: 'Event Start Date'
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: eventdate
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/events\r\n/events/date/*"

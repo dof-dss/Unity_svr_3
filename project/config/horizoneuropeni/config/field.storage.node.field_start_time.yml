@@ -1,0 +1,19 @@
+uuid: e1bd16b7-c062-4726-8cb3-8899165aabd6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - timefield
+id: node.field_start_time
+field_name: field_start_time
+entity_type: node
+type: timefield
+settings: {  }
+module: timefield
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

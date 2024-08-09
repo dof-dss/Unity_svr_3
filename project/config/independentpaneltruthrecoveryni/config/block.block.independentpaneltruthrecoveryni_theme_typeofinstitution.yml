@@ -1,0 +1,29 @@
+uuid: f2224265-7fef-4511-b459-35c415c660e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.institution_type
+  module:
+    - facets
+    - system
+  theme:
+    - independentpaneltruthrecoveryni_theme
+id: independentpaneltruthrecoveryni_theme_typeofinstitution
+theme: independentpaneltruthrecoveryni_theme
+region: search_facets
+weight: -4
+provider: null
+plugin: 'facet_block:institution_type'
+settings:
+  id: 'facet_block:institution_type'
+  label: 'Type of institution'
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: independentpaneltruthrecoveryni_theme_typeofinstitution
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/institutions\r\n/institutions/type/*"

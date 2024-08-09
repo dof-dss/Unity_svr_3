@@ -29,6 +29,7 @@ module:
   cookie_content_blocker: 0
   csp: 0
   ctools: 0
+  date_facet_drilldown: 0
   datetime: 0
   datetime_range: 0
   diff: 0
@@ -42,6 +43,7 @@ module:
   entity_reference_revisions: 0
   facets: 0
   facets_pretty_paths: 0
+  facets_summary: 0
   field: 0
   field_group: 0
   field_ui: 0
@@ -55,6 +57,7 @@ module:
   help: 0
   history: 0
   honeypot: 0
+  horizoneuropeni_breadcrumbs: 0
   http_cache_control: 0
   image: 0
   inline_entity_form: 0
@@ -102,10 +105,12 @@ module:
   search_api: 0
   search_api_solr: 0
   simplei: 0
+  smart_date: 0
   structure_sync: 0
   system: 0
   taxonomy: 0
   text: 0
+  timefield: 0
   token: 0
   token_filter: 0
   toolbar: 0

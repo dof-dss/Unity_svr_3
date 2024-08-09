@@ -1,0 +1,11 @@
+services:
+  horizoneuropeni_breadcrumbs.breadcrumb.board:
+    class: Drupal\horizoneuropeni_breadcrumbs\BoardBreadcrumb
+    arguments: ['@entity_type.manager', '@title_resolver', '@request_stack']
+    tags:
+      - { name: breadcrumb_builder, priority: 105 }
+  horizoneuropeni_breadcrumbs.breadcrumb.event:
+    class: Drupal\horizoneuropeni_breadcrumbs\EventBreadcrumb
+    arguments: ['@entity_type.manager', '@title_resolver', '@request_stack']
+    tags:
+      - { name: breadcrumb_builder, priority: 105 }

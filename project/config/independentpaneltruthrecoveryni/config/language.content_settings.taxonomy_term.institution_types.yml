@@ -1,0 +1,11 @@
+uuid: 0c324ca8-bd46-4c16-a9b4-6380b6c9e9c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.institution_types
+id: taxonomy_term.institution_types
+target_entity_type_id: taxonomy_term
+target_bundle: institution_types
+default_langcode: site_default
+language_alterable: false

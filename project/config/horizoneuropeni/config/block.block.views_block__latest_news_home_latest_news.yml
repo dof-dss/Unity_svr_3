@@ -1,0 +1,29 @@
+uuid: 754b9426-4fb7-48c1-a532-addb00900569
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.latest_news
+  module:
+    - system
+    - views
+  theme:
+    - horizoneuropeni_theme
+id: views_block__latest_news_home_latest_news
+theme: horizoneuropeni_theme
+region: top_first
+weight: -6
+provider: null
+plugin: 'views_block:latest_news-home_latest_news'
+settings:
+  id: 'views_block:latest_news-home_latest_news'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

@@ -1,0 +1,29 @@
+uuid: 24fd2d38-2c53-417b-9ef9-a624a6fdfc9e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_records
+    - filter.format.basic_html
+    - node.type.institutions
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - basic_html
+id: node.institutions.field_records
+field_name: field_records
+entity_type: node
+bundle: institutions
+label: Records
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

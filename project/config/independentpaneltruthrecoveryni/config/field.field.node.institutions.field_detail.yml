@@ -1,0 +1,29 @@
+uuid: 4b2f3970-6172-49aa-8a0e-369e973522a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_detail
+    - filter.format.basic_html
+    - node.type.institutions
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - basic_html
+id: node.institutions.field_detail
+field_name: field_detail
+entity_type: node
+bundle: institutions
+label: Detail
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

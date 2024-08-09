@@ -1,0 +1,29 @@
+uuid: b8de15e4-eab7-4a65-b9f8-f7da9fd9567e
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.published_date_news
+  module:
+    - facets
+    - system
+  theme:
+    - horizoneuropeni_theme
+id: publisheddate
+theme: horizoneuropeni_theme
+region: search_facets
+weight: -3
+provider: null
+plugin: 'facet_block:published_date_news'
+settings:
+  id: 'facet_block:published_date_news'
+  label: 'Published Date'
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: publisheddate
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/news\r\n/news/date/*"

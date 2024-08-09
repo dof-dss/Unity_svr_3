@@ -1,0 +1,11 @@
+uuid: a89e660c-d6f5-4d3a-9190-1d33a008f640
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.institutions
+id: node.institutions
+target_entity_type_id: node
+target_bundle: institutions
+default_langcode: site_default
+language_alterable: false

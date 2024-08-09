@@ -3,22 +3,53 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.event.body
     - field.field.node.event.field_contact_details
     - field.field.node.event.field_cost
-    - field.field.node.event.field_event_dates
-    - field.field.node.event.field_event_description
+    - field.field.node.event.field_event_date
     - field.field.node.event.field_location
+    - field.field.node.event.field_start_time
     - node.type.event
     - workflows.workflow.nics_editorial_workflow
   module:
     - content_moderation
-    - datetime_range
+    - field_group
     - path
+    - smart_date
+    - text
+    - timefield
+third_party_settings:
+  field_group:
+    group_event_date_time:
+      children:
+        - field_event_date
+        - field_start_time
+      label: 'Event date(s) and time'
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
 id: node.event.default
 targetEntityType: node
 bundle: event
 mode: default
 content:
+  body:
+    type: text_textarea_with_summary
+    weight: 4
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
   created:
     type: datetime_timestamp
     weight: 8
@@ -41,19 +72,24 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_event_dates:
-    type: daterange_default
-    weight: 1
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_event_description:
-    type: string_textarea
-    weight: 4
+  field_event_date:
+    type: smartdate_only
+    weight: 2
     region: content
     settings:
-      rows: 5
-      placeholder: ''
+      separator: to
+      hide_date: 0
+      allday: 0
+      remove_seconds: 0
+      modal: false
+      default_duration: 60
+      default_duration_increments: |-
+        30
+        60|1 hour
+        90
+        120|2 hours
+        custom
+      show_extra: false
     third_party_settings: {  }
   field_location:
     type: string_textfield
@@ -62,6 +98,31 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  field_start_time:
+    type: timefield_standard_widget
+    weight: 3
+    region: content
+    settings:
+      disable_plugin: false
+      separator: ':'
+      showLeadingZero: false
+      showMinutesLeadingZero: true
+      showPeriod: true
+      periodSeparator: ''
+      showHours: true
+      showMinutes: true
+      am_text: AM
+      pm_text: PM
+      minute_interval: 5
+      showCloseButton: false
+      closeButtonText: Done
+      showNowButton: false
+      nowButtonText: Now
+      showDeselectButton: false
+      deselectButtonText: Deselect
+      myPosition: 'left top'
+      atPosition: 'left bottom'
     third_party_settings: {  }
   langcode:
     type: language_select

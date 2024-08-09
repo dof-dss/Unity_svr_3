@@ -1,0 +1,46 @@
+uuid: 7951d8f1-87a2-479f-849d-2245d3cdfb60
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.diff
+    - field.field.node.event.body
+    - field.field.node.event.field_contact_details
+    - field.field.node.event.field_cost
+    - field.field.node.event.field_event_date
+    - field.field.node.event.field_location
+    - field.field.node.event.field_start_time
+    - node.type.event
+  module:
+    - text
+    - user
+id: node.event.diff
+targetEntityType: node
+bundle: event
+mode: diff
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_contact_details: true
+  field_cost: true
+  field_event_date: true
+  field_location: true
+  field_start_time: true
+  langcode: true
+  search_api_excerpt: true

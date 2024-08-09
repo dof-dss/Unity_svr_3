@@ -12,7 +12,7 @@ dependencies:
 id: frontpagebanner
 theme: horizoneuropeni_theme
 region: front_welcome
-weight: -2
+weight: -7
 provider: null
 plugin: 'block_content:c883aeea-5e88-4d98-871c-e673a59dfd2a'
 settings:
