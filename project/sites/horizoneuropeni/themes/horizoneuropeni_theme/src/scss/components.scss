@@ -102,7 +102,7 @@
 #top-area {
   h2 {
     color: $black;
-    padding: 3rem 0 0;
+    padding: 3rem 3rem 0;
   }
 }
 
@@ -281,12 +281,7 @@ div.event-info {
   @include breakpoint($lap) {
     display: flex;
     justify-content: space-between;
-
-    .field-photo {
-      float: none;
-      max-width: 100%;
-      margin: 0;
-    }
+    padding: 3rem;
 
     .views-row {
       flex-basis: 31.5%;
@@ -305,13 +300,13 @@ div.event-info {
   .news-article {
     border: 1px solid black;
     padding: 2.4rem;
-    height: 24rem;
+    height: 20rem;
     width: 30rem;
+    align-content: center;
   }
 
   article {
     clear: right;
-    margin-bottom: 2.4rem;
 
     p {
       margin-bottom: 0;
@@ -330,6 +325,7 @@ div.event-info {
 
           h3 {
             color: $link-hover;
+            text-decoration: underline;
           }
         }
       }
@@ -347,5 +343,104 @@ div.event-info {
       margin: 0;
       padding: 0;
     }
+  }
+}
+
+#content .home-latest-events {
+  background: #e2eafd;
+  @include breakpoint($lap) {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem;
+
+    .views-row {
+      flex-basis: 31.5%;
+    }
+  }
+
+  h3 {
+    margin: 1rem 0;
+    color: $link;
+
+    @include breakpoint($tab) {
+      @include adjust-font-size-to(18px, 4);
+    }
+  }
+
+  .event-article {
+    padding: 2.4rem;
+    height: 20rem;
+    width: 30rem;
+    background: $white;
+    align-content: center;
+  }
+
+  article {
+    clear: right;
+
+    p {
+      margin-bottom: 0;
+    }
+
+    a.events-link{
+      &:hover,
+      &:focus {
+        border-bottom: none;
+        outline: none;
+        background: none;
+
+        .event-article {
+          border: solid black 1px;
+          margin: 0 -1px -3px;
+
+          h3 {
+            color: $link-hover;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .published-date {
+    margin-bottom: 0;
+  }
+}
+
+#content {
+  .home-latest-events {
+    a[href] {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+.region-top-first {
+  @media screen and (max-width: 961px) {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    h2 {
+      text-align: center;
+    }
+  }
+}
+
+.region-top-second {
+  @media screen and (max-width: 961px) {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background: #e2eafd;
+
+    h2 {
+      text-align: center;
+    }
+  }
+
+  h2 {
+    background: #e2eafd;
   }
 }

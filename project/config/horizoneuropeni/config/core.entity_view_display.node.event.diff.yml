@@ -12,7 +12,9 @@ dependencies:
     - field.field.node.event.field_start_time
     - node.type.event
   module:
+    - smart_date
     - text
+    - timefield
     - user
 id: node.event.diff
 targetEntityType: node
@@ -24,23 +26,68 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 4
+    region: content
+  field_contact_details:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_cost:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_event_date:
+    type: smartdate_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+      format: default
+      force_chronological: false
+      add_classes: false
+      time_wrapper: true
+      localize: false
+      parts:
+        - start
+        - end
+      duration:
+        separator: ' | '
+        unit: ''
+        decimals: 2
+        suffix: h
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_location:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
     weight: 0
     region: content
-  content_moderation_control:
-    settings: {  }
+  field_start_time:
+    type: timefield_default_formatter
+    label: above
+    settings:
+      display_format:
+        hour: g
+        minute: i
+        separator: ':'
+        period: a
+        periodSeparator: ''
     third_party_settings: {  }
-    weight: -20
-    region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 100
+    weight: 3
     region: content
 hidden:
-  field_contact_details: true
-  field_cost: true
-  field_event_date: true
-  field_location: true
-  field_start_time: true
+  content_moderation_control: true
   langcode: true
+  links: true
   search_api_excerpt: true
