@@ -1,4 +1,4 @@
-uuid: 9c25122c-f2c8-45e3-a575-5b8707027b9b
+uuid: 2f0fc3e8-46a1-467e-bbb7-d96119810d88
 langcode: en
 status: true
 dependencies:
@@ -6,19 +6,16 @@ dependencies:
     - field.storage.node.field_start_time
     - node.type.event
   module:
-    - timefield
+    - time_field
 id: node.event.field_start_time
 field_name: field_start_time
 entity_type: node
 bundle: event
 label: 'Start time'
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
-settings:
-  totime: optional
-  weekly_summary: 0
-  weekly_summary_with_label: 0
-field_type: timefield
+settings: {  }
+field_type: time_range

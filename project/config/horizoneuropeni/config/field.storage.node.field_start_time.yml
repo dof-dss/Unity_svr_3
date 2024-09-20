@@ -1,16 +1,16 @@
-uuid: e1bd16b7-c062-4726-8cb3-8899165aabd6
+uuid: ee16ca70-3d35-4f7f-810c-e790a66ef681
 langcode: en
 status: true
 dependencies:
   module:
     - node
-    - timefield
+    - time_field
 id: node.field_start_time
 field_name: field_start_time
 entity_type: node
-type: timefield
+type: time_range
 settings: {  }
-module: timefield
+module: time_field
 locked: false
 cardinality: 1
 translatable: true

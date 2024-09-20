@@ -13,7 +13,7 @@ dependencies:
   module:
     - smart_date
     - text
-    - timefield
+    - time_field
     - user
 id: node.event.default
 targetEntityType: node
@@ -79,15 +79,11 @@ content:
     weight: 0
     region: content
   field_start_time:
-    type: timefield_default_formatter
+    type: time_range_formatter
     label: above
     settings:
-      display_format:
-        hour: g
-        minute: i
-        separator: ':'
-        period: a
-        periodSeparator: ''
+      time_format: 'h:i a'
+      timerange_format: 'start ~ end'
     third_party_settings: {  }
     weight: 3
     region: content

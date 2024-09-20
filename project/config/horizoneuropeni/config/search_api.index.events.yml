@@ -7,7 +7,6 @@ dependencies:
     - field.storage.node.field_event_date
     - field.storage.node.body
     - field.storage.node.field_location
-    - field.storage.node.field_start_time
     - search_api.server.solr_default
   module:
     - search_api_solr
@@ -98,14 +97,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_location
-  field_start_time:
-    label: 'Start time'
-    datasource_id: 'entity:node'
-    property_path: field_start_time
-    type: integer
-    dependencies:
-      config:
-        - field.storage.node.field_start_time
   title:
     label: Title
     datasource_id: 'entity:node'
