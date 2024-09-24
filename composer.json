@@ -251,9 +251,6 @@
             "drupal/slick": {
                 "PHP 8.2 compatibility": "https://git.drupalcode.org/issue/slick-3373261/-/commit/4035fef4eb48df2a2859d6c2785357d6071f9e72.patch"
             },
-            "drupal/time_field": {
-                "Validation for time range start/end fields": "https://www.drupal.org/files/issues/2023-09-18/validation_for_time-3176718-8.patch"
-            },
             "drupal/ultimate_cron": {
                 "Fix $last_ran deprecation error": "https://www.drupal.org/files/issues/2023-04-03/3351276-4.patch"
             },
