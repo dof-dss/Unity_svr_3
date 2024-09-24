@@ -1,0 +1,36 @@
+<?php
+
+use Drupal\Core\Cache\Cache;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_form_FORM_ID_form_alter().
+ */
+function horizoneuropeni_common_form_node_form_alter(&$form, FormStateInterface $form_state) {
+  if ($form['#form_id'] === 'node_event_form' || $form['#form_id'] === 'node_event_edit_form') {
+    // Add a custom form validation for the event content type.
+    $form['#validate'][] = 'horizoneuropeni_common_node_form_validate';
+  }
+}
+
+/**
+ * Validate handler for the event form time_field field.
+ *
+ * @see horizoneuropeni_common_form_node_form_alter()
+ */
+function horizoneuropeni_common_node_form_validate($form, FormStateInterface $form_state) {
+  $node = $form_state->getFormObject()->getEntity();
+  $start_time = $form_state->getValue('field_start_time')[0]['from'];
+  $end_time = $form_state->getValue('field_start_time')[0]['to'];
+  if ($node->getType() === 'event') {
+    // Don't let the end time be before the start time.
+    if (empty($end_time)) {
+      return;
+    }
+    if ($end_time <= $start_time) {
+      $form_state->setErrorByName('field_start_time][0][to', t('End time cannot be before the start time.'));
+    }
+  }
+}

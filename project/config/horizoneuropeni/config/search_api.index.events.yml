@@ -98,10 +98,10 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_location
-  field_start_time:
-    label: 'Start time'
+  field_start_time_from:
+    label: 'Start time » Seconds passed through midnight'
     datasource_id: 'entity:node'
-    property_path: field_start_time
+    property_path: 'field_start_time:from'
     type: integer
     dependencies:
       config:
