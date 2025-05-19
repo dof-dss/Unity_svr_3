@@ -10,7 +10,7 @@ third_party_settings:
 name: 'Featured content'
 type: featured_content
 description: 'Create and organize featured content for the Boundary Commission home page.'
-help: ''
+help: null
 new_revision: true
 preview_mode: 1
 display_submitted: false

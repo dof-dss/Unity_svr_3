@@ -10,7 +10,7 @@ third_party_settings:
 name: Decision
 type: decision
 description: 'Use decision content type to add decision pages to the the site.'
-help: ''
+help: null
 new_revision: true
 preview_mode: 1
 display_submitted: false

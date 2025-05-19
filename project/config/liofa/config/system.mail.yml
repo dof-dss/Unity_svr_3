@@ -1,6 +1,0 @@
-_core:
-  default_config_hash: Ov4a3Zw9RgdDYxJpw6f7qTUzNhCVWl7wVrIS0LgC9es
-langcode: en
-interface:
-  default: php_mail
-  webform: webform_php_mail

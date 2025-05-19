@@ -1,9 +1,0 @@
-uuid: e2f8c7ce-fdd9-4eff-9b38-098d0eaedaa6
-langcode: ga
-status: true
-dependencies: {  }
-id: ga
-label: Gaeilge
-direction: ltr
-weight: 0
-locked: false

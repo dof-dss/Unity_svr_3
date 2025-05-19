@@ -1,8 +1,0 @@
-uuid: f80e4d33-fc11-4975-8f9a-538ccb190102
-langcode: en
-status: true
-dependencies: {  }
-name: 'Site structure'
-vid: site_structure
-description: 'Enables content to be structured into areas of work'
-weight: 0

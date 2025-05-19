@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Consultation Response Type'
 vid: consultation_response_type
-description: ''
+description: null
 weight: 0
+new_revision: false

@@ -6,3 +6,4 @@ name: 'Decision types'
 vid: decision_types
 description: 'Decision types for use with the Decision content type'
 weight: 0
+new_revision: false

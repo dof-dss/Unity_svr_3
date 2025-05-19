@@ -23,7 +23,7 @@ third_party_settings:
 name: Institutions
 type: institutions
 description: 'Use this content type for institutions on your site.'
-help: ''
+help: null
 new_revision: true
 preview_mode: 1
 display_submitted: false
