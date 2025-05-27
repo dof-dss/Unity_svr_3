@@ -53,7 +53,7 @@
         "dof-dss/nicsdru_unity_profile": "^10.1",
         "dof-dss/nicsdru_unity_theme": "^10.1",
         "drupal/address": "^1.12",
-        "drupal/admin_toolbar": "^3.4",
+        "drupal/admin_toolbar": "^3.5",
         "drupal/allowed_formats": "^3.0",
         "drupal/antibot": "^2.0",
         "drupal/auto_entityqueue": "^2.1",
@@ -236,6 +236,9 @@
             },
             "drupal/slick": {
                 "PHP 8.2 compatibility": "https://git.drupalcode.org/issue/slick-3373261/-/commit/4035fef4eb48df2a2859d6c2785357d6071f9e72.patch"
+            },
+            "drupal/search_api": {
+                "Declaration of Drupal\\search_api_solr\\Plugin\\search_api\\backend\\SearchApiSolrBackend::__sleep() must be compatible": "https://www.drupal.org/files/issues/2024-06-18/type_declaration.patch"
             },
             "drupal/smart_date":{
                 "Hide duration field": "https://www.drupal.org/files/issues/2024-10-07/3379263-duration-fix.patch",
