@@ -342,6 +342,7 @@
       @include adjust-font-size-to(20px);
       margin: 0 0 1rem 0;
       color: $link;
+      overflow-wrap: break-word;
     }
 
     .published-date {
