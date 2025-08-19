@@ -13,7 +13,6 @@ db:
             - pacnidb
             - judiciarynidb
             - boundarycommissiondb
-            - industrialcourtdb
             - interchangenidb
             - infolibrarynicsdb
             - pressclippingsnicsdb
@@ -38,10 +37,6 @@ db:
                 default_schema: boundarycommissiondb
                 privileges:
                     boundarycommissiondb: admin
-            industrialcourt:
-                default_schema: industrialcourtdb
-                privileges:
-                    industrialcourtdb: admin
             interchangeni:
                 default_schema: interchangenidb
                 privileges:
@@ -97,8 +92,6 @@ solr_8_11:
                 conf_dir: !archive solr_config/
             boundarycommission_index:
                 conf_dir: !archive solr_config/
-            industrialcourt_index:
-                conf_dir: !archive solr_config/
             interchangeni_index:
                 conf_dir: !archive solr_config/
             pressclippingsnics_index:
@@ -126,8 +119,6 @@ solr_8_11:
                 core: judiciaryni_index
             boundarycommission:
                 core: boundarycommission_index
-            industrialcourt:
-                core: industrialcourt_index
             interchangeni:
                 core: interchangeni_index
             pressclippingsnics:

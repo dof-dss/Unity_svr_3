@@ -33,15 +33,6 @@ sites:
         database: boundarycommission
         status: production
         default: true
-    industrialcourt:
-        name: 'Industrial Court'
-        url: industrialcourt.gov.uk
-        solr: industrialcourt
-        cron_spec: '10 * * * *'
-        cron_cmd: 'cd web/sites/industrialcourt ; drush core-cron'
-        database: industrialcourt
-        status: production
-        default: false
     interchangeni:
         name: 'Interchange NI'
         url: interchangeni.org.uk
