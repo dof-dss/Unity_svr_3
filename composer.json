@@ -87,7 +87,7 @@
         "drupal/entity_embed": "^1.4",
         "drupal/entity_reference_revisions": "^1.10",
         "drupal/entityqueue": "^1.6",
-        "drupal/eu_cookie_compliance": "^1.24",
+        "drupal/eu_cookie_compliance": "^1.28",
         "drupal/facets": "2.0.10",
         "drupal/facets_pretty_paths": "^1.4",
         "drupal/fastly": "^4.0",
