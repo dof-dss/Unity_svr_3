@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8e9512e0d062a306485697707815217d",
+    "content-hash": "249f1077bf77c1c5dd413e8a90d0db93",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4529,31 +4529,31 @@
         },
         {
             "name": "drupal/facets_pretty_paths",
-            "version": "1.7.0",
+            "version": "2.0.3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/facets_pretty_paths.git",
-                "reference": "8.x-1.7"
+                "reference": "2.0.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/facets_pretty_paths-8.x-1.7.zip",
-                "reference": "8.x-1.7",
-                "shasum": "3e08802b82efe55edeab00c4488f302877af6470"
+                "url": "https://ftp.drupal.org/files/projects/facets_pretty_paths-2.0.3.zip",
+                "reference": "2.0.3",
+                "shasum": "c894ba28c9044ed8d37b349e6ab5d517efca4617"
             },
             "require": {
-                "drupal/core": "^9.1 || ^10",
-                "drupal/facets": "^1 || ^2 || ^3",
+                "drupal/core": "^10 || ^11",
+                "drupal/facets": "^2 || ^3",
                 "drupal/pathauto": "^1"
             },
             "require-dev": {
-                "drupal/search_api": "^1.5"
+                "drupal/search_api": "^1.29"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.7",
-                    "datestamp": "1709248637",
+                    "version": "2.0.3",
+                    "datestamp": "1727110224",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
