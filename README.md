@@ -17,4 +17,4 @@
 | Liofa | liofa | liofa.eu | ![#e8f5e9](https://placehold.co/140x30/c8e6c9/1b5e20.png?text=Production&font=source-sans-pro) |   | 
 | Independent Panel Truth Recovery NI | independentpaneltruthrecoveryni | independentpanel.truthrecoveryni.co.uk | ![#e8f5e9](https://placehold.co/140x30/c8e6c9/1b5e20.png?text=Production&font=source-sans-pro) |   | 
 | Horizon Europe | horizoneuropeni | horizoneuropeni.com | ![#e8f5e9](https://placehold.co/140x30/c8e6c9/1b5e20.png?text=Production&font=source-sans-pro) |   | 
-Last updated: 26/09/2025 10:32
+Last updated: 29/10/2025 09:32
