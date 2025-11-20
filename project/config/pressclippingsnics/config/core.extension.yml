@@ -49,6 +49,7 @@ module:
   flag: 0
   flood_control: 0
   geolocation: 0
+  google_tag: 0
   handy_cache_tags: 0
   help: 0
   history: 0
@@ -89,6 +90,7 @@ module:
   origins_media: 0
   origins_metatag: 0
   origins_qa: 0
+  origins_search_views_routing: 0
   origins_toc: 0
   origins_unique_title: 0
   page_cache: 0

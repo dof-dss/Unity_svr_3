@@ -4,6 +4,7 @@ langcode: en
 module:
   address: 0
   admin_toolbar: 0
+  admin_toolbar_links_access_filter: 0
   admin_toolbar_tools: 0
   allowed_formats: 0
   antibot: 0
@@ -54,6 +55,7 @@ module:
   filter: 0
   flag: 0
   geolocation: 0
+  google_tag: 0
   handy_cache_tags: 0
   help: 0
   history: 0
