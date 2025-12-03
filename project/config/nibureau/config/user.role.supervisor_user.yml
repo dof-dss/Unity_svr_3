@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entityqueue.entity_queue.board_members_queue
     - media.type.audio
     - media.type.document
     - media.type.file
@@ -102,7 +103,6 @@ permissions:
   - 'edit own image media'
   - 'edit own news content'
   - 'edit own remote_video media'
-  - 'manipulate all entityqueues'
   - 'manipulate entityqueues'
   - 'reschedule scheduled transitions node basic_page'
   - 'reschedule scheduled transitions node board_member'
