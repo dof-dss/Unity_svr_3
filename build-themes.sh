@@ -50,7 +50,7 @@ for site_name in "${site_names[@]}"; do
     if [ -d "$themes_dir" ]; then
         echo "Running npm install in $themes_dir"
         cd "$themes_dir"
-        
+
         nvm use 14
         npm install
         npm install -f node-sass
