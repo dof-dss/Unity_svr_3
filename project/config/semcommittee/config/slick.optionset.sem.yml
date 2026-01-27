@@ -19,6 +19,7 @@ options:
     dots: true
     draggable: false
     lazyLoad: ondemand
+    respondTo: slider
     rows: 0
     slidesToShow: 1.0
     swipe: false
