@@ -131,6 +131,13 @@ filters:
     status: true
     weight: -47
     settings: {  }
+  origins_media_cookie_content_blocker_embed_filter:
+    id: origins_media_cookie_content_blocker_embed_filter
+    provider: origins_common
+    status: true
+    weight: 0
+    settings:
+      replacement_text: 'Click here to view the video content'
   token_filter:
     id: token_filter
     provider: token_filter

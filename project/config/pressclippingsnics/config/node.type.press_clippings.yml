@@ -23,7 +23,7 @@ third_party_settings:
 name: 'Press Clippings'
 type: press_clippings
 description: 'A content type to add press clippings.'
-help: ''
+help: null
 new_revision: false
 preview_mode: 1
 display_submitted: false
