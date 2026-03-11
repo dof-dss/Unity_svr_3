@@ -8,6 +8,7 @@ dependencies:
     - field.storage.node.field_publication_date
   module:
     - node
+    - search_api
     - search_api_solr
 third_party_settings:
   search_api_solr:
@@ -145,4 +146,4 @@ options:
   cron_limit: 50
   index_directly: true
   track_changes_in_references: true
-server: null
+server: solr_default
