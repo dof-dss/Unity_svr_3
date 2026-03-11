@@ -17,7 +17,6 @@ dependencies:
     - entity_embed
     - media
     - noreferrer
-    - origins_common
     - token_filter
 _core:
   default_config_hash: Qz_ghgT5Z32QINhy2dM-vKWUVIO5psmUQ_w5oDQssW0
@@ -135,4 +134,4 @@ filters:
     status: true
     weight: -48
     settings:
-      replace_empty: '1'
+      replace_empty: true
