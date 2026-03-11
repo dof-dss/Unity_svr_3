@@ -6,6 +6,7 @@ dependencies:
     - field.storage.node.field_attachment
     - field.storage.node.field_press_type
     - field.storage.node.field_publication_date
+    - search_api.server.solr_default
   module:
     - node
     - search_api
