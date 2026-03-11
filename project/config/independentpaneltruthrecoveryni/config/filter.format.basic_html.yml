@@ -16,7 +16,6 @@ dependencies:
     - linkit
     - media
     - noreferrer
-    - origins_common
     - token_filter
 _core:
   default_config_hash: HlKmmrXKdPqtNNucK3UNjDREPNS-Uqzv6cQDyu0SXWc
