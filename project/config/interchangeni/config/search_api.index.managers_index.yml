@@ -4,14 +4,12 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_first_name
+    - field.storage.node.field_last_name
     - field.storage.node.field_manager_organisation
     - field.storage.node.field_organisation_type
-    - field.storage.node.field_last_name
-    - search_api.server.solr_default
   module:
-    - search_api_solr
     - node
-    - search_api
+    - search_api_solr
 third_party_settings:
   search_api_solr:
     finalize: false
@@ -54,9 +52,9 @@ third_party_settings:
     multilingual:
       limit_to_content_language: false
       include_language_independent: true
+      use_language_undefined_as_fallback_language: false
       specific_languages:
         en: '0'
-      use_language_undefined_as_fallback_language: false
       use_universal_collation: false
 id: managers_index
 name: 'Managers index'

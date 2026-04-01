@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: feature_block
 label: 'Feature block'
-revision: 0
+revision: false
 description: ''
