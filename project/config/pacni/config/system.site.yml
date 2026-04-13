@@ -3,7 +3,7 @@ _core:
 langcode: en
 uuid: 3db9a12c-17df-4deb-a197-f1dddf979422
 name: 'Planning Appeals Commission'
-mail: info@pacni.gov.uk
+mail: noreply@email.pacni.gov.uk
 slogan: ''
 page:
   403: ''
@@ -13,3 +13,4 @@ admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en
 frontpage_title: 'Welcome to Drupal site'
+frontpage_show_title: false

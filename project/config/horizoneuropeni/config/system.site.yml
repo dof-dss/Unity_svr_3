@@ -3,7 +3,7 @@ _core:
 langcode: en
 uuid: 934008c1-620f-454a-b0ac-4ec66b1db671
 name: 'Horizon Europe NI'
-mail: test@test.com
+mail: noreply@email.horizoneuropeni.com
 slogan: ''
 page:
   403: ''
@@ -13,3 +13,4 @@ admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en
 frontpage_title: 'Welcome to Drupal site'
+frontpage_show_title: false

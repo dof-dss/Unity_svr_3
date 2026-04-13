@@ -3,7 +3,7 @@ _core:
 langcode: en
 uuid: 04d66f31-2cd4-4d8c-9408-2107ccb017f2
 name: 'Judiciary NI'
-mail: LCJOffice@judiciaryni.uk
+mail: noreply@email.judiciaryni.uk
 slogan: ''
 page:
   403: ''
@@ -13,4 +13,4 @@ admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en
 frontpage_title: 'Welcome to Judiciary NI'
-frontpage_show_title: 0
+frontpage_show_title: false
