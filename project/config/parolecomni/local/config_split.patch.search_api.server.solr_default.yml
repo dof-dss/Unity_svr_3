@@ -17,6 +17,6 @@ removing:
     connector_config:
       host: parolecomni_solr.internal
       port: 8080
-      core: communityrelations_index
+      core: parolecomni_index
       skip_schema_check: false
       solr_install_dir: ''
