@@ -6,3 +6,4 @@ name: 'Clippings category'
 vid: clippings_category
 description: 'Enables news items to be structured into areas of work'
 weight: 0
+new_revision: false

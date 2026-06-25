@@ -6,7 +6,6 @@ fx: ''
 noscript: false
 one_pixel: true
 placeholder: ''
-responsive_image: false
 blazy:
   loadInvisible: false
   offset: 100
@@ -20,3 +19,4 @@ io:
   disconnect: false
   enabled: false
 extras: {  }
+responsive_image: false

@@ -20,7 +20,6 @@ db_pull_command:
         platform db:dump --yes ${PLATFORM_APP:+"--app=${PLATFORM_APP}"} --relationship=pacni --gzip --file=/var/www/html/.ddev/.downloads/db_pacni.sql.gz --project="${PLATFORM_PROJECT:-setme}" --environment="${PLATFORM_ENVIRONMENT:-setme}"
         platform db:dump --yes ${PLATFORM_APP:+"--app=${PLATFORM_APP}"} --relationship=judiciaryni --gzip --file=/var/www/html/.ddev/.downloads/db_judiciaryni.sql.gz --project="${PLATFORM_PROJECT:-setme}" --environment="${PLATFORM_ENVIRONMENT:-setme}"
         platform db:dump --yes ${PLATFORM_APP:+"--app=${PLATFORM_APP}"} --relationship=boundarycommission --gzip --file=/var/www/html/.ddev/.downloads/db_boundarycommission.sql.gz --project="${PLATFORM_PROJECT:-setme}" --environment="${PLATFORM_ENVIRONMENT:-setme}"
-        platform db:dump --yes ${PLATFORM_APP:+"--app=${PLATFORM_APP}"} --relationship=industrialcourt --gzip --file=/var/www/html/.ddev/.downloads/db_industrialcourt.sql.gz --project="${PLATFORM_PROJECT:-setme}" --environment="${PLATFORM_ENVIRONMENT:-setme}"
         platform db:dump --yes ${PLATFORM_APP:+"--app=${PLATFORM_APP}"} --relationship=interchangeni --gzip --file=/var/www/html/.ddev/.downloads/db_interchangeni.sql.gz --project="${PLATFORM_PROJECT:-setme}" --environment="${PLATFORM_ENVIRONMENT:-setme}"
         platform db:dump --yes ${PLATFORM_APP:+"--app=${PLATFORM_APP}"} --relationship=infolibrarynics --gzip --file=/var/www/html/.ddev/.downloads/db_infolibrarynics.sql.gz --project="${PLATFORM_PROJECT:-setme}" --environment="${PLATFORM_ENVIRONMENT:-setme}"
         platform db:dump --yes ${PLATFORM_APP:+"--app=${PLATFORM_APP}"} --relationship=pressclippingsnics --gzip --file=/var/www/html/.ddev/.downloads/db_pressclippingsnics.sql.gz --project="${PLATFORM_PROJECT:-setme}" --environment="${PLATFORM_ENVIRONMENT:-setme}"
@@ -39,7 +38,6 @@ db_import_command:
         gzip -dc .ddev/.downloads/db_pacni.sql.gz | ddev import-db --database=pacni --skip-hooks 
         gzip -dc .ddev/.downloads/db_judiciaryni.sql.gz | ddev import-db --database=judiciaryni --skip-hooks 
         gzip -dc .ddev/.downloads/db_boundarycommission.sql.gz | ddev import-db --database=boundarycommission --skip-hooks 
-        gzip -dc .ddev/.downloads/db_industrialcourt.sql.gz | ddev import-db --database=industrialcourt --skip-hooks 
         gzip -dc .ddev/.downloads/db_interchangeni.sql.gz | ddev import-db --database=interchangeni --skip-hooks 
         gzip -dc .ddev/.downloads/db_infolibrarynics.sql.gz | ddev import-db --database=infolibrarynics --skip-hooks 
         gzip -dc .ddev/.downloads/db_pressclippingsnics.sql.gz | ddev import-db --database=pressclippingsnics --skip-hooks 

@@ -13,4 +13,4 @@ folder: ../project/config/semcommittee/hosted
 module: {  }
 theme: {  }
 complete_list: {  }
-partial_list: (  )
+partial_list: '(  )'

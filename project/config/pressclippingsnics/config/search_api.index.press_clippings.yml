@@ -8,9 +8,9 @@ dependencies:
     - field.storage.node.field_publication_date
     - search_api.server.solr_default
   module:
-    - search_api_solr
     - node
     - search_api
+    - search_api_solr
 third_party_settings:
   search_api_solr:
     finalize: false
@@ -130,11 +130,11 @@ processor_settings:
     title: false
     alt: true
     tags:
-      b: 2
-      h1: 5
-      h2: 3
-      h3: 2
-      strong: 2
+      b: 2.0
+      h1: 5.0
+      h2: 3.0
+      h3: 2.0
+      strong: 2.0
   language_with_fallback: {  }
   rendered_item: {  }
   solr_date_range:

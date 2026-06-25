@@ -1,0 +1,42 @@
+uuid: 79be2b6f-5394-4482-9019-aa423946bab4
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: GTM-PM6MDD3F.690220e3c4a0d5.10502652
+label: GTM-PM6MDD3F
+weight: 0
+tag_container_ids:
+  - GTM-PM6MDD3F
+advanced_settings:
+  consent_mode: false
+  gtm:
+    GTM-PM6MDD3F:
+      data_layer: dataLayer
+      include_classes: false
+      allowlist_classes: ''
+      blocklist_classes: ''
+      include_environment: false
+      environment_id: ''
+      environment_token: ''
+dimensions_metrics: {  }
+conditions:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      anonymous: anonymous
+events:
+  search: {  }
+  webform_purchase: {  }
+  generate_lead:
+    value: ''
+    currency: ''
+  custom: {  }
+  sign_up:
+    method: CMS
+  login:
+    method: CMS

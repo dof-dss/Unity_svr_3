@@ -231,7 +231,7 @@ handlers:
       bcc_options: {  }
       cc_mail: ''
       cc_options: {  }
-      from_mail: webmaster@liofa.eu
+      from_mail: _default
       from_options: {  }
       from_name: 'Liofa website'
       reply_to: ''

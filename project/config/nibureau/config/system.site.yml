@@ -3,7 +3,7 @@ _core:
 langcode: en
 uuid: f4aca5e2-7993-4db4-812b-244015902258
 name: 'Northern Ireland Bureau'
-mail: info@nibureau.com
+mail: noreply@email.nibureau.com
 slogan: ''
 page:
   403: ''
@@ -13,4 +13,4 @@ admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en
 frontpage_title: 'Welcome to Drupal site'
-frontpage_show_title: 0
+frontpage_show_title: false

@@ -77,33 +77,30 @@
   border-image: linear-gradient(to right, #04225b 33%, #78a8cc 33%, #78a8cc 66%, #8c8a85 33%) 5;
 }
 
+
 .homepage--pull-quote {
-  background: resolve('front-banner.png') no-repeat 50%;
+  background: resolve('nibureau_front_banner.jpg') no-repeat 10%;
   height: 30rem;
 
-  .container-wrap {
-    padding: 8.4rem 0;
+  @include breakpoint($tab) {
+    background-position: 17%;
+  }
 
-    @media screen and (max-width: $max-grid-width) {
-      padding: 8.4rem 2rem;
-    }
-    @media screen and (max-width: $mob) {
-      padding: 5rem 2rem;
-    }
+  @include breakpoint($lap) {
+    background-position: 50%;
+  }
+
+  .container-wrap {
+    padding: 3.4rem 0;
   }
 
   blockquote {
-    @include adjust-font-size-to(40px);
+    @include adjust-font-size-to(28px);
     font-weight: bold;
-    max-width: 44%;
     text-shadow: 1px 1px 1px #000;
-    margin-left: 3rem;
-    @media screen and (max-width: $tab) {
-      @include adjust-font-size-to(26px);
-    }
-    @media screen and (max-width: $mob) {
-      @include adjust-font-size-to(22px);
-    }
+    margin-left: 1.8rem;
+    padding-left: 0;
+
 
     p {
       color: $white;
@@ -113,6 +110,20 @@
     &::after {
       background: none;
       padding: 0;
+    }
+
+    @include breakpoint($mob) {
+      max-width: 75%;
+      @include adjust-font-size-to(30px);
+    }
+
+    @include breakpoint($tab) {
+      max-width: 44%;
+      @include adjust-font-size-to(36px);
+    }
+
+    @include breakpoint($lap) {
+      @include adjust-font-size-to(40px);
     }
   }
 }

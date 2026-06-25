@@ -60,7 +60,7 @@ hooks:
         export FASTLY_API_SERVICE=dummyservice
 
         # For each multi site - run db-updates and import config.
-        for site in pacni judiciaryni boundarycommission industrialcourt interchangeni infolibrarynics pressclippingsnics parolecomni lgbcni semcommittee nibureau nicscommissioners liofa independentpaneltruthrecoveryni horizoneuropeni
+        for site in pacni judiciaryni boundarycommission interchangeni infolibrarynics pressclippingsnics parolecomni lgbcni semcommittee nibureau nicscommissioners liofa independentpaneltruthrecoveryni horizoneuropeni
         do
           result=$(drush -l $site st | grep "Drupal bootstrap : Successful" | awk {'print $4'})
           if [ "$result" = "Successful" ]; then
@@ -107,7 +107,7 @@ hooks:
         export FASTLY_API_SERVICE=$temp
 
         # For each multi site - clear cache (including Fastly cache)
-        for site in pacni judiciaryni boundarycommission industrialcourt interchangeni infolibrarynics pressclippingsnics parolecomni lgbcni semcommittee nibureau nicscommissioners liofa independentpaneltruthrecoveryni horizoneuropeni
+        for site in pacni judiciaryni boundarycommission interchangeni infolibrarynics pressclippingsnics parolecomni lgbcni semcommittee nibureau nicscommissioners liofa independentpaneltruthrecoveryni horizoneuropeni
         do
           result=$(drush -l $site st | grep "Drupal bootstrap : Successful" | awk {'print $4'})
           if [ "$result" = "Successful" ]; then
@@ -162,8 +162,6 @@ relationships:
     judiciaryni_solr: 'solr_8_11:judiciaryni'
     boundarycommission: 'db:boundarycommission'
     boundarycommission_solr: 'solr_8_11:boundarycommission'
-    industrialcourt: 'db:industrialcourt'
-    industrialcourt_solr: 'solr_8_11:industrialcourt'
     interchangeni: 'db:interchangeni'
     interchangeni_solr: 'solr_8_11:interchangeni'
     infolibrarynics: 'db:infolibrarynics'
@@ -200,9 +198,6 @@ crons:
     boundarycommission:
         spec: '10 * * * *'
         cmd: 'cd web/sites/boundarycommission ; drush core-cron'
-    industrialcourt:
-        spec: '10 * * * *'
-        cmd: 'cd web/sites/industrialcourt ; drush core-cron'
     interchangeni:
         spec: '10 * * * *'
         cmd: 'cd web/sites/interchangeni ; drush core-cron'

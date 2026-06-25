@@ -3,7 +3,7 @@ _core:
 langcode: en
 uuid: b00ef3b7-244c-4131-848c-a16ea07a6877
 name: 'The Single Electricity Market Committee'
-mail: info@cru.ie
+mail: noreply@email.semcommittee.com
 slogan: ''
 page:
   403: ''
@@ -13,4 +13,4 @@ admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en
 frontpage_title: 'Welcome to The Single Electricity Market Committee'
-frontpage_show_title: 0
+frontpage_show_title: false

@@ -3,7 +3,7 @@ _core:
 langcode: en
 uuid: 78765322-fa2b-444f-90d6-0510cccb5ffc
 name: 'Press Clippings Service'
-mail: cutsteam@finance-ni.gov.uk
+mail: noreply@email.pressclippings.nics.gov.uk
 slogan: ''
 page:
   403: /user/login
@@ -13,4 +13,4 @@ admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en
 frontpage_title: 'Press Clippings Service'
-frontpage_show_title: 1
+frontpage_show_title: true

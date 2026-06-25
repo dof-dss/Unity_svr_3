@@ -7,9 +7,8 @@ dependencies:
     - origins_toc
 third_party_settings:
   menu_ui:
-    available_menus:
-      - main
-    parent: 'main:'
+    available_menus: {  }
+    parent: ''
   origins_toc:
     toc_enable: 1
     toc_title: Contents
@@ -25,7 +24,7 @@ _core:
 name: 'Basic page'
 type: basic_page
 description: 'Use this content type for basic pages on your site.'
-help: ''
+help: null
 new_revision: true
 preview_mode: 1
 display_submitted: false

@@ -6,7 +6,7 @@ dependencies:
     module:
       - slick
 _core:
-  default_config_hash: R44sHtkxxZrBiHA2kQiOrgfOwXDce6s8fpQCTUoDhf0
+  default_config_hash: jHmfPBU2oNraKWjKwqYODaPOKQQM2sczj5TlDlN8Om8
 id: default
 name: default
 weight: -10
@@ -21,8 +21,14 @@ options:
     mobileFirst: false
     asNavFor: ''
     accessibility: true
+    regionLabel: carousel
+    useGroupRole: true
+    instructionsText: ''
     adaptiveHeight: false
     autoplay: false
+    useAutoplayToggleButton: true
+    pauseIcon: slick-pause-icon
+    playIcon: slick-play-icon
     pauseOnHover: true
     pauseOnDotsHover: false
     pauseOnFocus: true
@@ -30,6 +36,7 @@ options:
     arrows: true
     prevArrow: Previous
     nextArrow: Next
+    arrowsPlacement: ''
     downArrow: false
     downArrowTarget: ''
     downArrowOffset: 0
@@ -51,7 +58,7 @@ options:
     rows: 1
     slidesPerRow: 1
     slide: ''
-    slidesToShow: 1
+    slidesToShow: 1.0
     slidesToScroll: 1
     speed: 500
     swipe: true

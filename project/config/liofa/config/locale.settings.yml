@@ -12,5 +12,5 @@ translation:
   overwrite_customized: false
   overwrite_not_customized: true
   update_interval_days: 0
-  path: sites/liofa/files/translations
+  path: files/liofa/translations
   import_enabled: true
