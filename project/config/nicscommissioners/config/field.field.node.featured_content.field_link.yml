@@ -7,6 +7,16 @@ dependencies:
     - node.type.featured_content
   module:
     - link
+    - link_field_autocomplete_filter
+third_party_settings:
+  link_field_autocomplete_filter:
+    negate: true
+    allowed_content_types:
+      featured_content: featured_content
+      basic_page: '0'
+      board_member: '0'
+      publication: '0'
+      webform: '0'
 id: node.featured_content.field_link
 field_name: field_link
 entity_type: node
