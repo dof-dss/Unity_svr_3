@@ -1,1 +1,8 @@
+excluded_bundles:
+  basic_page: '0'
+  feature: '0'
+  judicial_decision: '0'
+  judicial_member: '0'
+  publication: '0'
+  webform: '0'
 exclude_ids_list: "7964\r\n6447\r\n8347\r\n8436\r\n8334\r\n7330\r\n8263\r\n5619\r\n7227\r\n7518\r\n6448\r\n6288\r\n6037\r\n5641\r\n5623\r\n5622\r\n3336\r\n1054\r\n1052\r\n6956\r\n7177\r\n6505\r\n5643"
