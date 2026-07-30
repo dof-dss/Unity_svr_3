@@ -6,3 +6,4 @@ name: 'judiciary publication types'
 vid: judiciary_publication_types
 description: 'List of types of publications published on the judiciary website'
 weight: 0
+new_revision: false
