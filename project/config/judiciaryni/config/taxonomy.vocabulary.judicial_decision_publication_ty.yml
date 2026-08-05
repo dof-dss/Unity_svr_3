@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Judicial decision publication types'
 vid: judicial_decision_publication_ty
-description: ''
+description: null
 weight: 0
+new_revision: false

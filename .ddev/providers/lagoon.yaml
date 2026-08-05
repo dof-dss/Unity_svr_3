@@ -7,13 +7,6 @@
 # 2. Configure an SSH key for your Lagoon user https://docs.lagoon.sh/using-lagoon-advanced/ssh/
 # 3. `ddev auth ssh`.
 # 4. Add LAGOON_PROJECT and LAGOON_ENVIRONMENT variables to your project in 'web_environment' or a '.ddev/.env'
-#    ```yaml
-#    web_environment:
-#        - LAGOON_PROJECT=<project-name>
-#        - LAGOON_ENVIRONMENT=<environment-name>
-#    ```
-#    You can also do this with `ddev config --web-environment-add="LAGOON_PROJECT=<project-name>,LAGOON_ENVIRONMENT=<environment-name>"`.
-#
 # 5. `ddev restart`
 #
 # 'ddev pull lagoon'
@@ -39,9 +32,7 @@ files_import_command:
     set -eu -o pipefail
     lagoon-sync sync files -p ${LAGOON_PROJECT} -e ${LAGOON_ENVIRONMENT} --no-interaction
 
-# push is very useful for non-production environments, but can be
-# very dangerous to production environments. If it is dangerous to your
-# workflow you can remove the lines below and remove the `ddev-generated` in this file
+# push is a dangerous command. If not absolutely needed it's better to delete these lines.
 db_push_command:
   command: |
     set -eu -o pipefail
@@ -49,9 +40,7 @@ db_push_command:
     export MARIADB_HOST=db MARIADB_USERNAME=db MARIADB_PASSWORD=db MARIADB_DATABASE=db
     lagoon-sync sync mariadb -p ${LAGOON_PROJECT} -t ${LAGOON_ENVIRONMENT} -e local --no-interaction
 
-# push is very useful for non-production environments, but can be
-# very dangerous to production environments. If it is dangerous to your
-# workflow you can remove the lines below and remove the `ddev-generated` in this file
+# push is a dangerous command. If not absolutely needed it's better to delete these lines.
 files_push_command:
   command: |
     set -eu -o pipefail

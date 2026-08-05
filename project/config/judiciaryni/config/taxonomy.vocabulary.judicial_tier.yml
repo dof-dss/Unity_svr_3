@@ -6,3 +6,4 @@ name: 'Judicial tier'
 vid: judicial_tier
 description: 'List of Judicial tiers'
 weight: 0
+new_revision: false
