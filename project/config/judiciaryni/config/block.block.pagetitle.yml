@@ -9,7 +9,7 @@ dependencies:
 id: pagetitle
 theme: judiciaryni_theme
 region: content
-weight: -13
+weight: -14
 provider: null
 plugin: page_title_block
 settings:
