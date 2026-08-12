@@ -81,37 +81,42 @@ db:
                 default_schema: horizoneuropenidb
                 privileges:
                     horizoneuropenidb: admin
-solr_8_11:
-    type: 'solr:8.11'
+solr_9_9:
+    type: 'solr:9.9'
     disk: 1024
     configuration:
+        modules:
+            - extraction
+            - analysis-extras
+            - langid
+            - ltr
         cores:
             pacni_index:
-                conf_dir: !archive solr_config/
+                conf_dir: !archive solr_configsets/pacni/conf/
             judiciaryni_index:
-                conf_dir: !archive solr_config/
+                conf_dir: !archive solr_configsets/judiciaryni/conf/
             boundarycommission_index:
-                conf_dir: !archive solr_config/
+                conf_dir: !archive solr_configsets/boundarycommission/conf/
             interchangeni_index:
-                conf_dir: !archive solr_config/
+                conf_dir: !archive solr_configsets/interchangeni/conf/
             pressclippingsnics_index:
-                conf_dir: !archive solr_config/
+                conf_dir: !archive solr_configsets/pressclippingsnics/conf/
             parolecomni_index:
-                conf_dir: !archive solr_config/
+                conf_dir: !archive solr_configsets/parolecomni/conf/
             lgbcni_index:
-                conf_dir: !archive solr_config/
+                conf_dir: !archive solr_configsets/lgbcni/conf/
             semcommittee_index:
-                conf_dir: !archive solr_config/
+                conf_dir: !archive solr_configsets/semcommittee/conf/
             nibureau_index:
-                conf_dir: !archive solr_config/
+                conf_dir: !archive solr_configsets/nibureau/conf/
             nicscommissioners_index:
-                conf_dir: !archive solr_config/
+                conf_dir: !archive solr_configsets/nicscommissioners/conf/
             liofa_index:
-                conf_dir: !archive solr_config/
+                conf_dir: !archive solr_configsets/liofa/conf/
             independentpaneltruthrecoveryni_index:
-                conf_dir: !archive solr_config/
+                conf_dir: !archive solr_configsets/independentpaneltruthrecoveryni/conf/
             horizoneuropeni_index:
-                conf_dir: !archive solr_config/
+                conf_dir: !archive solr_configsets/horizoneuropeni/conf/
         endpoints:
             pacni:
                 core: pacni_index

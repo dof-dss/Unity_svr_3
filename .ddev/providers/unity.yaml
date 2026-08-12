@@ -49,6 +49,7 @@ db_import_command:
         gzip -dc .ddev/.downloads/db_liofa.sql.gz | ddev import-db --database=liofa --skip-hooks 
         gzip -dc .ddev/.downloads/db_independentpaneltruthrecoveryni.sql.gz | ddev import-db --database=independentpaneltruthrecoveryni --skip-hooks 
         gzip -dc .ddev/.downloads/db_horizoneuropeni.sql.gz | ddev import-db --database=horizoneuropeni --skip-hooks 
+        scripts/solr/configure-local-connectors --all
     service: host
 files_pull_command:
     command: |
