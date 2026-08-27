@@ -30,13 +30,13 @@ conditions:
     roles:
       anonymous: anonymous
 events:
-  search: {  }
-  webform_purchase: {  }
+  custom: {  }
   generate_lead:
     value: ''
     currency: ''
-  custom: {  }
-  sign_up:
-    method: CMS
   login:
     method: CMS
+  search: {  }
+  sign_up:
+    method: CMS
+  webform_purchase: {  }
