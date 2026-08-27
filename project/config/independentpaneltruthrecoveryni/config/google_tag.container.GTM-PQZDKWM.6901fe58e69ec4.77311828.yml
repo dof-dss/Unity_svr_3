@@ -8,11 +8,11 @@ id: GTM-PQZDKWM.6901fe58e69ec4.77311828
 label: GTM-PQZDKWM
 weight: 0
 tag_container_ids:
-  - GTM-PQZDKWM
+  - GTM-NW8H2G85
 advanced_settings:
   consent_mode: false
   gtm:
-    GTM-PQZDKWM:
+    GTM-NW8H2G85:
       data_layer: dataLayer
       include_classes: false
       allowlist_classes: ''
@@ -30,13 +30,13 @@ conditions:
     roles:
       anonymous: anonymous
 events:
-  custom: {  }
+  search: {  }
   generate_lead:
     value: ''
     currency: ''
   login:
     method: CMS
-  search: {  }
+  webform_purchase: {  }
+  custom: {  }
   sign_up:
     method: CMS
-  webform_purchase: {  }
