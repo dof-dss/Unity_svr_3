@@ -125,5 +125,8 @@ function judiciaryni_common_switch_tier($tier_name, &$short_title, $judge_name, 
     case 'Presiding District Judge (Magistrates’ Courts)':
       $short_title = t('District Judge (MC) ') . $judge_name;
       break;
+
+    case 'Chief Social Security and Chief Child Support Commissioner':
+      $short_title = t('Chief Commissioner ') . $judge_name;
   }
 }

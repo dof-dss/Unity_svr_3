@@ -20,11 +20,11 @@ missing_label: others
 url_alias: type
 facet_source_id: 'search_api:views_page__judicial_decisions_search__sentence_guide_search_page'
 field_identifier: field_decision_type
-query_operator: or
+query_operator: and
 hard_limit: 50
 exclude: false
-use_hierarchy: false
-keep_hierarchy_parents_active: false
+use_hierarchy: true
+keep_hierarchy_parents_active: true
 hierarchy:
   type: taxonomy
   config: {  }
@@ -57,6 +57,17 @@ processor_configs:
     processor_id: display_value_widget_order
     weights:
       sort: 40
+    settings:
+      sort: ASC
+  hierarchy_processor:
+    processor_id: hierarchy_processor
+    weights:
+      build: 100
+    settings: {  }
+  term_weight_widget_order:
+    processor_id: term_weight_widget_order
+    weights:
+      sort: 60
     settings:
       sort: ASC
   translate_entity:
