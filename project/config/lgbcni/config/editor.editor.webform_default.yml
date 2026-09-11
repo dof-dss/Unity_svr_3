@@ -41,7 +41,7 @@ settings:
         - heading5
         - heading6
     ckeditor5_list:
-      reversed: true
+      reversed: false
       startIndex: true
     ckeditor5_sourceEditing:
       allowed_tags: {  }
