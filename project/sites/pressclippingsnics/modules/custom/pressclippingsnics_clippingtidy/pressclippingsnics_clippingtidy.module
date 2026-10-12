@@ -1,5 +1,11 @@
 <?php
+
+/**
+ * @file
+ */
+
 use Drupal\Core\Database\Database;
+
 /**
  * @file
  * Contains pressclippingsnics_clippingtidy.module.
