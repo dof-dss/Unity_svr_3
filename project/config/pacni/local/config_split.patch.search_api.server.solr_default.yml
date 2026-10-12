@@ -3,21 +3,17 @@ adding:
     connector_config:
       host: ddev-unity.svr.3-solr
       port: 8983
-      core: pacni_index
       skip_schema_check: true
       solr_install_dir: /opt/solr
       checkpoints_collection: ''
       stats_cache: org.apache.solr.search.stats.LRUStatsCache
       distrib: true
       context: solr
-    fallback_multiple: false
-    index_single_documents_fallback_count: 10
-    index_empty_text_fields: false
-    suppress_missing_languages: false
+    index_items_with_warnings: true
 removing:
   backend_config:
     connector_config:
       host: pacni_solr.internal
       port: 8080
-      core: pacni_index
+      skip_schema_check: false
       solr_install_dir: ''

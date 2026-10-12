@@ -9,18 +9,18 @@ _core:
 id: basic_page_pattern
 label: 'Basic page pattern'
 type: 'canonical_entities:node'
-pattern: '[node:title]'
+pattern: '/[node:title]'
 selection_criteria:
   6ddfe4a9-6905-45f1-a824-7bd6193da0e8:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 6ddfe4a9-6905-45f1-a824-7bd6193da0e8
     context_mapping:
       node: node
     bundles:
       basic_page: basic_page
       faq: faq
       webform: webform
+    uuid: 6ddfe4a9-6905-45f1-a824-7bd6193da0e8
 selection_logic: and
 weight: -5
 relationships: {  }

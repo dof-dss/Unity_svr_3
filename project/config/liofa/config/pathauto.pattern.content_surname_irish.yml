@@ -8,24 +8,24 @@ dependencies:
 id: content_surname_irish
 label: 'Content - Surname Irish'
 type: 'canonical_entities:node'
-pattern: 'oidhreacht-roinnte/sloinnte/[node:title]'
+pattern: '/oidhreacht-roinnte/sloinnte/[node:title]'
 selection_criteria:
   db55dc8b-e080-40ac-95b2-3d4aaa51c036:
     id: 'entity_bundle:node'
     negate: false
-    uuid: db55dc8b-e080-40ac-95b2-3d4aaa51c036
     context_mapping:
       node: node
     bundles:
       surname: surname
+    uuid: db55dc8b-e080-40ac-95b2-3d4aaa51c036
   a75ced9e-f720-47eb-acaa-e2263fe9a290:
     id: language
     negate: false
-    uuid: a75ced9e-f720-47eb-acaa-e2263fe9a290
     context_mapping:
       language: 'node:langcode:language'
     langcodes:
       ga: ga
+    uuid: a75ced9e-f720-47eb-acaa-e2263fe9a290
 selection_logic: and
 weight: 3
 relationships:

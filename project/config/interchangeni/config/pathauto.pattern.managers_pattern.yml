@@ -12,11 +12,11 @@ selection_criteria:
   5c1457f4-f9ee-44e6-aa4d-1e5eda2907c2:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 5c1457f4-f9ee-44e6-aa4d-1e5eda2907c2
     context_mapping:
       node: node
     bundles:
       manager: manager
+    uuid: 5c1457f4-f9ee-44e6-aa4d-1e5eda2907c2
 selection_logic: and
 weight: -5
 relationships: {  }
