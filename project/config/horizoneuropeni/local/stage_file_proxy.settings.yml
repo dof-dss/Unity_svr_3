@@ -1,6 +1,6 @@
 hotlink: false
 origin: https://www.horizoneuropeni.com
-origin_dir: ''
+origin_dir: files/horizoneuropeni
 proxy_headers: ''
 use_imagecache_root: true
 verify: true

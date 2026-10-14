@@ -1,6 +1,6 @@
 hotlink: false
 origin: https://www.boundarycommission.org.uk
-origin_dir: ''
+origin_dir: files/boundarycommission
 proxy_headers: ''
 use_imagecache_root: true
 verify: true

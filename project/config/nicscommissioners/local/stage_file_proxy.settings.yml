@@ -1,6 +1,6 @@
 hotlink: false
 origin: https://www.nicscommissioners.org
-origin_dir: ''
+origin_dir: files/nicscommissioners
 proxy_headers: ''
 use_imagecache_root: true
 verify: true

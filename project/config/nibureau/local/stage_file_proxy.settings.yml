@@ -1,6 +1,6 @@
 hotlink: false
 origin: https://www.nibureau.com
-origin_dir: ''
+origin_dir: files/nibureau
 proxy_headers: ''
 use_imagecache_root: true
 verify: true
