@@ -58,7 +58,7 @@
   {% endif %}
 
   {% if drupal_view_result('judicial_members', 'judiciary_term_id', 14)|length > 0 %}
-    <h3>Lords Justices of Appeal ({{ drupal_view_result('judicial_members', 'judiciary_term_id', 14)|length }})</h3>
+    <h3>Justices of Appeal ({{ drupal_view_result('judicial_members', 'judiciary_term_id', 14)|length }})</h3>
     {{ drupal_view('judicial_members', 'judiciary_term_id', 14) }}
   {% endif %}
 
