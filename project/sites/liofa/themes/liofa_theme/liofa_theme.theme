@@ -1,6 +1,10 @@
 <?php
 
 /**
+ * @file
+ */
+
+/**
  * Implements hook_theme_suggestions_field_alter().
  */
 function liofa_theme_theme_suggestions_field_alter(array &$suggestions, array $variables) {
@@ -12,7 +16,7 @@ function liofa_theme_theme_suggestions_field_alter(array &$suggestions, array $v
     'field_address_2',
     'field_county',
     'field_town_city',
-    'field_postcode'
+    'field_postcode',
   ];
 
   $label_block_bold = [
@@ -20,14 +24,14 @@ function liofa_theme_theme_suggestions_field_alter(array &$suggestions, array $v
     'field_bulk_number',
     'field_bulk_source',
     'field_contact_name',
-    'field_date_end'
+    'field_date_end',
   ];
 
   $label_inline = [
     'field_email',
     'field_phone',
     'field_mobile',
-    'field_external_url'
+    'field_external_url',
   ];
 
   if (in_array($element['#field_name'], $address_field_names)) {
@@ -52,7 +56,7 @@ function liofa_theme_theme_suggestions_block_alter(array &$suggestions, array $v
   $homepage_feature_blocks = [
     'liofa_theme_signuptoliofa',
     'liofa_theme_irishclasses',
-    'liofa_theme_thegaeltacht'
+    'liofa_theme_thegaeltacht',
   ];
 
   if (in_array($id, $homepage_feature_blocks)) {

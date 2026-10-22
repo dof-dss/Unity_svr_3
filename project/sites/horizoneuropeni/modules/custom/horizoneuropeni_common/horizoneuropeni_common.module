@@ -1,7 +1,10 @@
 <?php
 
-use Drupal\Core\Cache\Cache;
-use Drupal\Core\Entity\EntityInterface;
+/**
+ * @file
+ */
+
+use Drupal\Core\Entity\EntityFormInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\node\NodeInterface;
 
@@ -21,7 +24,14 @@ function horizoneuropeni_common_form_node_form_alter(&$form, FormStateInterface 
  * @see horizoneuropeni_common_form_node_form_alter()
  */
 function horizoneuropeni_common_node_form_validate($form, FormStateInterface $form_state) {
-  $node = $form_state->getFormObject()->getEntity();
+  $form_object = $form_state->getFormObject();
+  if (!$form_object instanceof EntityFormInterface) {
+    return;
+  }
+  $node = $form_object->getEntity();
+  if (!$node instanceof NodeInterface) {
+    return;
+  }
   $start_time = $form_state->getValue('field_start_time')[0]['value'];
   $end_time = $form_state->getValue('field_start_time')[0]['value2'];
   if ($node->getType() === 'event') {

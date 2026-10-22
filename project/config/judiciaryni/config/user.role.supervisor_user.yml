@@ -115,6 +115,7 @@ permissions:
   - 'edit own publication content'
   - 'edit own remote_video media'
   - 'manipulate entityqueues'
+  - 'reorder book pages'
   - 'reschedule scheduled transitions node basic_page'
   - 'reschedule scheduled transitions node feature'
   - 'reschedule scheduled transitions node judicial_decision'

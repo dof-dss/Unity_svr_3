@@ -7,16 +7,16 @@ dependencies:
 id: representations_received_pattern
 label: 'Representations received pattern'
 type: 'canonical_entities:node'
-pattern: '2023-review/representations-received/[node:title]'
+pattern: '/2023-review/representations-received/[node:title]'
 selection_criteria:
   8725fed3-65dc-4b0a-807f-7af7cb61a901:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 8725fed3-65dc-4b0a-807f-7af7cb61a901
     context_mapping:
       node: node
     bundles:
       respresentations: respresentations
+    uuid: 8725fed3-65dc-4b0a-807f-7af7cb61a901
 selection_logic: and
 weight: -5
 relationships: {  }

@@ -7,16 +7,16 @@ dependencies:
 id: member_of_judiciary_pattern
 label: 'Member of judiciary pattern'
 type: 'canonical_entities:node'
-pattern: 'about-judiciary/[node:title]'
+pattern: '/about-judiciary/[node:title]'
 selection_criteria:
   768750c4-f322-40da-8d64-fca38e57cb46:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 768750c4-f322-40da-8d64-fca38e57cb46
     context_mapping:
       node: node
     bundles:
       judicial_member: judicial_member
+    uuid: 768750c4-f322-40da-8d64-fca38e57cb46
 selection_logic: and
 weight: -5
 relationships: {  }

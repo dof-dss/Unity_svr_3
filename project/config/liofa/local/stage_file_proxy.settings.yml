@@ -1,0 +1,7 @@
+hotlink: false
+origin: https://www.liofa.eu
+origin_dir: files/liofa
+proxy_headers: ''
+use_imagecache_root: true
+verify: true
+excluded_extensions: ''
