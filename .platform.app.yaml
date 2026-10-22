@@ -63,8 +63,6 @@ hooks:
               cd /app/web/sites/$site
               # Disable Fastly purging while updating this site.
               drush -l "$site" state:set fastly.state.valid_purge_credentials false --input-format=json
-              # Preserve block permissions before retiring the contributed module.
-              drush -l "$site" php:script /app/scripts/drupal11/migrate-block-permissions.php
               # Repair logging and Views prerequisites before any site updates.
               drush -l "$site" upgrade-preflight || exit 1
               # Update the schema before commands can rebuild routes with new core code.
