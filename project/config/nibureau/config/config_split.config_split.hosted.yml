@@ -13,4 +13,4 @@ folder: ../project/config/nibureau/hosted
 module: {  }
 theme: {  }
 complete_list: {  }
-partial_list: (  )
+partial_list: '(  )'

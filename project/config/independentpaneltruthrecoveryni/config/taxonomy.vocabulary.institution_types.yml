@@ -6,3 +6,4 @@ name: 'Institution types'
 vid: institution_types
 description: 'List of institutions for institution content types'
 weight: 0
+new_revision: false

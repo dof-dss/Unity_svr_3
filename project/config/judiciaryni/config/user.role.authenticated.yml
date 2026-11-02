@@ -19,6 +19,7 @@ label: 'authenticated user'
 weight: 1
 is_admin: false
 permissions:
+  - 'access book list'
   - 'access content'
   - 'delete own files'
   - 'notify of path changes'

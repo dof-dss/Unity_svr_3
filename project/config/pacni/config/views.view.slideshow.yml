@@ -391,7 +391,6 @@ display:
             body: '0'
           optionset: pacni
           class: ''
-          id: ''
           image: ''
           link: ''
           overlay: ''
@@ -399,11 +398,12 @@ display:
           vanilla: true
           layout: ''
           cache: 0
-          skin: default
-          style: ''
           grid: null
           grid_medium: null
           grid_small: null
+          style: ''
+          id: ''
+          skin: default
           overridables:
             arrows: '0'
             autoplay: '0'

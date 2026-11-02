@@ -7,16 +7,16 @@ dependencies:
 id: consultation_response_title
 label: 'Consultation response title'
 type: 'canonical_entities:node'
-pattern: '2023-review/consultations/[node:title]'
+pattern: '/2023-review/consultations/[node:title]'
 selection_criteria:
   54c823aa-b872-4397-bd22-3c74a74e270c:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 54c823aa-b872-4397-bd22-3c74a74e270c
     context_mapping:
       node: node
     bundles:
       consultation_response: consultation_response
+    uuid: 54c823aa-b872-4397-bd22-3c74a74e270c
 selection_logic: and
 weight: -5
 relationships: {  }

@@ -54,7 +54,7 @@ class DecisionsBreadcrumb implements BreadcrumbBuilderInterface {
   /**
    * Symfony\Component\HttpFoundation\RequestStack definition.
    *
-   * @var Symfony\Component\HttpFoundation\RequestStack
+   * @var \Symfony\Component\HttpFoundation\RequestStack
    */
   protected $request;
 

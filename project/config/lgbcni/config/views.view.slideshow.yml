@@ -322,7 +322,6 @@ display:
             title: '0'
           optionset: lgbcni
           class: ''
-          id: ''
           image: ''
           link: ''
           overlay: ''
@@ -330,12 +329,13 @@ display:
           vanilla: true
           layout: ''
           cache: 0
-          current_view_mode: default
-          skin: default
-          style: ''
           grid: null
           grid_medium: null
           grid_small: null
+          style: ''
+          current_view_mode: default
+          id: ''
+          skin: default
           overridables:
             arrows: '0'
             autoplay: '0'
