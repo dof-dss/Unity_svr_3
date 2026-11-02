@@ -1,0 +1,26 @@
+uuid: b7988a63-32bf-4ab7-bc7c-dd92da73c4bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.map
+    - field.field.block_content.map.field_map
+  module:
+    - geolocation
+_core:
+  default_config_hash: yi9DQ4oT_bjHZ8kSymfpZBui6TYNAnN3P11ZE7S7j7E
+id: block_content.map.default
+targetEntityType: block_content
+bundle: map
+mode: default
+content:
+  field_map:
+    type: geolocation_latlng
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

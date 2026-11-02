@@ -1,0 +1,30 @@
+uuid: d6dadd38-6470-44a9-b382-09c4a019afc9
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:map:8a3b0097-b0f5-4cc7-991b-fd0992ab22b2'
+  module:
+    - block_content
+    - system
+  theme:
+    - pacni_theme
+id: map
+theme: pacni_theme
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:8a3b0097-b0f5-4cc7-991b-fd0992ab22b2'
+settings:
+  id: 'block_content:8a3b0097-b0f5-4cc7-991b-fd0992ab22b2'
+  label: Map
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /contact-us
