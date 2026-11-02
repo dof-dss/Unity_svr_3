@@ -7,16 +7,16 @@ dependencies:
 id: judiciary_decision_types_taxonomy
 label: 'Judiciary decision types taxonomy'
 type: 'canonical_entities:taxonomy_term'
-pattern: 'judiciary-decision-types/[term:name]'
+pattern: '/judiciary-decision-types/[term:name]'
 selection_criteria:
   3b12f5ba-d75c-4c6e-a073-2a546d22f6f8:
     id: 'entity_bundle:taxonomy_term'
     negate: false
-    uuid: 3b12f5ba-d75c-4c6e-a073-2a546d22f6f8
     context_mapping:
       taxonomy_term: taxonomy_term
     bundles:
       judiciary_decision_types: judiciary_decision_types
+    uuid: 3b12f5ba-d75c-4c6e-a073-2a546d22f6f8
 selection_logic: and
 weight: -5
 relationships: {  }

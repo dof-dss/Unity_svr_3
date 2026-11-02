@@ -12,11 +12,11 @@ selection_criteria:
   8cb6d6c4-1c90-49ab-a125-1ffd52dc40f2:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 8cb6d6c4-1c90-49ab-a125-1ffd52dc40f2
     context_mapping:
       node: node
     bundles:
       organisation: organisation
+    uuid: 8cb6d6c4-1c90-49ab-a125-1ffd52dc40f2
 selection_logic: and
 weight: -5
 relationships: {  }

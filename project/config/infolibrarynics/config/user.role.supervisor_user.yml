@@ -106,6 +106,7 @@ permissions:
   - 'edit own publication content'
   - 'edit own remote_video media'
   - 'edit own terms content'
+  - 'reorder book pages'
   - 'reschedule scheduled transitions node basic_page'
   - 'reschedule scheduled transitions node faq'
   - 'reschedule scheduled transitions node publication'

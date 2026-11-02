@@ -19,6 +19,6 @@ forms:
       - node_admin_content
       - comment_admin_overview
   additional:
-    edit: {  }
-    view: {  }
+    edit: ''
+    view: ''
 ldrenabled: 0

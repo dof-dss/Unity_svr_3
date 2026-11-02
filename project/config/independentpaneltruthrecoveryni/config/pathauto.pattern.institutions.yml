@@ -7,16 +7,16 @@ dependencies:
 id: institutions
 label: Institutions
 type: 'canonical_entities:node'
-pattern: 'institutions/[node:title]'
+pattern: '/institutions/[node:title]'
 selection_criteria:
   da084825-e978-4ca4-907b-9eb2ad9c79b0:
     id: 'entity_bundle:node'
     negate: false
-    uuid: da084825-e978-4ca4-907b-9eb2ad9c79b0
     context_mapping:
       node: node
     bundles:
       institutions: institutions
+    uuid: da084825-e978-4ca4-907b-9eb2ad9c79b0
 selection_logic: and
 weight: 0
 relationships: {  }

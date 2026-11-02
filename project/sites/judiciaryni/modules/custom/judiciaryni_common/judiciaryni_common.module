@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * @file
+ */
+
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\taxonomy\Entity\Term;
 use Drupal\Core\Entity\EntityInterface;
@@ -47,7 +51,7 @@ function judiciaryni_common_validate_publication(&$form, FormStateInterface $for
 
       if (str_contains($ext_host, 'judiciaryni.uk')) {
         // Set the error name to be used by using the _weight as the array position the error occurs in.
-        $error_name = 'field_external_publication]' . '[' . $value['_weight'] . ']' . '[uri';
+        $error_name = 'field_external_publication][' . $value['_weight'] . '][uri';
         $form_state->setErrorByName($error_name, t('URL must not be to the Judiciary website, use the attachment field for documents on the Judiciary website.'));
       }
     }
@@ -117,7 +121,7 @@ function judiciaryni_common_switch_tier($tier_name, &$short_title, $judge_name, 
       $short_title = t('Master ') . $judge_name;
       break;
 
-    case 'District Judge';
+    case 'District Judge':
       $short_title = t('District Judge ') . $judge_name;
       break;
 
