@@ -8,7 +8,6 @@ sites:
         name: 'Planning Appeals Commission'
         url: pacni.gov.uk
         solr: pacni
-        www: true
         cron_spec: '10 * * * *'
         cron_cmd: 'cd web/sites/pacni ; drush core-cron'
         database: pacni
@@ -18,7 +17,6 @@ sites:
         name: 'Judiciary NI'
         url: judiciaryni.uk
         solr: judiciaryni
-        www: true
         cron_spec: '10 * * * *'
         cron_cmd: 'cd web/sites/judiciaryni ; drush core-cron'
         database: judiciaryni
@@ -65,7 +63,6 @@ sites:
         name: 'Parole Commissioners for Northern Ireland'
         url: parolecomni.org.uk
         solr: parolecomni
-        www: true
         cron_spec: '10 * * * *'
         cron_cmd: 'cd web/sites/parolecomni ; drush core-cron'
         database: parolecomni
@@ -75,7 +72,6 @@ sites:
         name: 'Local Government Boundaries Commissioner for Northern Ireland'
         url: lgbc-ni.org.uk
         solr: lgbcni
-        www: true
         cron_spec: '10 * * * *'
         cron_cmd: 'cd web/sites/lgbcni ; drush core-cron'
         database: lgbcni
@@ -85,7 +81,6 @@ sites:
         name: 'The Single Electricity Market Committee'
         url: semcommittee.com
         solr: semcommittee
-        www: true
         cron_spec: '10 * * * *'
         cron_cmd: 'cd web/sites/semcommittee ; drush core-cron'
         database: semcommittee
@@ -95,7 +90,6 @@ sites:
         name: 'Northern Ireland Bureau'
         url: nibureau.com
         solr: nibureau
-        www: true
         cron_spec: '10 * * * *'
         cron_cmd: 'cd web/sites/nibureau ; drush core-cron'
         database: nibureau
@@ -105,7 +99,6 @@ sites:
         name: 'Civil Service Commissioners for Northern Ireland'
         url: nicscommissioners.org
         solr: nicscommissioners
-        www: true
         cron_spec: '10 * * * *'
         cron_cmd: 'cd web/sites/nicscommissioners ; drush core-cron'
         database: nicscommissioners
@@ -115,7 +108,6 @@ sites:
         name: Liofa
         url: liofa.eu
         solr: liofa
-        www: true
         cron_spec: '10 * * * *'
         cron_cmd: 'cd web/sites/liofa ; drush core-cron'
         database: liofa
@@ -125,7 +117,6 @@ sites:
         name: 'Independent Panel Truth Recovery NI'
         url: independentpanel.truthrecoveryni.co.uk
         solr: independentpaneltruthrecoveryni
-        www: true
         cron_spec: '10 * * * *'
         cron_cmd: 'cd web/sites/independentpaneltruthrecoveryni ; drush core-cron'
         database: independentpaneltruthrecoveryni
@@ -135,7 +126,6 @@ sites:
         name: 'Horizon Europe'
         url: horizoneuropeni.com
         solr: horizoneuropeni
-        www: true
         cron_spec: '10 * * * *'
         cron_cmd: 'cd web/sites/horizoneuropeni ; drush core-cron'
         database: horizoneuropeni
