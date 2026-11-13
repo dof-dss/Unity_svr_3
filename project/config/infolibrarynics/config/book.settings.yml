@@ -1,8 +1,11 @@
 _core:
   default_config_hash: i-_2TVi6FUEAqBgNRJkt6aaYmiw1k_LTrXzJS6wlZ4U
 allowed_types:
-  - basic_page
-block:
-  navigation:
-    mode: 'all pages'
-child_type: basic_page
+  -
+    content_type: basic_page
+    child_type: basic_page
+book_sort: weight
+truncate_label: true
+use_parent_selector: false
+use_alternative_form: false
+update_child_aliases: false

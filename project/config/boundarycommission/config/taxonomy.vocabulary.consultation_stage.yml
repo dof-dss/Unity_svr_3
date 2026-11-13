@@ -6,3 +6,4 @@ name: 'Consultation Stage'
 vid: consultation_stage
 description: ''
 weight: 0
+new_revision: false

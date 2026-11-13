@@ -37,17 +37,20 @@ function liofa_pledges_webform_submission_insert(WebformSubmissionInterface $web
  * Implements hook_entity_type_insert() for nodes.
  */
 function liofa_pledges_node_insert(NodeInterface $node) {
-  update_counts($node);
+  liofa_pledges_update_counts($node);
 }
 
 /**
  * Implements hook_entity_type_update() for nodes.
  */
 function liofa_pledges_node_update(NodeInterface $node) {
-  update_counts($node);
+  liofa_pledges_update_counts($node);
 }
 
-function update_counts(NodeInterface $node) {
+/**
+ * Updates pledge totals for published bulk pledges.
+ */
+function liofa_pledges_update_counts(NodeInterface $node) {
   // Update the Bulk pledges added through the content type. Only if published.
   if ($node->getType() === 'bulk_pledges' && $node->isPublished()) {
     // Update pledge count totals.
