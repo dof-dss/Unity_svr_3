@@ -1610,7 +1610,8 @@
                 "issues": "https://github.com/dof-dss/nicsdru_unity_modules/issues",
                 "source": "https://github.com/dof-dss/nicsdru_unity_modules/tree/11.1.2"
             },
-            "time": "2026-11-19T14:02:41+00:00"
+            "time": "2026-11-19T14:02:41+00:00",
+            "published-time": "2026-11-19T14:03:53+00:00"
         },
         {
             "name": "dof-dss/nicsdru_unity_profile",
