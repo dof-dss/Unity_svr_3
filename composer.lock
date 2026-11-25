@@ -1610,8 +1610,7 @@
                 "issues": "https://github.com/dof-dss/nicsdru_unity_modules/issues",
                 "source": "https://github.com/dof-dss/nicsdru_unity_modules/tree/11.1.2"
             },
-            "time": "2026-11-19T14:02:41+00:00",
-            "published-time": "2026-11-19T14:03:53+00:00"
+            "time": "2026-11-19T14:02:41+00:00"
         },
         {
             "name": "dof-dss/nicsdru_unity_profile",
@@ -17238,8 +17237,7 @@
                 "issues": "https://github.com/dof-dss/maestro-hosting/issues",
                 "source": "https://github.com/dof-dss/maestro-hosting/tree/1.4.3"
             },
-            "time": "2026-11-20T13:20:10+00:00",
-            "published-time": "2026-11-20T13:23:57+00:00"
+            "time": "2026-11-20T13:20:10+00:00"
         },
         {
             "name": "dof-dss/maestro-shell",
